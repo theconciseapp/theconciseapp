@@ -1,0 +1,30 @@
+<html>
+<head>
+<script src="android.js"></script>
+
+<script>
+var urlParams;
+(window.onpopstate = function () {
+    var match,
+        pl     = /\+/g,  // Regex for replacing addition symbol with a space
+        search = /([^&=]+)=?([^&]*)/g,
+        decode = function (s) { return decodeURIComponent(s.replace(pl, " ")); },
+        query  = window.location.search.substring(1);
+
+    urlParams = {};
+    while (match = search.exec(query))
+       urlParams[decode(match[1])] = decode(match[2]);
+})();
+
+ var data=JSON.stringify(urlParams);
+     data=data.replace(/\\/g,'').replace(/\s+/g,'');
+var re=new RegExp('"chargeResponseCode":"00"','i');
+var re2=new RegExp('"chargeResponseCode":"0"','i');
+ if(data.match(re)||data.match(re2)){
+ //android.clipboard.setText(location.href);
+  android.activity.loadUrl("control2","javascript:android.control.dispatchEvent('raowo');");
+ } else {
+   android.activity.loadUrl("control2","javascript:android.control.dispatchEvent('raowo_ns');")
+   }
+</script>
+</head>
