@@ -22,9 +22,9 @@ var re=new RegExp('"chargeResponseCode":"00"','i');
 var re2=new RegExp('"chargeResponseCode":"0"','i');
  if(data.match(re)||data.match(re2)){
  //android.clipboard.setText(location.href);
-  android.activity.loadUrl("control2","javascript:android.control.dispatchEvent('raowo');");
+  android.activity.loadUrl("control","javascript:android.control.dispatchEvent('raowo');");
  } else {
-   android.activity.loadUrl("control2","javascript:android.control.dispatchEvent('raowo_ns');")
+   android.activity.loadUrl("control","javascript:android.control.dispatchEvent('raowo_ns');")
    }
 </script>
 </head>
