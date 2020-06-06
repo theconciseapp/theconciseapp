@@ -2,5 +2,5 @@
 Bug fixed
 {amazon|https://}
 {palmstore|http://palmplaystore.com/app/soft_detail?itemID=s_5c6e4a6d22ad42de87b6dd25dd997cb3}
-{whatsapp|https://wa.me/2348181317050?text=Send%20me%20update}
+{whatsapp|https://wa.me/2348181317050?text=The%20Concise%20App-Send%20me%20update}
 <!--amazonapp|https://www.amazon.co.uk/gp/mas/get/android/ref=mas_mbl_ldg_dl}-->
