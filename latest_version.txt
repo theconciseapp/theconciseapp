@@ -1,6 +1,6 @@
 1.8
 *Generate Broadsheets
-#Generate Mid-term report
+*Generate Mid-term report
 *Improved Exam repoet templates
 
 {amazon|amzn://apps/android?initiatePurchaseFlow=true&p=concise.school.attendance.ng}
