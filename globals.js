@@ -1,6 +1,5 @@
 var default_semester='1st_semester';
 var default_session='2020_2021';
-alert('ok');
 function reverse(s){ return s.split("").reverse().join(""); 
 }
 
