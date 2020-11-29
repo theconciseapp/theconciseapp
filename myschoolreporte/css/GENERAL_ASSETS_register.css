@@ -1,0 +1,157 @@
+html{
+height:100%;
+}
+
+body.keyboard {
+ height: calc(100% + 200px); 
+
+ /* add padding for keyboard */
+}
+
+.form-container{
+ width:85%;
+ max-width: 400px;
+margin:30px auto;
+-webkit-box-shadow: 3px 3px 20px rgba(0,0,250,.3);
+-moz-box-shadow: 3px 3px 20px rgba(0,0,250,.3);
+-ms-box-shadow: 3px 3px 20px rgba(0,0,250,.3);
+box-shadow: 3px 3px 20px rgba(0,0,250,.3);
+ }
+
+.form-content{
+ width:100%;
+}
+
+.header{
+background:steelblue;
+color:#fff;
+padding:10px;
+border:0;
+border-radius: 0;
+}
+
+.form-container form{
+ /*border:1px solid steelblue;*/
+padding:20px;
+border-radius: 0;
+width: 100%;
+}
+
+.input-group{
+  margin: 10px auto;
+ width: 95%;
+ position:relative;
+}
+
+.input-group label{
+display:block;
+margin:3px;
+text-align:left;
+color:steelblue;
+font-size:14px;
+font-weight:bold;
+}
+
+.input-group select{
+ background:steelblue;
+font-size:15px;
+border:0;
+border-radius: 5px;
+color:#fff;
+outline:0;
+height:30px;
+}
+
+.input-group input{
+display:block;
+width: 95%;
+height:35px;
+padding:5px 10px;
+border:1px solid steelblue;
+border-radius:5px;
+font-size:15px;
+margin:0 auto;
+outline:0;
+}
+
+.input-group textarea{
+display: block;
+width: 95%;
+height:130px;
+padding:5px 10px;
+border:1px solid steelblue;
+border-radius:5px;
+font-size:15px;
+margin:0 auto;
+outline:0;
+}
+
+
+.password-group{
+margin:10px auto;
+width: 95%;
+position: relative;
+}
+
+.password-group label{
+ display:block;
+margin:3px;
+text-align:left;
+color:steelblue;
+font-size:14px;
+font-weight:bold;
+
+}
+
+.password-group input{
+padding:5px 5px;
+border:1px solid steelblue;
+border-radius:5px;
+font-size:15px;
+ width:50px;
+text-align:center;
+outline:0;
+}
+
+.input-group .btn{
+background:steelblue;
+color:#fff;
+padding: 8px;
+border:0;
+font-size:15px;
+border-radius:5px;
+outline:0;
+}
+
+
+.error{
+ width: 90%;
+ margin: 0px auto; 
+padding: 10px; 
+padding-top:0px;
+border: 1px solid #a94442;
+ color: #a94442; 
+background: #f2dede;
+ border-radius: 5px; 
+text-align: left;
+ }
+
+.error div{
+ margin: 5px;
+}
+
+ .success {
+ color: #3c763d;
+ background: #dff0d8; 
+border: 1px solid #3c763d; 
+margin-bottom: 20px;
+
+ }
+
+
+.username_response,
+.email_response{
+position: absolute;
+top: 0;
+right: 10%;
+}

@@ -1,0 +1,225 @@
+.small{ 
+  font-size: 13px!important;
+}
+
+.btn-default{
+  background:#fff;
+  border:1px solid #444;
+  color:333;
+}
+
+.add_exam_icon,.view_exam_icon{
+ height: 25px;
+  opacity: .5;
+}
+
+.total_present_i{ 
+  display:none;
+}
+
+.general_exam_record_btn{
+  position: fixed;
+  z-index: 40;
+  bottom: 10%;  
+  opacity:.9; 
+   border: 0;
+  background: #3c763d;
+   color:#ffffff;
+  text-align: center;
+  -webkit-box-shadow: 1px 1px 3px 1px #6ab2ca;
+ border-radius: 100%; 
+ right: 3%;
+ width: 55px;
+ height: 55px;
+   font-size:10px;
+}
+
+
+.general_exam_record_btn img{
+  width: 30px;
+ height: 30px;
+ display:block;
+ margin: 0 auto;
+ opacity: .8;
+}
+
+.exam_settings_btn{
+  position: fixed;
+  z-index: 40;
+  bottom: 10%;  
+  opacity:.9; 
+   border: 0;
+  background: #3c763d;
+   color:#ffffff;
+  text-align: center;
+  -webkit-box-shadow: 1px 1px 3px 1px #6ab2ca;
+ border-radius: 100%; 
+ left: 3%;
+ width: 55px;
+ height: 55px;
+   font-size:10px;
+}
+
+
+.exam_settings_btn img{
+  width: 30px;
+ height: 30px;
+ display:block;
+ margin: 0 auto;
+ opacity: .8;
+}
+
+
+.print_exam_btn{
+  position: fixed;
+  z-index: 40;
+  bottom: 10%;
+  right: 3%;
+  opacity:.9;
+   border: 0;
+  border-radius: 100%;
+ color: #333;
+ height: 60px;
+ width:60px;
+ font-size: 10px;
+  background: #fff;
+     /*#3c763d;*/
+  text-align: center;
+  -webkit-box-shadow: 1px 1px 3px 1px rgba(0,0,0,.4);
+}
+
+.print_exam_btn img{
+  width: 30px;
+ height: 30px;
+ display:block;
+ margin: 0 auto;
+ opacity: .8;
+}
+
+
+.subject_input_div{
+  display:inline-block;
+  width: 20%;
+  padding-left: 2px;
+ position:relative;
+}
+
+
+.subject_input{
+  width: 98%;
+ outline: none;
+ height: 40px;
+ border:0; 
+ -webkit-box-shadow: 1px 1px 3px 1px #999;
+padding-top: 10px;
+ padding-left: 5px; 
+}
+
+.test_input_div{
+ display: inline-block;
+ position: relative;
+ width: 15%;
+ height:50px;
+ margin-left: 6px;
+}
+
+.test_input_div span,.subject_input_div span{
+ position: absolute;
+ z-index:2;
+ top: 3px;
+ left: 10px; 
+ font-size: 9px;
+ 
+}
+
+
+.test_input{
+  width: 98%;
+ height: 45px;
+ padding-left: 5px;
+ padding-top: 10px; 
+ outline: none;
+ border:1px solid rgba(0,0,0,.18); 
+ border-radius: 4px;
+   color: #333333;
+   font-weight:bold;
+ -webkit-box-shadow: 1px 1px 3px 1px #999;
+}
+
+
+.test_input_button{
+  padding-top: 10px;
+  outline: none; 
+}
+
+
+.subjects_gen{
+  width: 50%;
+ max-width: 60%;
+ outline: none;
+ border:0; 
+ /* -webkit-box-shadow: 1px 1px 3px 1px #999;*/ 
+padding-top: 10px;
+ padding-left: 5px; 
+}
+
+.selected_subject_indicator{
+  margin: top: 5px;
+  font-weight:bold;
+  font-size: 17px;
+  color:#444;
+ }
+
+.subject_options{
+  border: 1px solid #444;
+  padding-top: 10px;
+}
+
+
+.template_file{
+ margin-bottom: 2px;
+ word-wrap: break-word;
+  word-break:break-word;
+   font-size: 15px;
+ }
+
+.template_file:hover{
+ background: #f0f0f0;
+}
+
+
+.template_file:nth-of-type(odd){
+}
+
+
+.print_now_btn,.exam_report_template_btn{
+ position: fixed;
+  z-index: 40;
+  right: 3%;
+  bottom: 10%;  
+  opacity:.9; 
+   border: 0;
+  border-radius: 100%; 
+  background: #fff;;
+   color: #333;
+  text-align: center;
+  -webkit-box-shadow: 1px 1px 3px 1px rgba(0,0,0,.5);
+    /*#6ab2ca;*/
+ width: 60px;
+   height:60px;
+   font-size:10px;
+}
+
+
+.print_now_btn img,.exam_report_template_btn img{
+  width: 20px;
+ height: 20px;
+ display:block;
+ margin: 0 auto;
+ opacity: .8;
+}
+
+.exam_report_template_btn{
+   left:3%;
+}
+
