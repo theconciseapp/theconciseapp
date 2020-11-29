@@ -1,4 +1,4 @@
-
+tt
 
   Dropzone.options.uploadWidget = {
   paramName: 'file',
@@ -180,6 +180,7 @@ var myDropzone = new Dropzone("div#upload-teacher-photo-widget", { url: "AJAX-PH
 
 
 });
+
 
 
 
