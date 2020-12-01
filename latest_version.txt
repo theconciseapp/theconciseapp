@@ -1,9 +1,21 @@
-1.8
-*Generate Broadsheets
-*Generate Mid-term report
-*Improved Exam report templates
+1.9
 
-{amazon|amzn://apps/android?initiatePurchaseFlow=true&p=concise.school.attendance.ng}
-{palmstore|http://palmplaystore.com/app/soft_detail?itemID=s_5c6e4a6d22ad42de87b6dd25dd997cb3}
-{whatsapp|https://wa.me/2348181317050?text=The%20Concise%20App-Send%20me%20update}
+* Parent(or Students) can now access/print their children's results (Examination & attendance)  online @ https://myschoolreporte.com.ng/portal (Requires extended subscription)
+* You can now choose to show/hide students id in score sheets or broadsheets
+* 3dlized report sheet templates
+* And other fixes
+
+Instruction To upgrade to version 1.9.
+
+1. Do fresh backup at the backup/restore menu
+2. Uninstall The Concise App
+3. Go to <a href="https://theconciseapps.com.ng" class="btn btn-success btn-sm">https://theconciseapps.com.ng</a>
+to download the latest version.
+
+(Your datas will not be lost)
+
+<!--amazo|amzn://apps/android?initiatePurchaseFlow=true&p=concise.school.attendance.ng}
+{palmstor|http://palmplaystore.com/app/soft_detail?itemID=s_5c6e4a6d22ad42de87b6dd25dd997cb3}
+{whatsap|https://wa.me/2348181317050?text=The%20Concise%20App-Send%20me%20update}
+-->
 <!--amazonapp|https://www.amazon.co.uk/gp/mas/get/android/ref=mas_mbl_ldg_dl}-->
