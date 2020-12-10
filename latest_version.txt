@@ -14,8 +14,8 @@ to download the latest version.
 
 (Your datas will not be lost)
 
-<!--amazo|amzn://apps/android?initiatePurchaseFlow=true&p=concise.school.attendance.ng}
-{palmstor|http://palmplaystore.com/app/soft_detail?itemID=s_5c6e4a6d22ad42de87b6dd25dd997cb3}
-{whatsap|https://wa.me/2348181317050?text=The%20Concise%20App-Send%20me%20update}
+<!--amazo|amzn://apps/android?initiatePurchaseFlow=true&p=concise.school.attendance.ng
+palmstor|http://palmplaystore.com/app/soft_detail?itemID=s_5c6e4a6d22ad42de87b6dd25dd997cb3
+whatsap|https://wa.me/2348181317050?text=The%20Concise%20App-Send%20me%20update
 -->
 <!--amazonapp|https://www.amazon.co.uk/gp/mas/get/android/ref=mas_mbl_ldg_dl}-->
