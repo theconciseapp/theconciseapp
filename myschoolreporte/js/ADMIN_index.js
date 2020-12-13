@@ -487,16 +487,26 @@ if(ISDEMO__) return toast('This is a demo.');
 
  var name=$.trim($('#edit_school_name').val() );
 
-if(!name ||name.length>80){
-toast('Enter teacher fullname. Min length: 4 chars, Max length: 80 chars');
+if(!name ||name.length>200){
+toast('Enter valid school name. Min length: 4 chars, Max length: 80 chars');
  return false;
 }
 name=name.replace(/\s+/,' ');
 
+/*
 if(!name || !name.match(/^([a-z0-9]{2,})+[ ]+([a-z0-9&'_() :;-]{2,})+$/i) ){
  toast('School name contains unsupported characters.');
  return false;
 }
+*/
+
+var fullname=$.trim($('#edit_full_name').val() );
+
+if(!fullname ||fullname.length>100){
+toast('Enter proprietor\'s full name.');
+ return false;
+}
+fullname=fullname.replace(/\s+/,' ');
 
   var username=$.trim( $('#edit_school_username').val() );
 
@@ -545,7 +555,7 @@ $.ajax({ url:'AJAX-PHP/update_school_data.php',
 data:$('#update_school_form').serialize() + '&csrf=' + CSRF__ + '&update_school=1',
  dataType:'text',
   type:'POST'}).done( function(data){
-   //alert(data)
+   alert(data)
    uspin.hide()
 $('.semail_response,.susername_response').empty();
 
