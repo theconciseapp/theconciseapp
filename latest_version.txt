@@ -10,7 +10,7 @@
 * Add school phone numbers, emails, website in all reports
 * And other small fixes.</strong>
 
-<a href="https://www.theconciseapps.com.ng/2019/10/download.html" class="btn btn-success btn-sm">INSTALL</a>
+<a style="display: block; margin:0 auto;" href="https://www.theconciseapps.com.ng/2019/10/download.html" class="btn btn-success btn-sm">INSTALL</a>
 
 <!--amazo|amzn://apps/android?initiatePurchaseFlow=true&p=concise.school.attendance.ng
 palmstor|http://palmplaystore.com/app/soft_detail?itemID=s_5c6e4a6d22ad42de87b6dd25dd997cb3
