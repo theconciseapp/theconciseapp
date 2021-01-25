@@ -1,6 +1,5 @@
 2.0
-
-* Disable/enable red, green and brown inks in report card exam scores & grades
+<strong>* Disable/enable red, green and brown inks in report card exam scores & grades
 * Students with highest score when recording are indicated with a star
 * Capture students photos directly from camera app
 * Attendance reports structure updated to a more professional look
@@ -9,7 +8,7 @@
 * Import Exam Report Templates
 * Restore backup directly from device
 * Add school phone numbers, emails, website in all reports
-* And other small fixes.
+* And other small fixes.</strong>
 
 <a href="https://www.theconciseapps.com.ng/2019/10/download.html" class="btn btn-success btn-sm">INSTALL</a>
 
