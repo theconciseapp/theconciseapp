@@ -1,18 +1,17 @@
 1.9
 
-* Parent(or Students) can now access/print their children's results (Examination & attendance)  online @ https://myschoolreporte.com.ng/portal (Requires extended subscription)
-* You can now choose to show/hide students id in score sheets or broadsheets
-* 3dlized report sheet templates
-* And other fixes
+* Disable/enable red, green and brown inks in report card exam scores & grades
+* Students with highest score when recording are indicated with a star
+* Capture students photos directly from camera app
+* Attendance reports structure updated to a more professional look
+* Exam report templates ugraded.
+* You can now increase/decrease font size of school name independently
+* Import Exam Report Templates
+* Restore backup directly from device
+* Add school phone numbers, emails, website in all reports
+* And other small fixes.
 
-Instruction To upgrade to version 1.9.
-
-1. Do fresh backup at the backup/restore menu
-2. Uninstall The Concise App
-3. Go to <a href="https://theconciseapps.com.ng" class="btn btn-success btn-sm">https://theconciseapps.com.ng</a>
-to download the latest version.
-
-(Your datas will not be lost)
+<a href="https://www.theconciseapps.com.ng/2019/10/download.html" class="btn btn-success btn-sm">INSTALL</a>
 
 <!--amazo|amzn://apps/android?initiatePurchaseFlow=true&p=concise.school.attendance.ng
 palmstor|http://palmplaystore.com/app/soft_detail?itemID=s_5c6e4a6d22ad42de87b6dd25dd997cb3
