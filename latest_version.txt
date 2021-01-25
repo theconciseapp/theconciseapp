@@ -1,4 +1,4 @@
-1.9
+2.0
 
 * Disable/enable red, green and brown inks in report card exam scores & grades
 * Students with highest score when recording are indicated with a star
