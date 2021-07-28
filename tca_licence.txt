@@ -1,0 +1,6 @@
+[
+ {"id":"rightpath",
+  "school_name":"Rightpath international school",
+  "site":"http://localhost:8080"
+ }
+]
