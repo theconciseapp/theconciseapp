@@ -6,7 +6,7 @@
 
 { "id":"deopotential",
   "school_name":"Deo potential school",
-  "site":"http://localhost:8080/deo",
+  "site":"https://tca.name.ng/deo",
   "date":"2021-08-02"
  }
 ]
