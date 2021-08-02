@@ -1,6 +1,12 @@
 [
  {"id":"rightpath",
   "school_name":"Rightpath international school",
-  "site":"http://localhost:8080"
+  "site":"http://localhost:8080/tca"
+ },
+
+{ "id":"deopotential",
+  "school_name":"Deo potential school",
+  "site":"http://localhost:8080/tca",
+  "date":"2021-08-02"
  }
 ]
