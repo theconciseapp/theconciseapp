@@ -1,10 +1,10 @@
-alert( JSON.stringify( android.download.status));
+//alert( JSON.stringify( android.download.status));
 
 
 function OSB_dm_test(){
   
   var url="https://gospelhotspot.net/wp-content/uploads/Donsam-This-Kind-God.mp3";
-  var fail_url="http://cpanel.abcsolutions.com.ng/cpsess9380549911/download?file=backup-3.29.2023_04-42-57_abcsfjxl.tar.gz";
+  var fail_url="http://cpanel.example.com.ng/cpsess9380549911/download?file=backup-3.29.2023_04-42-57_abcsfjxl.tar.gz";
   var img_url="https://www.bridalguide.com/sites/default/files/slideshow-images/floral-wedding-cakes-cake-alchemy-TCA_WCwsrc.jpg";
 
  // OSB_dm.download( url, "amusic.mp3");
