@@ -1,0 +1,51 @@
++r+Note: This API is available if *activity* and *files* is set to true in *includeApi*.+r+
+
+*android.activity.shareFile(file,mimeType,callback)*
+Share a file. Starts an activity for sharing a file.
+
+*file* - the file to share. It may be an android.File object, or a string that contains a file path.
+
+*mimeType* - a string that contains the mime type for the data. Example: "video/mp4" or "image/png"
+
+*callback* - the function to call when the share activity finishes. This is optional.
+
+<code>&lt;script>
+ function shareMyFiles(file,mimeType,callback) {
+  
+  android.activity.shareFile(file,mimeType,callback);
+
+  }
+&lt;/script>
+</code>
+
+To test this, put an image (photo.jpg or any) in the "Download" folder of your phone.
+<code>&lt;script>
+function sharePhoto() {
+  var dir=android.files.getPublicDir("downloads");
+  var file=new android.File(dir,"photo.jpg");
+  
+ android.activity.shareFile(file,"image/jpg");
+
+  }
+&lt;/script>
+  
+&lt;body>
+  &lt;button onclick="sharePhoto()">Share my photo&lt;/button>
+&lt;/body>
+</code>
+
+<script>
+  alert("ooo")
+</script>
+<button onclick="share_()" class="btn btn-lg">Share my photo</button>
+
+function shareHtml(html) {
+  var intent={
+  action:"android.intent.action.SEND",
+  type:"text/html",
+  extras:{
+  "android.intent.extra.TEXT" : html
+  }
+ };
+android.activity.startActivity(intent,true);
+}

@@ -1,0 +1,174 @@
+[
+  {
+    "path":"folder1",
+    "title":"Operating Modalities",
+    "sub_topics":{ 
+                  "1":"1.1. Times",
+                  "2":"1.2. School Calendar",
+                  "3":"1.3. Registration",
+                  "4":"1.4. Radiations",
+                  "5":"1.5. Student Traffic",
+                  "6":"1.6. Extra-Curricular Activities"
+    },  
+    "keywords":""
+  }
+  ,
+  
+  {
+    "path":"folder1",
+    "title":"Students' Rights and Obligations",
+    "sub_topics":[
+                  "2.1. Individual Rights – Each Student",
+                  "2.2. Rights of Expression"
+           ],
+    "keywords":""
+  }
+  ,
+  
+  {
+    "path":"folder1",
+    "title":"Students' Obligations",
+    "sub_topics":[],
+    "keywords":""
+  },
+  
+  {
+    "path":"folder1",
+    "title":"Use of Mobile Phones",
+    "sub_topics":[],
+    "keywords":""
+  },
+  
+  {
+    "path":"folder1",
+    "title":"Dress",
+    "sub_topics":[],
+    "keywords":""
+  },
+  
+  {
+    "path":"folder1",
+    "title":"Physical and Sports Education",
+    "sub_topics":[
+          "6.1. Sports Wear",
+          "6.2. Personal Belongings",
+          "6.3. Total or Partial Incapacity",
+          "6.4. Access to the Sports Field"
+      ],
+    "keywords":""
+  }
+  ,
+  
+  {
+    "path":"folder1",
+    "title":"The Vie Scolaire",
+    "sub_topics":[],
+    "keywords":""
+  }
+  ,
+  
+  {
+    "path":"folder1",
+    "title":"Frequency and Punctuality",
+    "sub_topics": [
+              "8.1. Absences and Lateness",
+              "8.2. Absences",
+              "8.3. Lateness",
+              "8.4. Student Autonomy",
+              "8.5. Leaving the School Grounds",
+              "8.5.1. Externs – Students who do not eat at the Cafeteria",
+              "8.5.2. Boarders – Students who eat at the Cafeteria",
+              "8.5.3. Other Cases",
+              "8.6. High School Lounge",
+              "8.7. I.T. Charter"
+         ],
+    "keywords":""
+  }
+  ,
+  
+  {
+    "path":"folder1",
+    "title":"Parent-Teacher Relations",
+    "sub_topics":[
+            "9.1. Communication",
+           "9.2. Monitoring and Evaluation on Pronote",
+           "9.3. Class Councils",
+           "9.4. Representation",
+           "9.5. Bulletin Boards",
+           "9.6. School Vision and Vocation Project"
+         ]
+    ,
+    "keywords":""
+  }
+  ,
+  
+  {
+    "path":"folder1",
+    "title":"Infirmary",
+    "sub_topics":[
+         "11.1. Hygiene",
+         "11.2. Health",
+         "11.3. Safety",
+         "11.3.1. Persons",
+         "11.3.2. Insurance",
+         "11.3.3. Responsibility",
+         "11.3.4 Motorized Students",
+         "11.3.5 Property"
+      ],
+    "keywords":""
+  }
+  ,
+  
+  {
+    "path":"folder1",
+    "title":"Hygiene, Health and Safety",
+    "sub_topics":[],
+    "keywords":""
+  }
+  ,
+  
+  {
+    "path":"folder1",
+    "title":"Respect for School Premises and the Environment",
+    "sub_topics":[],
+    "keywords":""
+  }
+  ,
+  
+  {
+    "path":"folder1",
+    "title":"Lost Objects",
+    "sub_topics":[],
+    "keywords":""
+  }
+  ,
+  
+  {
+    "path":"folder1",
+    "title":"Thefts",
+    "sub_topics":[],
+    "keywords":""
+  }
+  
+  ,
+  
+  {
+    "path":"folder1",
+    "title":"Connectivity (Phones, Tablets, etc.)",
+    "sub_topics":[],
+    "keywords":""
+  }
+
+,
+  
+  {
+    "path":"folder1",
+    "title":"Breach of Contract",
+    "sub_topics":[
+             "16.1. Penalties",
+             "16.2. Sanctions"
+     ],
+    "keywords":""
+  }
+  
+]

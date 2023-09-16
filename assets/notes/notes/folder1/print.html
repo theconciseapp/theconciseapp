@@ -1,0 +1,24 @@
++r+Note: This API is available if *webView* is set to true in *includeApi*.+r+
+
+Use this function to print a page.
+This function prints everything on the page, but you can use css media print to prevent some parts of the page from printing
+
+<code>&lt;script>
+
+function printPage() {
+ android.webView.print();
+ }
+  
+&lt;/script>
+</code>
+
+Test:
+
+<code>
+&lt;body>
+  &lt;button onclick="printPage()">Print this page&lt;/button>
+&lt;/body>
+</code>
+
+<button onclick="printPage()" class="btn btn-lg">Print this page</button>
+

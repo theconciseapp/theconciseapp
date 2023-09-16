@@ -1,0 +1,290 @@
+ [
+   {
+      "pro_items_range":[
+         100,
+         170
+      ],
+      "pro_price":"50",
+      "dollar_rate":464,
+      "logo":""
+   },
+   {
+      "path":"file:///assets/notes/notes/folder1/create-new-app.html",
+      "title":"Creating a new app",
+      "sub_topics":[],
+      "keywords":"first"
+   },
+   {
+      "path":"file:///assets/notes/notes/folder1/app-tree-nodes.html",
+      "title":"App tree, Nodes and Assets",
+      "sub_topics":[
+         
+      ],
+      "keywords":""
+   },
+   {
+      "path":"file:///assets/notes/notes/folder1/hello-world.html",
+      "title":"Let's write ''Hello World''",
+      "sub_topics":[
+         
+      ],
+      "keywords":""
+   },
+   {
+      "path":"file:///assets/notes/notes/folder1/webview-hello.html",
+      "title":"Write Hello World using the WebView Node",
+      "sub_topics":[
+         
+      ],
+      "keywords":""
+   },
+   
+   {
+       "path":"file:///assets/notes/notes/folder1/add-background.html",
+      "title":"Add background color to your App",
+      "sub_topics":[
+         
+      ],
+      "keywords":""
+   },
+   {
+      "path":"file:///assets/notes/notes/folder1/webview-text-colour.html",
+      "title":"Change text colour",
+      "sub_topics":[
+         
+      ],
+      "keywords":""
+   },
+   {
+      "path":"file:///assets/notes/notes/folder1/packaging.html",
+      "title":"Packaging- App icon, MinSdk, packageName, Permissions, TargetSdk, VersionCode, VersionName",
+      "sub_topics":[
+         
+      ],
+      "keywords":"change edit permission packaging"
+   },
+    {
+     "path":"file:///assets/notes/notes/folder1/import-files.html",
+      "title":"Import/add Images, Js, Css or Other files",
+      "sub_topics":[
+         
+      ],
+      "keywords":"assets videos json txt html"
+   },
+  {
+     "path":"file:///assets/notes/notes/folder1/display-photo.html",
+      "title":"Display photos in WebView page",
+      "sub_topics":[
+         
+      ],
+      "keywords":""
+   },
+    {
+     "path":"file:///assets/notes/notes/folder1/add-css.html",
+      "title":"Add CSS in WebView page",
+      "sub_topics":[
+         
+      ],
+      "keywords":""
+   },
+ 
+   {
+     "path":"file:///assets/notes/notes/folder1/add-javascript.html",
+      "title":"Add JAVASCRIPTS in WebView page",
+      "sub_topics":[
+         
+      ],
+      "keywords":""
+   },
+   {
+     "path":"file:///assets/notes/notes/folder1/webview-apis.html",
+      "title":"App Builder WebView APIs",
+      "sub_topics":[
+         
+      ],
+      "keywords":""
+   },
+   {
+      "path":"file:///assets/notes/notes/folder1/android-views.html",
+      "title":"Android Views",
+      "sub_topics":[
+         
+      ],
+      "keywords":""
+   },
+   
+   {
+      "path":"file:///assets/notes/notes/folder1/toggle-views.html",
+      "title":"Hide/Show a View",
+      "sub_topics":[
+         
+      ],
+      "keywords":""
+   }
+   ,
+  
+  
+   {
+      "path":"file:///assets/notes/notes/folder1/check-request-permission.html",
+      "title":"Check or Request a permission",
+      "sub_topics":[
+         
+      ],
+      "keywords":"haspermission requestpermission"
+   }
+   ,
+   
+    {
+      "path":"file:///assets/notes/notes/folder1/create-write-files.html",
+      "title":"Create, Write, Read a file",
+      "sub_topics":[
+         
+      ],
+      "keywords":"getfilesdir getexternaldir getexternalfilesdir getpublicdir"
+   },
+    {
+      "path":"file:///assets/notes/notes/folder1/zip-unzip.html",
+      "title":"Create a Zip file, Unzip a file",
+      "sub_topics":[
+         
+      ],
+      "keywords":"archive"
+   },
+   {
+      "path":"file:///assets/notes/notes/folder1/toast.html",
+      "title":"Show Toast",
+      "sub_topics":[
+         
+      ],
+      "keywords":"showLong"
+   },
+   
+   {
+      "path":"file:///assets/notes/notes/folder1/webview-id.html",
+      "title":"Get WebView ID",
+      "sub_topics":[
+         
+      ],
+      "keywords":""
+   },
+    {
+      "path":"file:///assets/notes/notes/folder1/allow-ext-url.html",
+      "title":"Allow external Url to load within your app",
+      "sub_topics":[
+         
+      ],
+      "keywords":"setAllowExternalUrl"
+   },
+  
+    {
+      "path":"file:///assets/notes/notes/folder1/api-level.html",
+      "title":"Get device's Api Level",
+      "sub_topics":[
+         
+      ],
+      "keywords":""
+   },
+  {
+      "path":"file:///assets/notes/notes/folder1/enable-zoom.html",
+      "title":"Enable zoom",
+      "sub_topics":[
+         
+      ],
+      "keywords":"zooming"
+   },
+   {
+      "path":"file:///assets/notes/notes/folder1/back-button.html",
+      "title":"Back button logic, Exit app, close activity",
+      "sub_topics":[
+         
+      ],
+      "keywords":""
+   },
+   {
+      "path":"file:///assets/notes/notes/folder1/launch-browser.html",
+      "title":"Open a Url with another app or browser",
+      "sub_topics":[
+         
+      ],
+      "keywords":"intent"
+   },
+   {
+      "path":"file:///assets/notes/notes/folder1/share-file.html",
+      "title":"Share a file with another app",
+      "sub_topics":[
+         
+      ],
+      "keywords":"intent"
+   },
+    {
+      "path":"file:///assets/notes/notes/folder1/share-html.html",
+      "title":"Share a text or html with another app",
+      "sub_topics":[
+         
+      ],
+      "keywords":"intent"
+   }
+  ,
+   {
+      "path":"file:///assets/notes/notes/folder1/add-trigger-js-from-tree.html",
+      "title":"Add inline javascript or trigger javascript function in WebView from the App Tree",
+      "sub_topics":[
+         
+      ],
+      "keywords":"call"
+   }
+   ,
+    {
+      "path":"file:///assets/notes/notes/folder1/clipboard.html",
+      "title":"Clipboard",
+      "sub_topics":[
+         
+      ],
+      "keywords":"hastext gettext settext"
+   }
+ 
+  ,
+    {
+      "path":"file:///assets/notes/notes/folder1/download.html",
+      "title":"Download manager",
+      "sub_topics":[
+         
+      ],
+      "keywords":"intent"
+   }
+   ,
+   
+    {
+      "path":"file:///assets/notes/notes/folder1/vibrator.html",
+      "title":"Vibrator - cause phone to vibrate",
+      "sub_topics":[
+         
+      ],
+      "keywords":""
+   }
+ 
+  ,
+    {
+      "path":"file:///assets/notes/notes/folder1/print.html",
+      "title":"Print",
+      "sub_topics":[
+         
+      ],
+      "keywords":"intent"
+   }
+   ,
+   {
+      "path":"file:///assets/notes/notes/folder1/log.html",
+      "title":"Get Android Log, errors",
+      "sub_topics":[
+         
+      ],
+      "keywords":""
+   }
+ 
+ 
+ ]
+
+
+
+

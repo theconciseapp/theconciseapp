@@ -1,0 +1,77 @@
+*ZIP files in a folder*
+
+*folder.zip(zipFile,callback)*
+Zip files in this folder into specified zip file. The zip file is always overwritten, and it never adds files to an existing archive.
+
+*zipFile* - destination (zip) file; may be a string or a File object.
+
+*callback* - (optional) a function to call when the operation is complete.
+
+This method starts a new thread for compressing files and returns control immediately. When the compression is done, *zipFinished* event is fired.
+
+Let' zip all files in "Download" folder of your device ( This may take some seconds depending on how much files in it are ) and save it in documents folder
+
+<code>var folder=android.files.getPublicDir("downloads");
+ var newZip=android.files.getPublicDir("documents");
+
+folder.zip( newZip,function( detail){
+  
+ if( detail.error ) ){
+  alert("Error occured: " + detail.error );
+ }
+   else{
+   alert("Successful- Saved to: " + newZip.toString() );
+  }
+});
+</code>
+
+
+*UNZIP AN ARCHIVE*
+
+*zipFile.unzip(folder,callback)*
+Extract files from the zip archive.
+
+folder - the directory where to put extracted files; may be a string or a File object. The directory is created if necessary.
+
+callback - (optional) a function to call when the operation is complete.
+
+This method starts a new thread for extracting files and returns control immediately. When the extraction is done, unzipFinished event is fired.
+
+<code>
+var zipFile = new android.File(zipPath);
+var folder = new android.File(folderPath);
+
+zipFile.unzip(folder,function(detail){
+  if( detail.error ){
+  alert("Error occurred: "+detail.error );
+  }
+   else{
+  alert( detail.count + " files extracted");
+   }
+});
+</code>
+
+*zipFile.unzipText(entryName)*
+
+Unzip one entry from this zip file and return it as a string.
+
+*entryName* - the name of the entry in the zip file.
+
+<code>var zipFile = new android.File(zipPath);
+
+ var text = zipFile.unzipText("README.TXT");
+  alert(text)
+</code>
+
+*visit(callback)*
+Visit all files in this folder recursively.
+
+*callback* - a function that takes one parameter(a File object) and returns either true to continue or false to stop.
+
+<code>
+var folder = new android.File(folderPath);
+folder.visit(function(file){
+   console.log("file="+file);
+   return true;
+});
+</code>

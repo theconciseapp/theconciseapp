@@ -1,0 +1,46 @@
+In this lesson, i will show you how to change the texts colour of your webview page (hello.html).
+When you created your app, the text's colour is black. That is the default color until it's changed.
+
+You +r+cannot+r+ change the colour of text of a WebView page through the *app tree*. This is why it would be an added advantage if you know or learn HTML and CSS +s+( https://www.w3schools.com )+s+
+App Builder guide is not meant to teach you HTML, CSS, JAVASCRIPT or JQUERY, we will only make use of them only where and when necessary.
+
+To change the text colour from black to white:
+
+1. Open *Assets* under *App Files* of your app
+2. Open *hello.html*
+In between your &lt;style&gt; &lt;/style&gt;, enter
+<code>h1{ color: white; }</code> or <code>body{ color: white; }</code>
+Instead of colour name (white;), you can also use Css color code: "*#ffffff;*" which also refers to white +s+( _learn more from_ https://www.w3schools.com )+s+
+
+_Full code +s+(you may click code below to copy it)+s+_
+<code>&lt;html&gt;
+&lt;style&gt;
+h1{ color: white; }
+&lt;/style&gt;
+&lt;script src="android.js"&gt;&lt;/script&gt;
+&lt;script&gt;
+
+&lt;/script&gt;
+&lt;body&gt;
+&lt;h1&gt;Hello
+&lt;br&gt;my name is so so so
+&lt;br&gt;I'm beautiful&lt;/h1&gt;
+&lt;/body&gt;
+&lt;/html&gt;</code>
+
+3. Build and launch
+
+*Our text colour has been successfully changed to white.*
+Watch video for clearer implementation
+[youtube=gW5ANwUA6_o]Change text colour of a WebView page~[/youtube]
+
+Explanation:
+&lt;h1&gt; is an HTML tag that stands for header. There are six types of html headers: h1, h2, h3, h4, h5, h6. And as you can see, we put _Hello, i'm so so so i'm beautiful_ in-between &lt;h1&gt; &lt;/h1&gt;
+
+&lt;style&gt; &lt;/style&gt; is a css tag used inside an html page. All css styles are put inside or in-between &lt;style&gt; &lt;/style&gt;
+
+Therefore, what this css style "_h1{ color: white; }_" does is that it targets all &lt;h1&gt; html tags in our html page (hello.html) and changed the colour of texts in-between &lt;h1&gt; &lt;/h1&gt; to white.
+Also note that in our style, we used "color" not "colour" i.e color: white;
+
+
+

@@ -1,0 +1,2306 @@
+{
+    "_id_": 523,
+    "_type": "App",
+    "features": {
+        "_id_": 493,
+        "_type": "App.Features",
+        "list_": [
+            {
+                "_id_": 418354,
+                "_type": "Function",
+                "name": {
+                    "_id_": 418358,
+                    "_type": "String",
+                    "value_": "globals"
+                },
+                "body": {
+                    "_id_": 418356,
+                    "_type": "Sequence",
+                    "list_": [
+                        {
+                            "_id_": 418811,
+                            "_type": "Argument",
+                            "name": {
+                                "_id_": 418813,
+                                "_type": "String",
+                                "value_": "wvId"
+                            }
+                        }
+                    ]
+                }
+            },
+            {
+                "_id_": 411895,
+                "_type": "Function",
+                "name": {
+                    "_id_": 411899,
+                    "_type": "String",
+                    "value_": "loadDrawerPage_"
+                },
+                "body": {
+                    "_id_": 411897,
+                    "_type": "Sequence",
+                    "list_": [
+                        {
+                            "_id_": 411901,
+                            "_type": "Argument",
+                            "name": {
+                                "_id_": 411903,
+                                "_type": "String",
+                                "value_": "dPageWebViewId"
+                            }
+                        },
+                        {
+                            "_id_": 411905,
+                            "_type": "WebView.Execute",
+                            "code": {
+                                "_id_": 411907,
+                                "_type": "InlineScript",
+                                "code": {
+                                    "_id_": 411909,
+                                    "_type": "String",
+                                    "value_": "$(function(){\n  loadDrawerPage();\n});"
+                                }
+                            },
+                            "webView": {
+                                "_id_": 411915,
+                                "_type": "LocalVariable.Get",
+                                "name": {
+                                    "_id_": 511383,
+                                    "_type": "String",
+                                    "value_": "dPageWebViewId"
+                                }
+                            }
+                        }
+                    ]
+                }
+            },
+            {
+                "_id_": 464005,
+                "_type": "Function",
+                "name": {
+                    "_id_": 464006,
+                    "_type": "String",
+                    "value_": "load_scripts"
+                },
+                "body": {
+                    "_id_": 464007,
+                    "_type": "Sequence",
+                    "list_": [
+                        {
+                            "_id_": 464050,
+                            "_type": "Argument",
+                            "name": {
+                                "_id_": 464051,
+                                "_type": "String",
+                                "value_": "webViewId"
+                            }
+                        },
+                        {
+                            "_id_": 464008,
+                            "_type": "Argument",
+                            "name": {
+                                "_id_": 464009,
+                                "_type": "String",
+                                "value_": "pageId"
+                            }
+                        },
+                        {
+                            "_id_": 482045,
+                            "_type": "WebView.LoadURL",
+                            "viewId": {
+                                "_id_": 482057,
+                                "_type": "LocalVariable.Get",
+                                "name": {
+                                    "_id_": 482060,
+                                    "_type": "String",
+                                    "value_": "webViewId"
+                                }
+                            },
+                            "url": {
+                                "_id_": 495586,
+                                "_type": "Expression",
+                                "text": {
+                                    "_id_": 495588,
+                                    "_type": "String",
+                                    "value_": "\"javascript:PAG_ID__='\" + pageId + \"'\";"
+                                }
+                            }
+                        },
+                        {
+                            "_id_": 464054,
+                            "_type": "WebView.Execute",
+                            "code": {
+                                "_id_": 464055,
+                                "_type": "ScriptFile",
+                                "file": {
+                                    "_id_": 464056,
+                                    "_type": "AssetFile",
+                                    "path_": "js\/jquery.3.3.1.js"
+                                }
+                            },
+                            "webView": {
+                                "_id_": 464057,
+                                "_type": "LocalVariable.Get",
+                                "name": {
+                                    "_id_": 464058,
+                                    "_type": "String",
+                                    "value_": "webViewId"
+                                }
+                            }
+                        },
+                        {
+                            "_id_": 464010,
+                            "_type": "WebView.Execute",
+                            "code": {
+                                "_id_": 464046,
+                                "_type": "ScriptFile",
+                                "file": {
+                                    "_id_": 464064,
+                                    "_type": "AssetFile",
+                                    "path_": "js\/moment.js"
+                                }
+                            },
+                            "webView": {
+                                "_id_": 464013,
+                                "_type": "LocalVariable.Get",
+                                "name": {
+                                    "_id_": 464014,
+                                    "_type": "String",
+                                    "value_": "webViewId"
+                                }
+                            }
+                        },
+                        {
+                            "_id_": 464533,
+                            "_type": "WebView.Execute",
+                            "code": {
+                                "_id_": 464534,
+                                "_type": "ScriptFile",
+                                "file": {
+                                    "_id_": 464543,
+                                    "_type": "AssetFile",
+                                    "path_": "third-party\/mediaelement-master\/build\/mediaelement-and-player.min.js"
+                                }
+                            },
+                            "webView": {
+                                "_id_": 464536,
+                                "_type": "LocalVariable.Get",
+                                "name": {
+                                    "_id_": 464537,
+                                    "_type": "String",
+                                    "value_": "webViewId"
+                                }
+                            }
+                        },
+                        {
+                            "_id_": 464566,
+                            "_type": "WebView.Execute",
+                            "code": {
+                                "_id_": 464567,
+                                "_type": "ScriptFile",
+                                "file": {
+                                    "_id_": 466526,
+                                    "_type": "AssetFile",
+                                    "path_": "third-party\/yPlayer.js"
+                                }
+                            },
+                            "webView": {
+                                "_id_": 464569,
+                                "_type": "LocalVariable.Get",
+                                "name": {
+                                    "_id_": 464570,
+                                    "_type": "String",
+                                    "value_": "webViewId"
+                                }
+                            }
+                        },
+                        {
+                            "_id_": 464020,
+                            "_type": "WebView.Execute",
+                            "code": {
+                                "_id_": 464021,
+                                "_type": "ScriptFile",
+                                "file": {
+                                    "_id_": 464022,
+                                    "_type": "AssetFile",
+                                    "path_": "js\/check-update.js"
+                                }
+                            },
+                            "webView": {
+                                "_id_": 464023,
+                                "_type": "LocalVariable.Get",
+                                "name": {
+                                    "_id_": 464024,
+                                    "_type": "String",
+                                    "value_": "webViewId"
+                                }
+                            }
+                        },
+                        {
+                            "_id_": 509745,
+                            "_type": "Conditional",
+                            "condition": {
+                                "_id_": 509760,
+                                "_type": "Equal",
+                                "a": {
+                                    "_id_": 509761,
+                                    "_type": "Expression",
+                                    "text": {
+                                        "_id_": 509762,
+                                        "_type": "String",
+                                        "value_": "pageId"
+                                    }
+                                },
+                                "b": {
+                                    "_id_": 509773,
+                                    "_type": "String",
+                                    "value_": "general"
+                                }
+                            },
+                            "onTrue": {
+                                "_id_": 509768,
+                                "_type": "Call",
+                                "name": {
+                                    "_id_": 509771,
+                                    "_type": "String",
+                                    "value_": "loadDrawerPage_"
+                                },
+                                "arguments": {
+                                    "_id_": 511377,
+                                    "_type": "List",
+                                    "list_": [
+                                        {
+                                            "_id_": 511379,
+                                            "_type": "LocalVariable.Get",
+                                            "name": {
+                                                "_id_": 511382,
+                                                "_type": "String",
+                                                "value_": "webViewId"
+                                            }
+                                        }
+                                    ],
+                                    "elementType_": "Action"
+                                }
+                            }
+                        }
+                    ]
+                }
+            },
+            {
+                "_id_": 8,
+                "_type": "Variable",
+                "init": {
+                    "_id_": 7,
+                    "_type": "InlineScript",
+                    "code": {
+                        "_id_": 6,
+                        "_type": "String",
+                        "value_": "\/\/context.getFilesDir();\ncontext.getExternalFilesDir(null)"
+                    }
+                },
+                "name": {
+                    "_id_": 4,
+                    "_type": "String",
+                    "value_": "importFolder"
+                }
+            },
+            {
+                "_id_": 14,
+                "_type": "Variable",
+                "init": {
+                    "_id_": 13,
+                    "_type": "InlineScript",
+                    "code": {
+                        "_id_": 12,
+                        "_type": "String",
+                        "value_": "0"
+                    }
+                },
+                "name": {
+                    "_id_": 10,
+                    "_type": "String",
+                    "value_": "decodedImage"
+                }
+            },
+            {
+                "_id_": 20,
+                "_type": "Variable",
+                "init": {
+                    "_id_": 19,
+                    "_type": "String.Text",
+                    "value": {
+                        "_id_": 18,
+                        "_type": "String",
+                        "value_": "jpeg"
+                    }
+                },
+                "name": {
+                    "_id_": 16,
+                    "_type": "String",
+                    "value_": "PHOTO_FORMAT"
+                }
+            },
+            {
+                "_id_": 474,
+                "_type": "Activity",
+                "features": {
+                    "_id_": 462,
+                    "_type": "Activity.Features",
+                    "list_": [
+                        {
+                            "_id_": 101,
+                            "_type": "Activity.SetContentView",
+                            "comment": {
+                                "_id_": 100,
+                                "_type": "Comment",
+                                "list_": [],
+                                "text_": "Added automatically for compatibility reasons.\nIn earlier versions of App Builder, the content view was set before the feature setup.\nNow the features are set up in the order listed, and this item marks the point when the content view is set."
+                            }
+                        },
+                        {
+                            "_id_": 442,
+                            "_type": "Function",
+                            "name": {
+                                "_id_": 427,
+                                "_type": "String",
+                                "value_": "share_fileExt"
+                            },
+                            "body": {
+                                "_id_": 441,
+                                "_type": "Sequence",
+                                "list_": [
+                                    {
+                                        "_id_": 431,
+                                        "_type": "Argument",
+                                        "name": {
+                                            "_id_": 430,
+                                            "_type": "String",
+                                            "value_": "file_"
+                                        }
+                                    },
+                                    {
+                                        "_id_": 434,
+                                        "_type": "InlineScript",
+                                        "code": {
+                                            "_id_": 433,
+                                            "_type": "String",
+                                            "value_": "var filex= new java.io.File(file_);\n  "
+                                        }
+                                    },
+                                    {
+                                        "_id_": 440,
+                                        "_type": "ShareFile",
+                                        "fileProvider": {
+                                            "_id_": 439,
+                                            "_type": "String",
+                                            "value_": "FileProviderAppExt"
+                                        },
+                                        "file": {
+                                            "_id_": 438,
+                                            "_type": "Expression",
+                                            "text": {
+                                                "_id_": 437,
+                                                "_type": "String",
+                                                "value_": "filex"
+                                            }
+                                        }
+                                    }
+                                ],
+                                "elementType_": "Action"
+                            }
+                        },
+                        {
+                            "_id_": 425,
+                            "_type": "Function",
+                            "name": {
+                                "_id_": 410,
+                                "_type": "String",
+                                "value_": "share_file"
+                            },
+                            "body": {
+                                "_id_": 424,
+                                "_type": "Sequence",
+                                "list_": [
+                                    {
+                                        "_id_": 414,
+                                        "_type": "Argument",
+                                        "name": {
+                                            "_id_": 413,
+                                            "_type": "String",
+                                            "value_": "file_"
+                                        }
+                                    },
+                                    {
+                                        "_id_": 417,
+                                        "_type": "InlineScript",
+                                        "code": {
+                                            "_id_": 416,
+                                            "_type": "String",
+                                            "value_": "var filex= new java.io.File(file_);\n  "
+                                        }
+                                    },
+                                    {
+                                        "_id_": 423,
+                                        "_type": "ShareFile",
+                                        "fileProvider": {
+                                            "_id_": 422,
+                                            "_type": "String",
+                                            "value_": "FileProvider1"
+                                        },
+                                        "file": {
+                                            "_id_": 421,
+                                            "_type": "Expression",
+                                            "text": {
+                                                "_id_": 420,
+                                                "_type": "String",
+                                                "value_": "filex"
+                                            }
+                                        }
+                                    }
+                                ],
+                                "elementType_": "Action"
+                            }
+                        },
+                        {
+                            "_id_": 445,
+                            "_type": "InlineScript",
+                            "code": {
+                                "_id_": 444,
+                                "_type": "String",
+                                "value_": " activity.getJSActivity().setDrawer(views.drawer_layout);\n views.drawer_layout.setDrawerLockMode(1);\n\n\/\/var oldRoot = activity.findViewById(android.R.id.content).getChildAt(0);\n\/*\nvar oldRoot = activity.findViewById(android.R.id.content).getChildAt(0);\nvar newRoot = easy.inflateView(\"root\",easy.getGlobalScope());\n  activity.setContentView(newRoot);\n  newRoot.addView(oldRoot);\n  *\/"
+                            }
+                        },
+                        {
+                            "_id_": 109,
+                            "_type": "Variable",
+                            "init": {
+                                "_id_": 108,
+                                "_type": "Files.File",
+                                "parent": {
+                                    "_id_": 106,
+                                    "_type": "Files.FilesDir"
+                                },
+                                "name": {
+                                    "_id_": 107,
+                                    "_type": "String",
+                                    "value_": "pic.jpg"
+                                }
+                            },
+                            "name": {
+                                "_id_": 103,
+                                "_type": "String",
+                                "value_": "picFile"
+                            }
+                        },
+                        {
+                            "_id_": 112,
+                            "_type": "InlineScript",
+                            "code": {
+                                "_id_": 111,
+                                "_type": "String",
+                                "value_": "\nfunction randomNumber(len,charSet) {\n    charSet = charSet || '023456789';\n    var randomString='';\n    for (var i=0; i<len;i++) {\n        var randomPoz=Math.floor(Math.random()*charSet.length);\n        randomString+=charSet.substring(randomPoz,randomPoz+1);\n    }\n    return randomString;\n}\n\n\n\n\/\/resizeImage(new java.io.FileInputStream(file));\n    \n"
+                            }
+                        },
+                        {
+                            "_id_": 158,
+                            "_type": "Function",
+                            "name": {
+                                "_id_": 114,
+                                "_type": "String",
+                                "value_": "takePhoto"
+                            },
+                            "comment": {
+                                "_id_": 157,
+                                "_type": "Comment",
+                                "list_": [],
+                                "text_": "take chat camera photo"
+                            },
+                            "body": {
+                                "_id_": 155,
+                                "_type": "Sequence",
+                                "list_": [
+                                    {
+                                        "_id_": 120,
+                                        "_type": "Files.DeleteFile",
+                                        "file": {
+                                            "_id_": 119,
+                                            "_type": "Variable.Get",
+                                            "name": {
+                                                "_id_": 118,
+                                                "_type": "String",
+                                                "value_": "picFile"
+                                            }
+                                        }
+                                    },
+                                    {
+                                        "_id_": 154,
+                                        "_type": "Activity.TakePhoto",
+                                        "fileProvider": {
+                                            "_id_": 125,
+                                            "_type": "String",
+                                            "value_": "FileProvider1"
+                                        },
+                                        "file": {
+                                            "_id_": 124,
+                                            "_type": "Variable.Get",
+                                            "name": {
+                                                "_id_": 123,
+                                                "_type": "String",
+                                                "value_": "picFile"
+                                            }
+                                        },
+                                        "showChooser": {
+                                            "_id_": 126,
+                                            "_type": "Boolean",
+                                            "value_": true
+                                        },
+                                        "onResult": {
+                                            "_id_": 153,
+                                            "_type": "Sequence",
+                                            "list_": [
+                                                {
+                                                    "_id_": 130,
+                                                    "_type": "InlineScript",
+                                                    "code": {
+                                                        "_id_": 129,
+                                                        "_type": "String",
+                                                        "value_": "var importedFiles=[];\n\nvar uri = picFile.toString()\n\nif(uri) camera__(uri,\"images\");\n\n\nfunction camera__(uri,type) {  \n try{\n   var name=\"0.jpg\";\n  var folder = new java.io.File(importFolder,'TEMP-DIR');\n  var file = new java.io.File(folder,name);\n  var thumb = new java.io.File(folder, \"thumb.png\");\n  \n   folder.mkdirs();\n   var is= new java.io.FileInputStream( uri);\n \n   decodedImage=resizeImage(is);\n   compressImage( decodedImage, file, PHOTO_FORMAT);\n   imageThumbnail( decodedImage, thumb);\n\n  importedFiles.push( file.toString() );        \n  importedFiles.push( thumb.toString() );\n   \n   \n }\n  catch(err) {\n    console.log(err);\n   if(file.isFile()) file.delete();\n  }  \n}\n"
+                                                    }
+                                                },
+                                                {
+                                                    "_id_": 152,
+                                                    "_type": "WebView.DispatchEvent",
+                                                    "data": {
+                                                        "_id_": 151,
+                                                        "_type": "AnObject",
+                                                        "fields": {
+                                                            "_id_": 150,
+                                                            "_type": "List",
+                                                            "list_": [
+                                                                {
+                                                                    "_id_": 143,
+                                                                    "_type": "KeyValue",
+                                                                    "value": {
+                                                                        "_id_": 142,
+                                                                        "_type": "Expression",
+                                                                        "text": {
+                                                                            "_id_": 141,
+                                                                            "_type": "String",
+                                                                            "value_": "importFolder.toString()"
+                                                                        }
+                                                                    },
+                                                                    "key": {
+                                                                        "_id_": 139,
+                                                                        "_type": "String",
+                                                                        "value_": "path"
+                                                                    }
+                                                                },
+                                                                {
+                                                                    "_id_": 149,
+                                                                    "_type": "KeyValue",
+                                                                    "value": {
+                                                                        "_id_": 148,
+                                                                        "_type": "Expression",
+                                                                        "text": {
+                                                                            "_id_": 147,
+                                                                            "_type": "String",
+                                                                            "value_": "importedFiles"
+                                                                        }
+                                                                    },
+                                                                    "key": {
+                                                                        "_id_": 145,
+                                                                        "_type": "String",
+                                                                        "value_": "file_paths"
+                                                                    }
+                                                                }
+                                                            ],
+                                                            "elementType_": "KeyValue"
+                                                        }
+                                                    },
+                                                    "webView": {
+                                                        "_id_": 135,
+                                                        "_type": "IdReference",
+                                                        "ref": {
+                                                            "_id_": 134,
+                                                            "_type": "String",
+                                                            "value_": "@id\/main"
+                                                        }
+                                                    },
+                                                    "name": {
+                                                        "_id_": 132,
+                                                        "_type": "String",
+                                                        "value_": "importPhotoCompleted"
+                                                    }
+                                                }
+                                            ],
+                                            "elementType_": "Action"
+                                        }
+                                    }
+                                ],
+                                "elementType_": "Action"
+                            }
+                        },
+                        {
+                            "_id_": 206,
+                            "_type": "Function",
+                            "name": {
+                                "_id_": 160,
+                                "_type": "String",
+                                "value_": "importPhoto"
+                            },
+                            "body": {
+                                "_id_": 205,
+                                "_type": "Sequence",
+                                "list_": [
+                                    {
+                                        "_id_": 164,
+                                        "_type": "Argument",
+                                        "name": {
+                                            "_id_": 163,
+                                            "_type": "String",
+                                            "value_": "pformat"
+                                        }
+                                    },
+                                    {
+                                        "_id_": 170,
+                                        "_type": "Variable.Set",
+                                        "name": {
+                                            "_id_": 166,
+                                            "_type": "String",
+                                            "value_": "PHOTO_FORMAT"
+                                        },
+                                        "value": {
+                                            "_id_": 169,
+                                            "_type": "LocalVariable.Get",
+                                            "name": {
+                                                "_id_": 168,
+                                                "_type": "String",
+                                                "value_": "pformat"
+                                            }
+                                        }
+                                    },
+                                    {
+                                        "_id_": 204,
+                                        "_type": "Activity.Start",
+                                        "showChooser": {
+                                            "_id_": 176,
+                                            "_type": "Boolean",
+                                            "value_": true
+                                        },
+                                        "intent": {
+                                            "_id_": 175,
+                                            "_type": "Intent",
+                                            "action": {
+                                                "_id_": 173,
+                                                "_type": "String",
+                                                "value_": "ACTION_GET_CONTENT"
+                                            },
+                                            "type": {
+                                                "_id_": 174,
+                                                "_type": "String",
+                                                "value_": "image\/*"
+                                            }
+                                        },
+                                        "onResult": {
+                                            "_id_": 203,
+                                            "_type": "Sequence",
+                                            "list_": [
+                                                {
+                                                    "_id_": 180,
+                                                    "_type": "InlineScript",
+                                                    "code": {
+                                                        "_id_": 179,
+                                                        "_type": "String",
+                                                        "value_": " var importedFiles=[];\n\nvar uri = intent.getData();\n\n if(uri) goImportPostFiles_(uri,0);\n\nvar clip = intent.getClipData();\n   if(clip) {\n  var n = clip.getItemCount();\n  if(n>6) n=6;\n  \n  for(var i=0; i<n; ++i) {\n    uri = clip.getItemAt(i).getUri();\n    if(uri) {\n     goImportPostFiles_(uri,i);\n    }\n  }  \n}  \n\nfunction file_ext(file) {\n    var extension = file.substr( (file.lastIndexOf('.') +1) );\n    switch(extension) {\n        case 'jpg':\n        case 'png':\n        case 'gif':\n        case 'jpeg':\n            return 'jpg';\n        break;\n        default:\n        return extension;\n    }\n}\n\n\nfunction goImportPostFiles_( uri,pos) {  \n  try{\n var name = com.extra.Extra.getNameForUri(context,uri);\n var type=  file_ext( name);\n    if(!type ) return;\n    type=type.toLowerCase();\n    \n    \/\/name=randomNumber( 15) + '.' + type;\n    \n   name= pos + '.' + type;\n         \n  var folder = new java.io.File( importFolder,'TEMP-DIR');\n  var file  =  new java.io.File(folder, name);\n  var thumb  =  new java.io.File(folder, \"thumb.png\");\n\n   folder.mkdirs();\n\n   var is = context.getContentResolver().openInputStream(uri);\n  \n     \/*\n     var size=is.available();    \n   if(!size ||size>16777216) return;\n   *\/\n   \n  if(type!='jpg' ){\n    var os = new java.io.FileOutputStream(file);\n   com.serakont.ab.IOUtils.copyStream(is, os, true, true);\n  } else{\n   decodedImage=resizeImage(is);\n   compressImage( decodedImage, file, PHOTO_FORMAT);\n   imageThumbnail( decodedImage, thumb);\n }\n  importedFiles.push( file.toString() );        \n  importedFiles.push( thumb.toString() );        \n \n  }\n  catch(err) {\n    console.log(err);\n    if(file && file.isFile()){\n      file.delete();\n    }\n  }\n}\n"
+                                                    }
+                                                },
+                                                {
+                                                    "_id_": 202,
+                                                    "_type": "WebView.DispatchEvent",
+                                                    "data": {
+                                                        "_id_": 201,
+                                                        "_type": "AnObject",
+                                                        "fields": {
+                                                            "_id_": 200,
+                                                            "_type": "List",
+                                                            "list_": [
+                                                                {
+                                                                    "_id_": 193,
+                                                                    "_type": "KeyValue",
+                                                                    "value": {
+                                                                        "_id_": 192,
+                                                                        "_type": "Expression",
+                                                                        "text": {
+                                                                            "_id_": 191,
+                                                                            "_type": "String",
+                                                                            "value_": "importFolder.toString()"
+                                                                        }
+                                                                    },
+                                                                    "key": {
+                                                                        "_id_": 189,
+                                                                        "_type": "String",
+                                                                        "value_": "path"
+                                                                    }
+                                                                },
+                                                                {
+                                                                    "_id_": 199,
+                                                                    "_type": "KeyValue",
+                                                                    "value": {
+                                                                        "_id_": 198,
+                                                                        "_type": "Expression",
+                                                                        "text": {
+                                                                            "_id_": 197,
+                                                                            "_type": "String",
+                                                                            "value_": "importedFiles"
+                                                                        }
+                                                                    },
+                                                                    "key": {
+                                                                        "_id_": 195,
+                                                                        "_type": "String",
+                                                                        "value_": "file_paths"
+                                                                    }
+                                                                }
+                                                            ],
+                                                            "elementType_": "KeyValue"
+                                                        }
+                                                    },
+                                                    "webView": {
+                                                        "_id_": 185,
+                                                        "_type": "IdReference",
+                                                        "ref": {
+                                                            "_id_": 184,
+                                                            "_type": "String",
+                                                            "value_": "@id\/main"
+                                                        }
+                                                    },
+                                                    "name": {
+                                                        "_id_": 182,
+                                                        "_type": "String",
+                                                        "value_": "importPhotoCompleted"
+                                                    }
+                                                }
+                                            ],
+                                            "elementType_": "Action"
+                                        }
+                                    }
+                                ],
+                                "elementType_": "Action"
+                            }
+                        },
+                        {
+                            "_id_": 247,
+                            "_type": "Function",
+                            "name": {
+                                "_id_": 208,
+                                "_type": "String",
+                                "value_": "uploadPhoto"
+                            },
+                            "comment": {
+                                "_id_": 246,
+                                "_type": "Comment",
+                                "list_": [],
+                                "text_": "Upload logo,Teacher photo\n"
+                            },
+                            "body": {
+                                "_id_": 244,
+                                "_type": "Sequence",
+                                "list_": [
+                                    {
+                                        "_id_": 243,
+                                        "_type": "Activity.Start",
+                                        "showChooser": {
+                                            "_id_": 215,
+                                            "_type": "Boolean",
+                                            "value_": true
+                                        },
+                                        "intent": {
+                                            "_id_": 214,
+                                            "_type": "Intent",
+                                            "action": {
+                                                "_id_": 212,
+                                                "_type": "String",
+                                                "value_": "ACTION_GET_CONTENT"
+                                            },
+                                            "type": {
+                                                "_id_": 213,
+                                                "_type": "String",
+                                                "value_": "image\/*"
+                                            }
+                                        },
+                                        "onResult": {
+                                            "_id_": 242,
+                                            "_type": "Sequence",
+                                            "list_": [
+                                                {
+                                                    "_id_": 219,
+                                                    "_type": "InlineScript",
+                                                    "code": {
+                                                        "_id_": 218,
+                                                        "_type": "String",
+                                                        "value_": "var importedFiles=[];\n\nvar uri = intent.getData();\n\n if(uri) goImportPostFiles_(uri,0);\n\nvar clip = intent.getClipData();\n   if(clip) {\n  var n = clip.getItemCount();\n  if(n>6) n=6;\n  \n  for(var i=0; i<n; ++i) {\n    uri = clip.getItemAt(i).getUri();\n    if(uri) {\n     goImportPostFiles_(uri,i);\n    }\n  }  \n}  \n\nfunction file_ext(file) {\n    var extension = file.substr( (file.lastIndexOf('.') +1) );\n    switch(extension) {\n        case 'jpg':\n        case 'png':\n        case 'gif':\n        case 'jpeg':\n            return 'jpg';\n        break;\n        default:\n        return extension;\n    }\n}\n\n\nfunction goImportPostFiles_( uri,pos) {  \n  try{\n var name = com.extra.Extra.getNameForUri(context,uri);\n var type=  file_ext( name);\n    if(!type ) return;\n    type=type.toLowerCase();\n    \n    \/\/name=randomNumber( 15) + '.' + type;\n    \n   name= pos + '.' + type;\n         \n  var folder = new java.io.File( importFolder,'TEMP-DIR');\n  var file  =  new java.io.File(folder, name);\n  var thumb  =  new java.io.File(folder, \"thumb.png\");\n\n   folder.mkdirs();\n\n   var is = context.getContentResolver().openInputStream(uri);\n   \n  if(type!='jpg' ){\n    var os = new java.io.FileOutputStream(file);\n   com.serakont.ab.IOUtils.copyStream(is, os, true, true);\n  } else{\n   decodedImage=resizeImage(is);\n   compressImage( decodedImage, file, PHOTO_FORMAT);\n   imageThumbnail( decodedImage, thumb);\n }\n  importedFiles.push( file.toString() );        \n  importedFiles.push( thumb.toString() );        \n \n  }\n  catch(err) {\n    console.log(err);\n    if(file && file.isFile()){\n      file.delete();\n    }\n  }\n}\n"
+                                                    }
+                                                },
+                                                {
+                                                    "_id_": 241,
+                                                    "_type": "WebView.DispatchEvent",
+                                                    "data": {
+                                                        "_id_": 240,
+                                                        "_type": "AnObject",
+                                                        "fields": {
+                                                            "_id_": 239,
+                                                            "_type": "List",
+                                                            "list_": [
+                                                                {
+                                                                    "_id_": 232,
+                                                                    "_type": "KeyValue",
+                                                                    "value": {
+                                                                        "_id_": 231,
+                                                                        "_type": "Expression",
+                                                                        "text": {
+                                                                            "_id_": 230,
+                                                                            "_type": "String",
+                                                                            "value_": "importFolder.toString()"
+                                                                        }
+                                                                    },
+                                                                    "key": {
+                                                                        "_id_": 228,
+                                                                        "_type": "String",
+                                                                        "value_": "path"
+                                                                    }
+                                                                },
+                                                                {
+                                                                    "_id_": 238,
+                                                                    "_type": "KeyValue",
+                                                                    "value": {
+                                                                        "_id_": 237,
+                                                                        "_type": "Expression",
+                                                                        "text": {
+                                                                            "_id_": 236,
+                                                                            "_type": "String",
+                                                                            "value_": "importedFiles"
+                                                                        }
+                                                                    },
+                                                                    "key": {
+                                                                        "_id_": 234,
+                                                                        "_type": "String",
+                                                                        "value_": "file_paths"
+                                                                    }
+                                                                }
+                                                            ],
+                                                            "elementType_": "KeyValue"
+                                                        }
+                                                    },
+                                                    "webView": {
+                                                        "_id_": 224,
+                                                        "_type": "IdReference",
+                                                        "ref": {
+                                                            "_id_": 223,
+                                                            "_type": "String",
+                                                            "value_": "@id\/main"
+                                                        }
+                                                    },
+                                                    "name": {
+                                                        "_id_": 221,
+                                                        "_type": "String",
+                                                        "value_": "uploadPhotoCompleted"
+                                                    }
+                                                }
+                                            ],
+                                            "elementType_": "Action"
+                                        }
+                                    }
+                                ],
+                                "elementType_": "Action"
+                            }
+                        },
+                        {
+                            "_id_": 286,
+                            "_type": "Function",
+                            "name": {
+                                "_id_": 249,
+                                "_type": "String",
+                                "value_": "importTheme"
+                            },
+                            "body": {
+                                "_id_": 285,
+                                "_type": "Sequence",
+                                "list_": [
+                                    {
+                                        "_id_": 284,
+                                        "_type": "Activity.Start",
+                                        "showChooser": {
+                                            "_id_": 256,
+                                            "_type": "Boolean",
+                                            "value_": true
+                                        },
+                                        "intent": {
+                                            "_id_": 255,
+                                            "_type": "Intent",
+                                            "action": {
+                                                "_id_": 253,
+                                                "_type": "String",
+                                                "value_": "ACTION_GET_CONTENT"
+                                            },
+                                            "type": {
+                                                "_id_": 254,
+                                                "_type": "String",
+                                                "value_": "application\/zip"
+                                            }
+                                        },
+                                        "onResult": {
+                                            "_id_": 283,
+                                            "_type": "Sequence",
+                                            "list_": [
+                                                {
+                                                    "_id_": 260,
+                                                    "_type": "InlineScript",
+                                                    "code": {
+                                                        "_id_": 259,
+                                                        "_type": "String",
+                                                        "value_": " var importedTheme=[];\n\nvar uri = intent.getData();\n\n if(uri) importTheme_(uri,0);\n\n\nfunction file_ext(file) {\n    var extension = file.substr( (file.lastIndexOf('.') +1) );\n    switch(extension) {\n      case 'zip':\n            return 'zip';\n        break;\n        default:\n        return false;\n    }\n}\n\n\nfunction importTheme_( uri,pos) {  \n  try{\n var name = com.extra.Extra.getNameForUri(context, uri);\n var type=  file_ext( name);\n \n    if(!type ) return;\n    type=type.toLowerCase();\n\n  var folder = new java.io.File( importFolder,'TEMP-DIR');\n  var file  =  new java.io.File(folder, name);\n  \n   folder.mkdirs();\n\n   var is = context.getContentResolver().openInputStream(uri);\n  \n    var os = new java.io.FileOutputStream(file);\n   com.serakont.ab.IOUtils.copyStream(is, os, true, true); \n  importedTheme.push( file.toString() );        \n  }\n  catch(err) {\n    console.log(err);\n    if(file && file.isFile()){\n      file.delete();\n    }\n  }\n}\n"
+                                                    }
+                                                },
+                                                {
+                                                    "_id_": 282,
+                                                    "_type": "WebView.DispatchEvent",
+                                                    "data": {
+                                                        "_id_": 281,
+                                                        "_type": "AnObject",
+                                                        "fields": {
+                                                            "_id_": 280,
+                                                            "_type": "List",
+                                                            "list_": [
+                                                                {
+                                                                    "_id_": 273,
+                                                                    "_type": "KeyValue",
+                                                                    "value": {
+                                                                        "_id_": 272,
+                                                                        "_type": "Expression",
+                                                                        "text": {
+                                                                            "_id_": 271,
+                                                                            "_type": "String",
+                                                                            "value_": "importFolder.toString()"
+                                                                        }
+                                                                    },
+                                                                    "key": {
+                                                                        "_id_": 269,
+                                                                        "_type": "String",
+                                                                        "value_": "path"
+                                                                    }
+                                                                },
+                                                                {
+                                                                    "_id_": 279,
+                                                                    "_type": "KeyValue",
+                                                                    "value": {
+                                                                        "_id_": 278,
+                                                                        "_type": "Expression",
+                                                                        "text": {
+                                                                            "_id_": 277,
+                                                                            "_type": "String",
+                                                                            "value_": "importedTheme"
+                                                                        }
+                                                                    },
+                                                                    "key": {
+                                                                        "_id_": 275,
+                                                                        "_type": "String",
+                                                                        "value_": "file_paths"
+                                                                    }
+                                                                }
+                                                            ],
+                                                            "elementType_": "KeyValue"
+                                                        }
+                                                    },
+                                                    "webView": {
+                                                        "_id_": 265,
+                                                        "_type": "IdReference",
+                                                        "ref": {
+                                                            "_id_": 264,
+                                                            "_type": "String",
+                                                            "value_": "@id\/main"
+                                                        }
+                                                    },
+                                                    "name": {
+                                                        "_id_": 262,
+                                                        "_type": "String",
+                                                        "value_": "importThemeCompleted"
+                                                    }
+                                                }
+                                            ],
+                                            "elementType_": "Action"
+                                        }
+                                    }
+                                ],
+                                "elementType_": "Action"
+                            }
+                        },
+                        {
+                            "_id_": 325,
+                            "_type": "Function",
+                            "name": {
+                                "_id_": 288,
+                                "_type": "String",
+                                "value_": "importBackup"
+                            },
+                            "body": {
+                                "_id_": 324,
+                                "_type": "Sequence",
+                                "list_": [
+                                    {
+                                        "_id_": 323,
+                                        "_type": "Activity.Start",
+                                        "showChooser": {
+                                            "_id_": 295,
+                                            "_type": "Boolean",
+                                            "value_": true
+                                        },
+                                        "intent": {
+                                            "_id_": 294,
+                                            "_type": "Intent",
+                                            "action": {
+                                                "_id_": 292,
+                                                "_type": "String",
+                                                "value_": "ACTION_GET_CONTENT"
+                                            },
+                                            "type": {
+                                                "_id_": 293,
+                                                "_type": "String",
+                                                "value_": "application\/zip"
+                                            }
+                                        },
+                                        "onResult": {
+                                            "_id_": 322,
+                                            "_type": "Sequence",
+                                            "list_": [
+                                                {
+                                                    "_id_": 299,
+                                                    "_type": "InlineScript",
+                                                    "code": {
+                                                        "_id_": 298,
+                                                        "_type": "String",
+                                                        "value_": " var importedBackup=[];\n\nvar uri = intent.getData();\n\n if(uri) importBackup_(uri,0);\n\n\nfunction file_ext(file) {\n    var extension = file.substr( (file.lastIndexOf('.') +1) );\n    switch(extension) {\n      case 'zip':\n            return 'zip';\n        break;\n        default:\n        return false;\n    }\n}\n\n\nfunction importBackup_( uri,pos) {  \n  try{\n var name = com.extra.Extra.getNameForUri(context, uri);\n var type=  file_ext( name);\n \n    if(!type ) return;\n    type=type.toLowerCase();\n\n  var folder = new java.io.File( importFolder,'TEMP-DIR');\n  var file  =  new java.io.File(folder, name);\n  \n   folder.mkdirs();\n\n   var is = context.getContentResolver().openInputStream(uri);\n  \n    var os = new java.io.FileOutputStream(file);\n   com.serakont.ab.IOUtils.copyStream(is, os, true, true); \n  importedBackup.push( file.toString() );        \n  }\n  catch(err) {\n    console.log(err);\n    if(file && file.isFile()){\n      file.delete();\n    }\n  }\n}\n"
+                                                    }
+                                                },
+                                                {
+                                                    "_id_": 321,
+                                                    "_type": "WebView.DispatchEvent",
+                                                    "data": {
+                                                        "_id_": 320,
+                                                        "_type": "AnObject",
+                                                        "fields": {
+                                                            "_id_": 319,
+                                                            "_type": "List",
+                                                            "list_": [
+                                                                {
+                                                                    "_id_": 312,
+                                                                    "_type": "KeyValue",
+                                                                    "value": {
+                                                                        "_id_": 311,
+                                                                        "_type": "Expression",
+                                                                        "text": {
+                                                                            "_id_": 310,
+                                                                            "_type": "String",
+                                                                            "value_": "importFolder.toString()"
+                                                                        }
+                                                                    },
+                                                                    "key": {
+                                                                        "_id_": 308,
+                                                                        "_type": "String",
+                                                                        "value_": "path"
+                                                                    }
+                                                                },
+                                                                {
+                                                                    "_id_": 318,
+                                                                    "_type": "KeyValue",
+                                                                    "value": {
+                                                                        "_id_": 317,
+                                                                        "_type": "Expression",
+                                                                        "text": {
+                                                                            "_id_": 316,
+                                                                            "_type": "String",
+                                                                            "value_": "importedBackup"
+                                                                        }
+                                                                    },
+                                                                    "key": {
+                                                                        "_id_": 314,
+                                                                        "_type": "String",
+                                                                        "value_": "file_paths"
+                                                                    }
+                                                                }
+                                                            ],
+                                                            "elementType_": "KeyValue"
+                                                        }
+                                                    },
+                                                    "webView": {
+                                                        "_id_": 304,
+                                                        "_type": "IdReference",
+                                                        "ref": {
+                                                            "_id_": 303,
+                                                            "_type": "String",
+                                                            "value_": "@id\/main"
+                                                        }
+                                                    },
+                                                    "name": {
+                                                        "_id_": 301,
+                                                        "_type": "String",
+                                                        "value_": "importBackupCompleted"
+                                                    }
+                                                }
+                                            ],
+                                            "elementType_": "Action"
+                                        }
+                                    }
+                                ],
+                                "elementType_": "Action"
+                            }
+                        },
+                        {
+                            "_id_": 351,
+                            "_type": "Function",
+                            "name": {
+                                "_id_": 327,
+                                "_type": "String",
+                                "value_": "toggleView"
+                            },
+                            "body": {
+                                "_id_": 350,
+                                "_type": "Sequence",
+                                "list_": [
+                                    {
+                                        "_id_": 331,
+                                        "_type": "Argument",
+                                        "name": {
+                                            "_id_": 330,
+                                            "_type": "String",
+                                            "value_": "viewName"
+                                        }
+                                    },
+                                    {
+                                        "_id_": 334,
+                                        "_type": "Argument",
+                                        "name": {
+                                            "_id_": 333,
+                                            "_type": "String",
+                                            "value_": "action"
+                                        }
+                                    },
+                                    {
+                                        "_id_": 349,
+                                        "_type": "Conditional",
+                                        "condition": {
+                                            "_id_": 338,
+                                            "_type": "Expression",
+                                            "text": {
+                                                "_id_": 337,
+                                                "_type": "String",
+                                                "value_": "action?true:false"
+                                            }
+                                        },
+                                        "onTrue": {
+                                            "_id_": 343,
+                                            "_type": "View.Hide",
+                                            "view": {
+                                                "_id_": 342,
+                                                "_type": "Expression",
+                                                "text": {
+                                                    "_id_": 341,
+                                                    "_type": "String",
+                                                    "value_": "viewName"
+                                                }
+                                            }
+                                        },
+                                        "onFalse": {
+                                            "_id_": 348,
+                                            "_type": "View.Show",
+                                            "view": {
+                                                "_id_": 347,
+                                                "_type": "Expression",
+                                                "text": {
+                                                    "_id_": 346,
+                                                    "_type": "String",
+                                                    "value_": "viewName"
+                                                }
+                                            }
+                                        }
+                                    }
+                                ],
+                                "elementType_": "Action"
+                            }
+                        },
+                        {
+                            "_id_": 368,
+                            "_type": "Function",
+                            "name": {
+                                "_id_": 353,
+                                "_type": "String",
+                                "value_": "resizeImage"
+                            },
+                            "body": {
+                                "_id_": 367,
+                                "_type": "Sequence",
+                                "list_": [
+                                    {
+                                        "_id_": 357,
+                                        "_type": "Argument",
+                                        "name": {
+                                            "_id_": 356,
+                                            "_type": "String",
+                                            "value_": "imagefile"
+                                        }
+                                    },
+                                    {
+                                        "_id_": 366,
+                                        "_type": "Return",
+                                        "value": {
+                                            "_id_": 365,
+                                            "_type": "Bitmap.Decode",
+                                            "maxHeight": {
+                                                "_id_": 364,
+                                                "_type": "Integer",
+                                                "value_": 500
+                                            },
+                                            "source": {
+                                                "_id_": 362,
+                                                "_type": "Expression",
+                                                "text": {
+                                                    "_id_": 361,
+                                                    "_type": "String",
+                                                    "value_": "imagefile"
+                                                }
+                                            },
+                                            "maxWidth": {
+                                                "_id_": 363,
+                                                "_type": "Integer",
+                                                "value_": 500
+                                            }
+                                        }
+                                    }
+                                ],
+                                "elementType_": "Action"
+                            }
+                        },
+                        {
+                            "_id_": 394,
+                            "_type": "Function",
+                            "name": {
+                                "_id_": 370,
+                                "_type": "String",
+                                "value_": "compressImage"
+                            },
+                            "body": {
+                                "_id_": 393,
+                                "_type": "Sequence",
+                                "list_": [
+                                    {
+                                        "_id_": 374,
+                                        "_type": "Argument",
+                                        "name": {
+                                            "_id_": 373,
+                                            "_type": "String",
+                                            "value_": "decodedImage"
+                                        }
+                                    },
+                                    {
+                                        "_id_": 377,
+                                        "_type": "Argument",
+                                        "name": {
+                                            "_id_": 376,
+                                            "_type": "String",
+                                            "value_": "saveTo"
+                                        }
+                                    },
+                                    {
+                                        "_id_": 380,
+                                        "_type": "Argument",
+                                        "name": {
+                                            "_id_": 379,
+                                            "_type": "String",
+                                            "value_": "format"
+                                        }
+                                    },
+                                    {
+                                        "_id_": 392,
+                                        "_type": "Bitmap.Compress",
+                                        "output": {
+                                            "_id_": 391,
+                                            "_type": "LocalVariable.Get",
+                                            "name": {
+                                                "_id_": 390,
+                                                "_type": "String",
+                                                "value_": "saveTo"
+                                            }
+                                        },
+                                        "image": {
+                                            "_id_": 384,
+                                            "_type": "Expression",
+                                            "text": {
+                                                "_id_": 383,
+                                                "_type": "String",
+                                                "value_": "decodedImage"
+                                            }
+                                        },
+                                        "format": {
+                                            "_id_": 387,
+                                            "_type": "LocalVariable.Get",
+                                            "name": {
+                                                "_id_": 386,
+                                                "_type": "String",
+                                                "value_": "imagefile"
+                                            }
+                                        },
+                                        "quality": {
+                                            "_id_": 388,
+                                            "_type": "Integer",
+                                            "value_": 80
+                                        }
+                                    }
+                                ],
+                                "elementType_": "Action"
+                            }
+                        },
+                        {
+                            "_id_": 408,
+                            "_type": "Function",
+                            "name": {
+                                "_id_": 396,
+                                "_type": "String",
+                                "value_": "imageThumbnail"
+                            },
+                            "body": {
+                                "_id_": 407,
+                                "_type": "Sequence",
+                                "list_": [
+                                    {
+                                        "_id_": 400,
+                                        "_type": "Argument",
+                                        "name": {
+                                            "_id_": 399,
+                                            "_type": "String",
+                                            "value_": "decodedImage"
+                                        }
+                                    },
+                                    {
+                                        "_id_": 403,
+                                        "_type": "Argument",
+                                        "name": {
+                                            "_id_": 402,
+                                            "_type": "String",
+                                            "value_": "saveTo"
+                                        }
+                                    },
+                                    {
+                                        "_id_": 406,
+                                        "_type": "InlineScript",
+                                        "code": {
+                                            "_id_": 405,
+                                            "_type": "String",
+                                            "value_": "var decodedThumb=android.media.ThumbnailUtils.extractThumbnail(decodedImage,100, 100)\n\nconsole.log(decodedThumb)\n\ncompressImage( decodedThumb, saveTo, \"jpeg\");\n\n\n"
+                                        }
+                                    }
+                                ],
+                                "elementType_": "Action"
+                            }
+                        },
+                        {
+                            "_id_": 453,
+                            "_type": "Function",
+                            "name": {
+                                "_id_": 447,
+                                "_type": "String",
+                                "value_": "lockDrawer"
+                            },
+                            "body": {
+                                "_id_": 452,
+                                "_type": "Sequence",
+                                "list_": [
+                                    {
+                                        "_id_": 451,
+                                        "_type": "InlineScript",
+                                        "code": {
+                                            "_id_": 450,
+                                            "_type": "String",
+                                            "value_": "views.drawer_layout.setDrawerLockMode(1);\n"
+                                        }
+                                    }
+                                ],
+                                "elementType_": "Action"
+                            }
+                        },
+                        {
+                            "_id_": 461,
+                            "_type": "Function",
+                            "name": {
+                                "_id_": 455,
+                                "_type": "String",
+                                "value_": "unlockDrawer"
+                            },
+                            "body": {
+                                "_id_": 460,
+                                "_type": "Sequence",
+                                "list_": [
+                                    {
+                                        "_id_": 459,
+                                        "_type": "InlineScript",
+                                        "code": {
+                                            "_id_": 458,
+                                            "_type": "String",
+                                            "value_": "views.drawer_layout.setDrawerLockMode(0);"
+                                        }
+                                    }
+                                ],
+                                "elementType_": "Action"
+                            }
+                        },
+                        {
+                            "_id_": 406958,
+                            "_type": "OnEvent",
+                            "eventName": {
+                                "_id_": 406960,
+                                "_type": "String",
+                                "value_": "load_note"
+                            },
+                            "action": {
+                                "_id_": 406962,
+                                "_type": "Sequence",
+                                "list_": [
+                                    {
+                                        "_id_": 406963,
+                                        "_type": "ScopeVariable",
+                                        "name": {
+                                            "_id_": 406964,
+                                            "_type": "String",
+                                            "value_": "data"
+                                        }
+                                    },
+                                    {
+                                        "_id_": 406965,
+                                        "_type": "ScopeVariable",
+                                        "name": {
+                                            "_id_": 406966,
+                                            "_type": "String",
+                                            "value_": "name"
+                                        }
+                                    },
+                                    {
+                                        "_id_": 407345,
+                                        "_type": "WebView.Execute",
+                                        "code": {
+                                            "_id_": 407347,
+                                            "_type": "InlineScript",
+                                            "code": {
+                                                "_id_": 407349,
+                                                "_type": "String",
+                                                "value_": "var NOTEAJAX__;\nvar TOPICS={}\nvar TOTAL_TOPICS=0;\nvar HISTORY__=[];\n\nfunction upgraded(pid){\n  return localStorage.getItem(\"pro_activated\");\n\/\/  return localStorage.getItem( pid + \"_pro_activated\");\n}\n\nfunction reload(){   \n  location.reload()\n}\n\nfunction paymentInfo(){\n  var price=+localStorage.getItem( PAGE_ID__ + \"_payment_amount\");\n  var dollar_rate=+(localStorage.getItem(\"dollar-rate\")||0);\n  \n  var data='<div class=\"text-center\">Unlock\/Upgrade for just &#8358;' + price;\n  if( dollar_rate ){\n    var dol=(price\/dollar_rate).toFixed(1);\n    data+=' ($' + dol + ')';\n  }\n   data+='<br><br>';\n\nif( PAYM_PublicKey ){\n  data+='<button class=\"btn btn-sm btn-info\" onclick=\"paymentPage();\">Pay with card<\/button>';\n}\n data+='<div><button class=\"mt-2 btn btn-sm btn-info\" onclick=\"otherPaymentOptions();\">Other payment options<\/button><\/div>';\n data+='<br><\/div>';\n showInfo(\"\",data);\n}\n\nfunction paymentPage(){\n localStorage.setItem(\"payment_page_opened\", \"true\" );\n localStorage.setItem(\"payment_amount\", localStorage.getItem( PAGE_ID__ + \"_payment_amount\") );\n localStorage.setItem(\"selected_book_id\", PAGE_ID__);\n localStorage.setItem(\"reload_payment\", randomString(10) );\n}\n\nfunction otherPaymentOptions(retry){\n \n  if(!retry){\n \n  var data='<div class=\"center-div bg-white\">';\n      data+='<div class=\"center-text-div\" style=\"padding: 30px 16px 0 16px;\">';\n      data+='<div id=\"other-payment-o\" style=\"min-height: 150px;\"><div class=\"text-center\"><img class=\"w-100\" src=\"file:\/\/\/assets\/loading-indicator\/loading4.png\"><\/div><\/div>';\n      data+='<\/div><\/div>';\n   displayData( data, { oszindex: 600, osclose: true, data_id:\"other-payment-potions\"});\n  }\n var elem=$(\"#other-payment-o\");\n \n  $.ajax({\n     url: other_payment_options_url,\n    dataType:\"html\",\n}).done(function(result){\n     var data= __format( result  );   \n elem.html( data.replace(\/\\n\/g,\"<br>\") );\n     \n }).fail(function(e) {\n    \n if(elem.length){\n   setTimeout(function(){\n      otherPaymentOptions(1)\n    }, 5000);\n  }\n });\n \n}\n\n\nfunction loader(){\n  var temp_=localStorage.getItem(\"appTemplateSelected\")||DEFAULT_TEMPLATE;\n  var dir=new android.File( TEMPLATES_DIR, temp_);\n  \nvar data='<div id=\"loading-image-container\" class=\"loading-image-container\">';\n    data+='<img src=\"file:\/\/\/assets\/drawer-pages\/loader.png\">';\n    data+='<\/div>';\n  return data;\n}\n\nfunction openTopicsList(){\n $(\"#TOPICS--LIST--CONTAINER\").removeClass(\"HIDE--TOPICS--LIST\");\n  displayData(\"\", { on_close:\"closeTopicsList\", osclose: true, oszindex: 100, dummy: true, data_id: \"dummy-topics-list\" });\n}\n\n\nfunction closeTopicsList(){\n  closeDisplayData(\"dummy-topics-list\");\n $(\"#TOPICS--LIST--CONTAINER\").addClass(\"HIDE--TOPICS--LIST\");\n \/\/$(\".SUB--TOPICS--CONTAINER\").css(\"display\",\"none\");\n $(\".SUB--TOPICS--BTN\").css(\"display\",\"block\");\n}\n\n\nfunction __t(){ \n try{\n var file=new android.File( EXTERNAL_DIR, \"contents\/\" +  PAGE_ID__ + \"\/\" + PAGE_ID__ + \".json\");\n  if( file.isFile() ){ \n    return JSON.parse(file.read());\n  }\n}catch(e){}\n  \n  file=new android.AssetFile(\"notes\/\" + PAGE_ID__ + \".json\"); \n  return JSON.parse(file.read() );\n}\n\n\n\nfunction listTopics(){\n  alert(988)\n  TOPICS=__t();\nif(TOPICS.length>200 ){\n  TOPICS.length=200; \n}\n TOTAL_TOPICS= TOPICS.length;\n  \n  if(TOTAL_TOPICS.length<2) {\n   $(\"#TOGGLE--TOPICS--LIST\").remove();\n    return;\n  }\n var list_='';\n var pro_=upgraded( PAGE_ID__);\n var firstItem=TOPICS[0];\n var pro_range= firstItem.pro_items_range;\n var pro_price= firstItem.pro_price||1;\n var dollar_rate=firstItem.dollar_rate;\n     \n  localStorage.setItem( PAGE_ID__ + \"_payment_amount\", pro_price);\n  localStorage.removeItem(\"dollar-rate\");\n  \n if( dollar_rate ){\n  localStorage.setItem(\"dollar-rate\", dollar_rate);\n }\n   \n   var min=9999;\n   var max=99999;\n  \n  if( pro_range){\n    min=+pro_range[0];\n    max=+pro_range[1];\n  }\n    var odd=0;\n  $.each( TOPICS, function(i,v){\n     if( i==0 ) return true;\n      var title=    v.title;\n      var kwords=   v.keywords;\n      var sub_topics= v.sub_topics;\n      var icon= v.icon;\n      var pro=\"\";\n      var free=v.free; \n    \/\/Use v.free to negate an item between pro_range\n    \/\/so if (free), an item within pro_range will not require upgrade\n      var page=i+1;\n     odd++\n if( odd==2 ) odd=0;\n    \n if(!pro_ && !free && ( page>=min && page<=max) ){\n     pro=1;\n   }\n        \n  var curr=+localStorage.getItem( PAGE_ID__ + \"_current_page\")||2;\n      list_+='<div class=\"t\">';\n    \n      list_+='<div class=\"container-fluid hover-me TOPIC--LIST--BTN' + ( curr==page?\" TOPIC--SELECTED\":\"\") + ' ALTERNATE-' + odd + '\" id=\"TOPIC-' + page + '\" data-pro=\"' + pro + '\" data-sub-topic=\"\" onclick=\"loadPage(event,' + page + ');\">';\n      list_+='<div class=\"row\">';\n      list_+='<div class=\"col w-60\">';\n     \n  if(pro ){\n    list_+='<img src=\"file:\/\/\/assets\/images\/lock.png\" id=\"PRO--TOPIC--' + page + '\" class=\"PRO--INDICATOR\">';\n   }\n   else{\n    if( icon){\n       list_+='<img class=\"TITLE--ICON EXTERNAL-ICON\" src=\"' + icon + '\">';\n    }else {\n      list_+='<img class=\"TITLE--ICON\" src=\"file:\/\/\/assets\/images\/button-icons\/forward-grey.png\">';\n    }\n   }\n   list_+='<\/div>';\n   list_+='<div class=\"col\"><div class=\"TITLE\">' + title +  '<\/div><div class=\"d-none\">' + kwords + '<\/div><\/div>';\n     \n   if(sub_topics.length){\n      list_+='<div class=\"col w-60 text-center SUB--TOPICS--TOGGLE--BTN\" data-page=\"' + page + '\"><img class=\"stt-btn\" src=\"file:\/\/\/assets\/images\/button-icons\/sub-menu.png\" style=\"width: 16px;\"><\/div>';\n   }\n      list_+='<\/div>';\n      list_+='<\/div>';\n    \n   if( sub_topics.length){\n     list_+=subTopics( sub_topics, page, pro); \n   }\n    list_+='<\/div>';\n\n   });\n  \n  $(\"#TOPICS--LIST\").html( list_ );\n  $(\"#TOPICS--LIST--CONTAINER\").scrollTop( +localStorage.getItem( PAGE_ID__ + \"_topics-scroll-pos\")||0 );  \n}\n  \n  \n  \nfunction loadPage(event,page_, nav){\n  var this_=$(event.currentTarget);\n  var target_=$(event.target);\n \n  var page=page_||localStorage.getItem( PAGE_ID__ + \"_current_page\")||2;\n      page=+page;\n  \n if( nav===-1) {\n   page=page-1;\n }\n  else if ( nav===1){\n   page=page+1;\n  }\n  \n  \n if ( page<2 ){\n    return toast(\"No more\", {type: \"info\"});\n  }else if( page > TOTAL_TOPICS){\n    return toast(\"No more\",{type:\"info\"});\n  }\n   \nif( event && ( target_.hasClass(\"SUB--TOPICS--TOGGLE--BTN\") || target_.hasClass(\"stt-btn\") ) ){\n var sub_topic_cont=$(\"#SUB--TOPICS--CONTAINER--\" + page);\n \n if( sub_topic_cont.is(\":visible\") ){\n    sub_topic_cont.slideUp();\n }else{\n    sub_topic_cont.slideDown();\n }\n return;\n}\n  \n var topicBtn=$(\"#TOPIC-\" + page);\n \n  if( topicBtn.attr(\"data-pro\") && !upgraded( PAGE_ID__) ){\n    return paymentInfo();\n }\n  \n \/\/ if( NOTEAJAX__) NOTEAJAX__.abort();\n    \n  $(\".TOPIC--LIST--BTN\").removeClass(\"TOPIC--SELECTED\");\n    topicBtn.addClass(\"TOPIC--SELECTED\");\n  \n  $(\".refresh-btn-container\").remove();\n   \n  var sub_topic=this_.data(\"sub-topic\")||0;\n  $(\".SUB--TOPICS--BTN\").removeClass(\"SUB--TOPIC--SELECTED\");\n \n if( sub_topic ){ \n  this_.addClass(\"SUB--TOPIC--SELECTED\");\n }\n  \n var result= TOPICS[page-1];\n var url=result.path;\n\nvar save_folder=new android.File( EXTERNAL_DIR, \"contents\/\" + PAGE_ID__ + \"\/external-notes\");\n  \n if( !save_folder.isDirectory() && !save_folder.mkdirs() ){\n  return android.toast.show(\"Could not create folder: \" + save_folder.toString() );\n  }\n  \nvar externalUrl= url.match(\/\\b(https:\\\/\\\/)\/);\nvar ext_file=new android.File( save_folder, page + \".txt\");\nvar localExists=false;\n  \n var backBtn=sessionStorage.getItem(\"is-back-button\");\n sessionStorage.removeItem(\"is-back-button\");\n \n  var cpElem= $(\"#CURRENT--PAGE\");\n    cpElem.val(page);\n  \n  $(\"#MAIN--NOTE--CONTAINER\").append( loader());\n  var ndiv=$(\".NOTE--TEXTS\");\n  ndiv.attr(\"id\",\"NOTE--TEXTS--\" + page).html(\"\");\n \n var title= result.title;\n \nif( externalUrl && ext_file.isFile() ){\n localExists=true;\n  noteLoaded( title, ext_file.read() , sub_topic, page );\n}\n  \n $(\"#TOOLBAR--TITLE\").text( title);\n\n $(\"#LINK--REF--NOTE--CONTAINER\")\n     .css(\"display\",\"none\")\n     .empty();\n    \n  \/\/if(page_ ) \n  \n  closeTopicsList();\n  \n  NOTEAJAX__=$.ajax({\n     url: url,\n    dataType: \"text\",\n}).done(function(note){\n    \n$(\".loading-image-container\").remove();\n \nif( externalUrl ){\n   ext_file.write(note);\n }\n \nnoteLoaded(title, note, sub_topic, page );  \n    \n}).fail(function(e,txt,xhr){\n   \/\/ alert( JSON.stringify(e))\n  if( txt==\"abort\") return;\n    $(\".loading-image-container\").remove();\n localStorage.setItem( PAGE_ID__ + \"_current_page\" , page);\n\n var refresh=$('<div class=\"element-center refresh-btn-container text-center\"><small>Could not load. Refresh<\/small><br><\/div>')\n     .append('<img style=\"width: 40px; height: 40px;\" src=\"file:\/\/\/assets\/drawer-pages\/refresh.png\">')\n     .click(function(){\n    loadPage( event, page, 0);\n});\n    \n if(!localExists ){\n   \/\/$(\"#MAIN--NOTE--CONTAINER\")\n   $(\"#NOTE--TEXTS--\" + page).append(refresh);\n   $(\"#SEARCH--FOUND\").text(0);\n }\n});\n  settings_();\n}\n\n\nfunction noteLoaded(title, note, sub_topic, page){\n  var data= __format( note  );   \n  $(\"#NOTE--TEXTS--\" + page).html('<h5><strong>' + title + '<\/strong><\/h5>' + data.replace(\/\\n\/g,\"<br>\") );\n  android.control.execute(\"processNote()\");   \n  if( sub_topic){\n     $(\".sub-topic\").css(\"display\",\"none\");\n     $(\"#sub-topic-\" + sub_topic).css(\"display\",\"block\");\n  }\n   else{\n     localStorage.setItem(  PAGE_ID__ + \"_current_page\", page);\n   }\n    \n  var dir=new android.File(EXTERNAL_DIR, \"contents\/\" +  PAGE_ID__ + \"\/NOTES-METAS\/\" + page);\n  var file=new android.File(dir, \"scroll-pos.txt\");\n\n  var lread=localStorage.getItem(\"last-read-position\")||\"YES\";\n \n if( lread==\"YES\" && file.isFile() ){\n  var pos=+file.read()||0\n  $(\"#NOTE--CONTAINER\").animate({scrollTop: pos});\n }\n \n  var tsearch=$.trim( $(\"#TOPICS--SEARCH--BOX\").val())\n  var text=$.trim($(\"#SEARCH--BOX\").val())||tsearch;\n  \/\/var text=$.trim( $(\"#TOPIC--SEARCH--BOX\").val())\n  if( text.length ) {\n  var elem=$(\"#NOTE--TEXTS\");\n    elem.unmark().mark(text);\n  var found=elem.find(\"mark\").length;\n    $(\"#SEARCH--FOUND\").text(found||\"\")\n  \/\/ elem.scrollTo(\"mark:first\", 3000);\n }\n  \n  $(\"#NOTE--TEXTS\").unmark().mark(text); \n}\n\n\nfunction loadReference(t, path){\n  var this_=$(t);\n   path=path||this_.attr(\"data-href\");\n  if(!path) return toast(\"Not found!\");\n var tElem=$(\"#TOOLBAR--TITLE\");\n  \nif( !tElem.attr(\"data-prev-title\") ){\n  var prevTitle=tElem.text();\ntElem.attr(\"data-prev-title\", prevTitle);\n  }\n\n$.each( TOPICS, function(page ,result){\n  if( result.path==path ){\n   \n  NOTEAJAX__=$.ajax({\n     url: $.trim( path.toString() ),\n    dataType: \"text\",\n}).done(function(note){\n   \n $(\".loading-image-container\").remove();\n  var data= __format( note  );\n var title= result.title;\n\n  tElem.text( title);\n\nvar topicBtn=$(\"#TOPIC-\" + ( page+1) );\n \n if( topicBtn.attr(\"data-pro\") && !upgraded( PAGE_ID__) ){\n    return paymentInfo();\n }    \n    \n $(\"#LINK--REF--NOTE--CONTAINER\")\n   .append('<div class=\"LINK--REF--NOTE NOTE--TEXTS\"><h3><u>' + title + '<\/u><\/h3>' + data.replace(\/\\n\/g,\"<br>\") + '<\/div>' )\n   .css(\"display\",\"block\");\n   \n   android.control.execute(\"processNote()\");   \n \n\/* if( !upgraded() ) $(\"#LINK--REF--NOTE--CONTAINER lock\").addClass(\"lock\");\n  mediaplayer_( $(\"audio\"), \"super\" );   \n *\/\n  }).fail(function(e,txt,xhr){\n   \/\/ alert( JSON.stringify(e))\n    $(\".loading-image-container\").remove();\n    \nvar refresh=$('<div class=\"element-center refresh-btn-container text-center\"><small>Could not load. Refresh<\/small><br><\/div>')\n     .append('<img style=\"width: 40px; height: 40px;\" src=\"file:\/\/\/assets\/drawer-pages\/refresh.png\">')\n     .click(function(){\n    loadReference({}, path);\n});\n\n $(\"#LINK--REF--NOTE--CONTAINER\").append(refresh);\n   });\n   return false;\n}\n    \n  });\n}\n\n\n\nfunction nextPrev(nav){\n $(\"#TOPICS--SEARCH--BOX\").val(\"\");\n loadPage({},0,nav);\n }\n\nfunction enlargePhoto(t, double){\n var this_=$(t);\n  \n  if( double){\n  var size=+this_.attr(\"data-size\")+50;\n  if( size>250){\n    return $(\".ENLARGED--PHOTO\").attr(\"data-size\", \"100\").css({\"width\": \"\",\"max-width\":\"100vw\",\"max-height\":\"100vh\"});   \n  }\n  return $(\".ENLARGED--PHOTO\").attr(\"data-size\", size).css({\"width\": size +\"%\",\"max-width\":1200,\"max-height\":1200});   \n  }\n \n var src=this_.attr(\"src\");\n $(\"#ENLARGED--PHOTO--CHILD--CONT\").html('<img onclick=\"enlargePhoto(this,1);\" data-size=\"100\" src=\"' + src + '\" class=\"ENLARGED--PHOTO\">');\n openCustomPage(\"ENLARGED--PHOTO--CONT\");\n}\n\nfunction fetchPicture(path, width,height, q, onerror, callback ){\n   q=q||1;\n var img = document.createElement(\"img\");\n     img.crossOrigin='anonymous';\n     img.onload = function(){     \n       var canvas = document.createElement(\"canvas\");\n       var ctx = canvas.getContext(\"2d\");\n\n       width =width ||img.width;\n       height=height||img.height;\n       \n       canvas.width=width;\n       canvas.height=height;\n \n     ctx.drawImage(this,0,0,width, height);\n     callback( canvas.toDataURL(\"image\/jpeg\", q) );\n  };\n      img.src = path;\n   if(onerror){\n     img.addEventListener(\"error\",function(e){\n     callback(\"\",\"error\", e);\n     });\n   }\n}\n\n\nfunction shareFile(t){\n  var this_=$(t);\n  \n var photo=$(\".ENLARGED--PHOTO\").attr(\"src\");\n  var temp=new android.File( EXTERNAL_DIR,\"shared.jpg\");\n  this_.attr(\"src\", \"file:\/\/\/assets\/loading-indicator\/loading2.png\");\n  \nvar share_src=\"file:\/\/\/assets\/images\/share.png\";\n \n if( photo.match(\/file:\\\/\\\/\\\/\/) ){\n  photo=photo.replace(\"file:\/\/\/assets\/\",\"\"); \n  var file=new android.AssetFile( photo );\nif( file.copyTo(temp) ){\n this_.attr(\"src\", share_src);\n android.control.execute(\"share_fileExt('\" + temp.toString() + \"');\");  \n  return\n }\n this_.attr(\"src\", share_src);\n toast(\"Failed. Please retry\");\n}\n  else{\n   fetchPicture(photo, 0,0, 1, true, function(base64,err, err_details){  \nif( err ){\n  this_.attr(\"src\", share_src);\n return toast( \"Failed\");\n}\n\nif( base64 && temp.writeBase64(base64.split(\",\")[1] ) ){\n   android.control.execute(\"share_fileExt('\" + temp.toString() + \"');\");  \n }else{\n    toast(\"Failed. Please retry.\");\n   }\nthis_.attr(\"src\", share_src);     \n });\n  \n}\n  \n  \n}\n\n\n\nfunction openSearchBox(){\n  $(\".search-box-container\").fadeIn();  \n}\n\nfunction closeSearchBox(){\n  $(\".search-box-container\").css(\"display\",\"none\");  \n  $(\"#NOTE--TEXTS\").unmark();\n  $(\"#SEARCH--BOX\").val(\"\");\n  $(\"#SEARCH--FOUND\").text(\"\")\n     \n}\n\n\nfunction isMobile(){\n  return $(\"#IS--MOBILE\").is(\":visible\");\n}\n\n\nfunction settings_(){\n  var fs=+localStorage.getItem(\"text-font-size\")||14;\n  var fw=localStorage.getItem(\"text-font-weight\")||\"Normal\";\n  var tc=localStorage.getItem(\"text-color\")||\"black\";\n  var bc=localStorage.getItem(\"background-color\")||\"white\";\n  var lg=localStorage.getItem(\"text-line-gap\")||\"1.6\";\n\n $(\"#NOTE--CONTAINER\").css({\"font-size\": fs,\"font-weight\":fw, color:tc});\n  $(\"#NOTE--TEXTS\").css({\"line-height\":lg});\n $(\"body,#TOPICS--LIST--CONTAINER\").css({background:bc});\n $(\"#TOPICS--LIST--CONTAINER\").css({color:tc});\n}\n  \nfunction fetchExternalContents( url ){\n  fetchExternalAssets_( url, function(result,e,xhr,txt){\n   if(result){\n     var dir=new android.File( EXTERNAL_DIR, \"contents\/\" + PAGE_ID__);\n     if(!dir.isDirectory() && !dir.mkdirs()){\n   return android.toast.show(\"Can't create direc- \" + dir.toString() );    \n     }\n     \n   var file=new android.File( dir, PAGE_ID__ + \".json\");\n   var fexists=file.isFile();\n   if( file.write( result) ){\n     if( !fexists) {\n       location.reload();\n     }\n     else listTopics();\n   }\n }else{\n   \/\/Ignore\n }\n  \n});   \n}\n\n\n\nfunction doOnOrientationChange() {\n   function ori(){\n     switch(window.orientation) {\n      case 90:\n         return 2;\n        break;\n      case -90:\n        return 2;\n        break;\n      case 0:\n        return 1;\n        break;\n      case 180:\n        return 1\n        break;\n      default:\n        break;\n    }\n   }\n  \n\/\/var val_=ori();\n  closeTopicsList();\n  \n}\n\nwindow.addEventListener('orientationchange', doOnOrientationChange);\n\n\/\/ Initial execution if needed\ndoOnOrientationChange();\n\nwindow.addEventListener('onOrientationChanged',function(newConfig){\n\n\/\/ Checks the orientation of the screen\n   alert (newConfig.orientation)\n});\n\n\nfunction onBackPressed() {\n  var total_op=customPageOpenedIds.length;\n\n var adCount=1; \/\/localStorage.getItem('app_ad_count'); \n \n  if($(\".so-options-container\").is(\":visible\")){\n return $(\".so-options-container\").css(\"display\",\"none\");\n  } \n else  \n if( $('.display--data').length ){\n  var elem=$('.display--data').last();\n    var on_close=elem.data(\"on-close\");\n   if(!elem.hasClass('no-cancel') ){\n   closeDisplayData( elem.data('id'), on_close );\n }\n  return;\n}\n else if( total_op){\n     var last=customPageOpenedIds[total_op-1];\n    closeCustomPage(null,last);\n    return;\n  }\n   else if( $(\"#video-element-container\").is(\":visible\") ){\n   exitVideoFullScreen();\n   return;\n }\n  else if( $(\".yplayer-container\").is(\":visible\") ){\n   var elem=$(\".yplayer-container:visible\");\n   var pos=elem.attr(\"data-position\");\n   $(\".yplayer-container\").css(\"display\",\"none\").empty();\n    pauseVideo(pos);\n  return;\n  }\n   else if( $(\".search-box-container:visible\").length){\n    closeSearchBox();\n    return;\n  }\n  else if( $(\"#SPONSORED--POSTS\").is(\":visible\") ){\n   closeAdWindow();\n return;\n  }\n else if ($(\"#LINK--REF--NOTE--CONTAINER\").is(\":visible\")){\n   $(\"#LINK--REF--NOTE--CONTAINER\")\n     .css(\"display\",\"none\")\n     .empty();\n    var tElem=$(\"#TOOLBAR--TITLE\")\n      tElem.text( tElem.attr(\"data-prev-title\") ) \n return;\n }\n\n\/* var cp=+$(\"#CURRENT--PAGE\").val();\nif( cp>=3 ){\n return nextPrev(-1);\n}\n*\/\n  \nif( adCount){\n  localStorage.removeItem('app_ad_count'); \n if(confirm(\"Do you really want to quit?\")) {  \n   sessionStorage.clear();\n   android.activity.finish();\n  }\n }\n  else{\n  showExitAd();\n  localStorage.setItem('app_ad_count','1');\n }\n \n}\n\nfunction showExitAd(){\n  \n}\n"
+                                            }
+                                        },
+                                        "webView": {
+                                            "_id_": 407355,
+                                            "_type": "InlineScript",
+                                            "code": {
+                                                "_id_": 407357,
+                                                "_type": "String",
+                                                "value_": "data[0]"
+                                            }
+                                        }
+                                    }
+                                ]
+                            }
+                        },
+                        {
+                            "_id_": 470250,
+                            "_type": "OnEvent",
+                            "eventName": {
+                                "_id_": 470252,
+                                "_type": "String",
+                                "value_": "load_scripts"
+                            },
+                            "action": {
+                                "_id_": 470254,
+                                "_type": "Sequence",
+                                "list_": [
+                                    {
+                                        "_id_": 470255,
+                                        "_type": "ScopeVariable",
+                                        "name": {
+                                            "_id_": 470256,
+                                            "_type": "String",
+                                            "value_": "data"
+                                        }
+                                    },
+                                    {
+                                        "_id_": 470257,
+                                        "_type": "ScopeVariable",
+                                        "name": {
+                                            "_id_": 470258,
+                                            "_type": "String",
+                                            "value_": "name"
+                                        }
+                                    },
+                                    {
+                                        "_id_": 470260,
+                                        "_type": "Call",
+                                        "name": {
+                                            "_id_": 470262,
+                                            "_type": "String",
+                                            "value_": "load_scripts"
+                                        },
+                                        "arguments": {
+                                            "_id_": 470264,
+                                            "_type": "List",
+                                            "list_": [
+                                                {
+                                                    "_id_": 472418,
+                                                    "_type": "Expression",
+                                                    "text": {
+                                                        "_id_": 472419,
+                                                        "_type": "String",
+                                                        "value_": "data[0]"
+                                                    }
+                                                },
+                                                {
+                                                    "_id_": 472411,
+                                                    "_type": "Expression",
+                                                    "text": {
+                                                        "_id_": 472413,
+                                                        "_type": "String",
+                                                        "value_": "data[1]"
+                                                    }
+                                                }
+                                            ],
+                                            "elementType_": "Action"
+                                        }
+                                    }
+                                ]
+                            }
+                        }
+                    ]
+                },
+                "screenOrientation": {
+                    "_id_": 466,
+                    "_type": "Activity.ScreenOrientation",
+                    "value_": "unspecified"
+                },
+                "theme": {
+                    "_id_": 473,
+                    "_type": "Theme.AppCompat",
+                    "colorAccent": {
+                        "_id_": 470,
+                        "_type": "Color",
+                        "color_": -16747045
+                    },
+                    "colorPrimaryDark": {
+                        "_id_": 468,
+                        "_type": "String",
+                        "value_": "#0079C6"
+                    },
+                    "android:navigationBarColor": {
+                        "_id_": 472,
+                        "_type": "Color",
+                        "color_": -855297
+                    }
+                },
+                "drawer": {
+                    "_id_": 94,
+                    "_type": "Drawer",
+                    "id": {
+                        "_id_": 96,
+                        "_type": "String",
+                        "value_": "drawer_layout"
+                    },
+                    "menu": {
+                        "_id_": 87,
+                        "_type": "Drawer.Menu",
+                        "id": {
+                            "_id_": 89,
+                            "_type": "String",
+                            "value_": ""
+                        },
+                        "style": {
+                            "_id_": 86,
+                            "_type": "Drawer.Menu.Style"
+                        },
+                        "items": {
+                            "_id_": 84,
+                            "_type": "List",
+                            "list_": [],
+                            "elementType_": "Drawer.Menu.Item"
+                        }
+                    },
+                    "width": {
+                        "_id_": 93,
+                        "_type": "Dimension",
+                        "unit": {
+                            "_id_": 92,
+                            "_type": "DimensionUnit",
+                            "value_": "dp"
+                        },
+                        "value": {
+                            "_id_": 91,
+                            "_type": "Float",
+                            "value_": 300
+                        }
+                    }
+                },
+                "contentView": {
+                    "_id_": 78,
+                    "_type": "RelativeLayout",
+                    "id": {
+                        "_id_": 80,
+                        "_type": "String",
+                        "value_": ""
+                    },
+                    "views": {
+                        "_id_": 75,
+                        "_type": "ViewList",
+                        "list_": [
+                            {
+                                "_id_": 36,
+                                "_type": "WebView",
+                                "legacy": {
+                                    "_id_": 545,
+                                    "_type": "Boolean",
+                                    "value_": true
+                                },
+                                "id": {
+                                    "_id_": 30,
+                                    "_type": "String",
+                                    "value_": "control"
+                                },
+                                "onPageStarted": {
+                                    "_id_": 420186,
+                                    "_type": "Sequence",
+                                    "list_": [
+                                        {
+                                            "_id_": 420187,
+                                            "_type": "ScopeVariable",
+                                            "name": {
+                                                "_id_": 420188,
+                                                "_type": "String",
+                                                "value_": "url"
+                                            }
+                                        },
+                                        {
+                                            "_id_": 420189,
+                                            "_type": "ScopeVariable",
+                                            "name": {
+                                                "_id_": 420190,
+                                                "_type": "String",
+                                                "value_": "view"
+                                            }
+                                        }
+                                    ]
+                                },
+                                "url": {
+                                    "_id_": 29,
+                                    "_type": "URL",
+                                    "url": {
+                                        "_id_": 455600,
+                                        "_type": "String",
+                                        "value_": "control\/control.html"
+                                    }
+                                },
+                                "android:layout_width": {
+                                    "_id_": 35,
+                                    "_type": "View.SpecialDimension",
+                                    "value_": "wrap_content"
+                                },
+                                "android:layout_height": {
+                                    "_id_": 33,
+                                    "_type": "View.SpecialDimension",
+                                    "value_": "wrap_content"
+                                },
+                                "android:visibility": {
+                                    "_id_": 31,
+                                    "_type": "View.Visibility",
+                                    "value_": "gone"
+                                }
+                            },
+                            {
+                                "_id_": 59,
+                                "_type": "DrawerLayout",
+                                "id": {
+                                    "_id_": 56,
+                                    "_type": "String",
+                                    "value_": "drawer_wv"
+                                },
+                                "views": {
+                                    "_id_": 55,
+                                    "_type": "ViewList",
+                                    "list_": [
+                                        {
+                                            "_id_": 54,
+                                            "_type": "LinearLayout",
+                                            "id": {
+                                                "_id_": 51,
+                                                "_type": "String",
+                                                "value_": "drawer_main"
+                                            },
+                                            "views": {
+                                                "_id_": 50,
+                                                "_type": "ViewList",
+                                                "list_": [
+                                                    {
+                                                        "_id_": 49,
+                                                        "_type": "ViewSelector",
+                                                        "className": {
+                                                            "_id_": 46,
+                                                            "_type": "String",
+                                                            "value_": "com.serakont.ab.ViewSelector"
+                                                        },
+                                                        "id": {
+                                                            "_id_": 45,
+                                                            "_type": "String",
+                                                            "value_": "content"
+                                                        },
+                                                        "views": {
+                                                            "_id_": 44,
+                                                            "_type": "ViewList",
+                                                            "list_": []
+                                                        },
+                                                        "android:layout_width": {
+                                                            "_id_": 48,
+                                                            "_type": "String",
+                                                            "value_": "match_parent"
+                                                        },
+                                                        "android:layout_height": {
+                                                            "_id_": 47,
+                                                            "_type": "String",
+                                                            "value_": "match_parent"
+                                                        }
+                                                    }
+                                                ]
+                                            },
+                                            "android:layout_width": {
+                                                "_id_": 53,
+                                                "_type": "String",
+                                                "value_": "match_parent"
+                                            },
+                                            "android:layout_height": {
+                                                "_id_": 52,
+                                                "_type": "String",
+                                                "value_": "match_parent"
+                                            },
+                                            "android:orientation": {
+                                                "_id_": 40,
+                                                "_type": "Orientation",
+                                                "value_": "vertical"
+                                            }
+                                        }
+                                    ]
+                                },
+                                "android:layout_width": {
+                                    "_id_": 58,
+                                    "_type": "String",
+                                    "value_": "match_parent"
+                                },
+                                "android:layout_height": {
+                                    "_id_": 57,
+                                    "_type": "String",
+                                    "value_": "match_parent"
+                                }
+                            },
+                            {
+                                "_id_": 74,
+                                "_type": "RelativeLayout",
+                                "id": {
+                                    "_id_": 71,
+                                    "_type": "String",
+                                    "value_": "logo_display"
+                                },
+                                "views": {
+                                    "_id_": 70,
+                                    "_type": "ViewList",
+                                    "list_": [
+                                        {
+                                            "_id_": 69,
+                                            "_type": "WebView",
+                                            "legacy": {
+                                                "_id_": 566,
+                                                "_type": "Boolean",
+                                                "value_": true
+                                            },
+                                            "id": {
+                                                "_id_": 66,
+                                                "_type": "String",
+                                                "value_": "logo_display_view"
+                                            },
+                                            "onPageStarted": {
+                                                "_id_": 421583,
+                                                "_type": "Sequence",
+                                                "list_": [
+                                                    {
+                                                        "_id_": 421584,
+                                                        "_type": "ScopeVariable",
+                                                        "name": {
+                                                            "_id_": 421585,
+                                                            "_type": "String",
+                                                            "value_": "url"
+                                                        }
+                                                    },
+                                                    {
+                                                        "_id_": 421586,
+                                                        "_type": "ScopeVariable",
+                                                        "name": {
+                                                            "_id_": 421587,
+                                                            "_type": "String",
+                                                            "value_": "view"
+                                                        }
+                                                    }
+                                                ]
+                                            },
+                                            "url": {
+                                                "_id_": 65,
+                                                "_type": "URL",
+                                                "url": {
+                                                    "_id_": 422067,
+                                                    "_type": "String",
+                                                    "value_": "logo-display\/logo-display.html"
+                                                }
+                                            },
+                                            "android:layout_width": {
+                                                "_id_": 68,
+                                                "_type": "String",
+                                                "value_": "match_parent"
+                                            },
+                                            "android:layout_height": {
+                                                "_id_": 67,
+                                                "_type": "String",
+                                                "value_": "match_parent"
+                                            }
+                                        }
+                                    ]
+                                },
+                                "android:background": {
+                                    "_id_": 73,
+                                    "_type": "Color",
+                                    "color_": -855297
+                                }
+                            },
+                            {
+                                "_id_": 126451,
+                                "_type": "WebView",
+                                "legacy": {
+                                    "_id_": 126452,
+                                    "_type": "Boolean",
+                                    "value_": true
+                                },
+                                "id": {
+                                    "_id_": 126453,
+                                    "_type": "String",
+                                    "value_": "buy_pro"
+                                },
+                                "onPageStarted": {
+                                    "_id_": 399987,
+                                    "_type": "Sequence",
+                                    "list_": [
+                                        {
+                                            "_id_": 399988,
+                                            "_type": "ScopeVariable",
+                                            "name": {
+                                                "_id_": 399989,
+                                                "_type": "String",
+                                                "value_": "url"
+                                            }
+                                        },
+                                        {
+                                            "_id_": 399990,
+                                            "_type": "ScopeVariable",
+                                            "name": {
+                                                "_id_": 399991,
+                                                "_type": "String",
+                                                "value_": "view"
+                                            }
+                                        },
+                                        {
+                                            "_id_": 452428,
+                                            "_type": "WebView.Execute",
+                                            "code": {
+                                                "_id_": 452429,
+                                                "_type": "ScriptFile",
+                                                "file": {
+                                                    "_id_": 452430,
+                                                    "_type": "AssetFile",
+                                                    "path_": "js\/jquery.3.3.1.js"
+                                                }
+                                            },
+                                            "webView": {
+                                                "_id_": 452431,
+                                                "_type": "View.Reference",
+                                                "ref": {
+                                                    "_id_": 452432,
+                                                    "_type": "String",
+                                                    "value_": "@id\/buy_pro"
+                                                }
+                                            }
+                                        },
+                                        {
+                                            "_id_": 452413,
+                                            "_type": "WebView.Execute",
+                                            "code": {
+                                                "_id_": 452424,
+                                                "_type": "ScriptFile",
+                                                "file": {
+                                                    "_id_": 452438,
+                                                    "_type": "AssetFile",
+                                                    "path_": "js\/moment.js"
+                                                }
+                                            },
+                                            "webView": {
+                                                "_id_": 452416,
+                                                "_type": "View.Reference",
+                                                "ref": {
+                                                    "_id_": 452417,
+                                                    "_type": "String",
+                                                    "value_": "@id\/buy_pro"
+                                                }
+                                            }
+                                        },
+                                        {
+                                            "_id_": 453349,
+                                            "_type": "WebView.Execute",
+                                            "code": {
+                                                "_id_": 453350,
+                                                "_type": "ScriptFile",
+                                                "file": {
+                                                    "_id_": 453359,
+                                                    "_type": "AssetFile",
+                                                    "path_": "android.js"
+                                                }
+                                            },
+                                            "webView": {
+                                                "_id_": 453352,
+                                                "_type": "View.Reference",
+                                                "ref": {
+                                                    "_id_": 453353,
+                                                    "_type": "String",
+                                                    "value_": "@id\/buy_pro"
+                                                }
+                                            }
+                                        },
+                                        {
+                                            "_id_": 452862,
+                                            "_type": "WebView.Execute",
+                                            "code": {
+                                                "_id_": 452863,
+                                                "_type": "ScriptFile",
+                                                "file": {
+                                                    "_id_": 452872,
+                                                    "_type": "AssetFile",
+                                                    "path_": "bootstrap.js"
+                                                }
+                                            },
+                                            "webView": {
+                                                "_id_": 452865,
+                                                "_type": "View.Reference",
+                                                "ref": {
+                                                    "_id_": 452866,
+                                                    "_type": "String",
+                                                    "value_": "@id\/buy_pro"
+                                                }
+                                            }
+                                        },
+                                        {
+                                            "_id_": 452873,
+                                            "_type": "WebView.Execute",
+                                            "code": {
+                                                "_id_": 452874,
+                                                "_type": "ScriptFile",
+                                                "file": {
+                                                    "_id_": 452883,
+                                                    "_type": "AssetFile",
+                                                    "path_": "js\/global-bootstrap.js"
+                                                }
+                                            },
+                                            "webView": {
+                                                "_id_": 452876,
+                                                "_type": "View.Reference",
+                                                "ref": {
+                                                    "_id_": 452877,
+                                                    "_type": "String",
+                                                    "value_": "@id\/buy_pro"
+                                                }
+                                            }
+                                        },
+                                        {
+                                            "_id_": 452895,
+                                            "_type": "WebView.Execute",
+                                            "code": {
+                                                "_id_": 452896,
+                                                "_type": "ScriptFile",
+                                                "file": {
+                                                    "_id_": 452905,
+                                                    "_type": "AssetFile",
+                                                    "path_": "js\/global-functions.js"
+                                                }
+                                            },
+                                            "webView": {
+                                                "_id_": 452898,
+                                                "_type": "View.Reference",
+                                                "ref": {
+                                                    "_id_": 452899,
+                                                    "_type": "String",
+                                                    "value_": "@id\/buy_pro"
+                                                }
+                                            }
+                                        },
+                                        {
+                                            "_id_": 452884,
+                                            "_type": "WebView.Execute",
+                                            "code": {
+                                                "_id_": 452885,
+                                                "_type": "ScriptFile",
+                                                "file": {
+                                                    "_id_": 452894,
+                                                    "_type": "AssetFile",
+                                                    "path_": "js\/functions.js"
+                                                }
+                                            },
+                                            "webView": {
+                                                "_id_": 452887,
+                                                "_type": "View.Reference",
+                                                "ref": {
+                                                    "_id_": 452888,
+                                                    "_type": "String",
+                                                    "value_": "@id\/buy_pro"
+                                                }
+                                            }
+                                        },
+                                        {
+                                            "_id_": 399993,
+                                            "_type": "WebView.Execute",
+                                            "code": {
+                                                "_id_": 399995,
+                                                "_type": "InlineScript",
+                                                "code": {
+                                                    "_id_": 399997,
+                                                    "_type": "String",
+                                                    "value_": "android.webView.setAllowExternalURLs(false);\n \nvar pconfig={\n  \"vendor\":\"rave\" \/\/\"rave\" \"paystack\"\n}\n  \n\nfunction m_bl(){ return 0; }\n\n\nfunction showReload(){\n   $('.pay').html('<button class=\"retry btn btn-sm btn-warning\" onclick=\"pwr();\">Retry<\/button>');\n  }\n       \n function userForm(x){\n   $('.views').hide();\n   var prevCustFname=$.trim(localStorage.getItem('prouser_fullname'));\n   var prevCustPhone=$.trim(localStorage.getItem('prouser_phone'));\n      var prevCustEmail=$.trim(localStorage.getItem('prouser_email'));\n\n     if(prevCustFname) $('#fname').val(prevCustFname);\n    if(prevCustPhone) $('#phone').val(prevCustPhone);\n   if(prevCustEmail) $('#email').val(prevCustEmail);\n   \n   if( !prevCustEmail ||x){\n     $(\".user-form\").fadeIn();\n     $(\".user-payment-info\").css(\"display\",\"none\");\n   }\n  \n  if(x) $(\"#close_gamer_form\").show();\n     else {\n      $(\"#close_gamer_form\").hide(); \n     }\n   }\n   \nfunction saveUserForm(){    \n    var fn=$.trim( $('#fname').val()  );\n    var pn=$.trim($('#phone').val()  );   \n    var e=$.trim( $('#email').val() );\n   var name=fn.split(' ');\n    if(name.length<2){\n      toast('Please enter your full name.');\n      return false;\n    }\n    \n  if(!fn.match(\/^[a-zA-Z ]{2,100}$\/)){\n    toast('Please enter a valid fullname.');\n   return false;\n  }   \n  else     \n  if(!pn.match(\/^[0-9+-]{5,20}$\/)){\n     toast('Please enter a valid phone number.');\n   return false;\n  }       \n   \n else if(e.length<4) {\n     toast('Enter a valid email address.');\n   return false;\n }\n    \n   localStorage.setItem('prouser_fname',name[0]);\n   localStorage.setItem('prouser_fullname',fn);\n   localStorage.setItem('prouser_lname',name[1]);\n   localStorage.setItem('prouser_phone',pn);\n   localStorage.setItem('prouser_email',e);\n  \n  $(\".save\").text(\"Saving...\");\n   setTimeout(function(){\n     location.reload(); \n   },1500);\n  }\n   \nfunction helpline(v){\n if(v) {\n   openInBrowser(whatsApp('*GId: ' +appId() + ',#BET' + randomString(3) + APP_VERSION + '*\\nHello! Request for activation code.\\n\\n_Kindly drop your previous payment evidence or your name & email address and month of payment_') );\n  return false;\n  }\n  openInBrowser(whatsApp('*GId: ' + appId()  + ',#BET' + randomString(3) + APP_VERSION + '*\\nHello! There is a problem activating the app\\n\\n_Please state the error or issue below_'));\n}\n \n      \n function acceptCondition(){\n    localStorage.setItem('accept_upgrade_condition','yes');\n   userForm();\n   }\n    \n \n function tac(){\n   userForm();\n   return;\n if(localStorage.getItem('accept_upgrade_condition') ){\n   userForm();\n     return false;\n   }\n   $('.views').hide();\n   $('.tac').fadeIn();\n }\n\n \n function pwr(){\n      \n   var custFirstname=$.trim(localStorage.getItem('prouser_fname') );\n   var custLastname=$.trim(localStorage.getItem('prouser_lname'));\n   var custPhone=$.trim(localStorage.getItem('prouser_phone') );\n   var custEmail=$.trim( localStorage.getItem('prouser_email'));\n   var pid=localStorage.getItem(\"selected_book_id\")||\"\";\n\n  var amt=+localStorage.getItem(pid + \"_payment_amount\")||1000;\n  var cexp=+localStorage.getItem(\"coins_expected\")||1000;\n \n  var currentBal=+m_bl(); \n   var buypro=localStorage.getItem(\"buy_pro\");\n   \n if(!custFirstname||!custLastname||!custPhone||!custEmail||custEmail=='null') {\n   userForm();\n   return false;\n    }\n \nvar drate= localStorage.getItem(\"dollar-rate\")||460;\n   \n  var udata='<div style=\"font-size: 70%;\">';\n    \n \/\/  udata+='<div class=\"text-center\"><button class=\"change_cust_email\" style=\"background: #004480;\">change<\/button><\/div>';\n   \n\n     udata+='<div>Name: ' + custFirstname + ' ' + custLastname + '<\/div>'; \n     udata+='<div>Email: ' + custEmail + '<\/div>'; \n     udata+='<div>Phone: ' + custPhone + '<\/div>'; \n     udata+='<div class=\"pay\">Please wait...<\/div><\/div>';\n   \n  $('.cust_email').html(udata);     \n  \n  var data='<div style=\"width:100%; text-align: center; margin-bottom: 5px;\"><img style=\"max-heigh: 60px; max-width: 90%;\" src=\"' + pconfig.vendor + '.png\"><\/div>';\n      data+='<form>';\n  \n \/\/ data+='<button class=\"btn btn-sm btn-success\" type=\"button\" onClick=\"payNow()\">' + ( buypro?'Unlock all features':'') + ' [ &#8358;' + amt + '( &#36;' + (amt\/drate).toFixed(1) + ' )' + (buypro?'':' for <img src=\"file:\/\/\/assets\/payment\/coins.png\" style=\"width: 16px;\"> ' + cexp + ' coins' ) + ' ]<\/button>';\n   data+='<button class=\"btn btn-sm btn-success\" type=\"button\" onclick=\"payNow()\">Upgrade [ &#8358;' + amt + ' ( &#36;' + (amt\/drate).toFixed(1) + ' ) ]<\/button>';\n      \n      data+='<\/form>';\n      data+='<br><br>';\n \n  if( telegramLink||whatsappLink){\n      data+='<div class=\"text-center\"><div>Do you need help or your payment did not reflect? Contact us with your proof of payment to any our platforms below<\/div>';\n      \n   if( whatsappLink){\n        data+='<button onclick=\"triggerWhatsapp();\" class=\"help-btn btn btn-sm btn-warning mb-2\"><img src=\"whatsapp.png\"> Whatsapp<\/button>';\n      }\n    \n    if( telegramLink){\n        data+=' <button onclick=\"triggerTelegram();\" class=\"help-btn btn btn-sm btn-light\"><img src=\"telegram-blue.png\"> Telegram<\/button>';\n      }\n    data+='<\/div>';\n      }\n   \n $(\".pay\").html(data);\n }\n\nfunction payNow(){\n  \n  if( pconfig.vendor=='paystack'){\n    payWithPaystack();\n  }\n  \n else{\n   payWithRave();\n }\n}\n\nfunction payWithPaystack() {\n \/\/ e.preventDefault();\n  var aid=appId();\n  var custFirstname=$.trim(localStorage.getItem('prouser_fname') );\n   var custLastname=$.trim(localStorage.getItem('prouser_lname'));\n   var custPhone=$.trim(localStorage.getItem('prouser_phone') );\n   var custEmail=$.trim( localStorage.getItem('prouser_email'));\n   var custFullname=$.trim( localStorage.getItem('prouser_fullname'));\n  \n   var pid=localStorage.getItem(\"selected_book_id\")||\"\";\n  var amt=+localStorage.getItem(pid + \"_payment_amount\")||1000;\n  var cexp=+localStorage.getItem('coins_expected')||1000;\n  var currentBal=+m_bl(); \n  var ref=APP_LABEL__.replace(\/[^a-z0-9 ]\/gi,\"\").replace(\/\\s+\/g,'') + '-' + Math.floor( (Math.random() * 1000000000) + 1) + '-' + aid + '-' + custPhone +'-' + currentBal + '-' + amt;\n \n  var title=APP_LABEL__ + \" - upgrade\"; \/\/'-Coins ' + cexp;\n  \n  var handler = PaystackPop.setup({\n    key: PAYM_PublicKey,\n    email: custEmail,\n    phone: custPhone,\n    firstname: custFirstname,\n    lastname: custLastname,\n    amount: amt * 100,\n    ref: ref,\n    \/\/''+Math.floor((Math.random() * 1000000000) + 1), \/\/ generates a pseudo-unique reference. Please replace with a reference you generated. Or remove the line entirely so our API will generate one for you\n    label: title, \/\/ \"Optional string that replaces customer email\"\n    currency: \"NGN\",\n    channels: ['card'],\n    metadata: {\n      \"app_id\": aid,\n      },\n    onClose: function(){\n      toast('Payment cancelled');\n    },\n    callback: function(response){\n  \/\/let message = \"Payment complete! Reference: \" + response.reference;\n     if( response.status==\"success\"){\n   if( localStorage.getItem(\"buy_pro\") ){\n       localStorage.setItem(\"pro_activated\",\"true\");\n    alert(\"Please re-start app for upgrade to take effect\");\n     android.activity.finish();\n     return;\n   }\n       \n       var bal=+m_bl()||0;\n       m_bl( bal+cexp);\n       localStorage.setItem(\"update_coins\", randomString(6));\n       android.activity.hideView(\"buy_pro\");\n      \/\/ android.control.dispatchEvent('updateBalance',null);\n     }\n     else{\n       toast('Transaction failed.',{hide:6000});  \n     }\n    }\n  });\n  handler.openIframe();\n}\n\n\nfunction payWithRave() {\n   var aid=appId();\n var custFirstname=$.trim(localStorage.getItem('prouser_fname') );\n   var custLastname=$.trim(localStorage.getItem('prouser_lname'));\n   var custPhone=$.trim(localStorage.getItem('prouser_phone') );\n   var custEmail=$.trim( localStorage.getItem('prouser_email'));\n   var custFullname=$.trim( localStorage.getItem('prouser_fullname'));\n  \n var pid=localStorage.getItem(\"selected_book_id\")||\"\";\n\n  var amt=+localStorage.getItem(pid + \"_payment_amount\")||1000;\n    var cexp=+localStorage.getItem('coins_expected')||1000;\n  var currentBal=+m_bl();\n    \n  var ref=APP_LABEL__.replace(\/[^a-z0-9 ]\/gi,\"\").replace(\/\\s+\/g,'') + '-' + Math.floor( (Math.random() * 1000000000) + 1) + '-' + aid + '-' + custPhone +'-' + currentBal + '-' + amt;\n \n  var title=APP_LABEL__ + \" - upgrade\"; \/\/'-Coins ' + cexp;\n \n    var PAYM_PublicKey=\"FLWPUBK-abb1c9ae93350d274f57c4cc5d22bb77-X\";\n \n  \n  var x=FlutterwaveCheckout({\n    public_key: PAYM_PublicKey,\n    tx_ref: ref,\n    amount: amt,\n    currency: \"NGN\",\n    payment_options: \"card\",\n   \/\/ redirect_url: \"https:\/\/glaciers.titanic.com\/handle-flutterwave-payment\",\n    meta: {\n     app_id: aid,\n      \/\/consumer_mac: \"92a3-912ba-1192a\",\n    },\n    customer: {\n      email: custEmail,\n      phone_number: custPhone,\n      name: custFullname,\n    },\n    customizations: {\n      title: title,\n      description: \"Upgrade \" + APP_LABEL__,\n      logo: \"file:\/\/\/assets\/payment\/whatsapp.png\",\n      \/\/\"https:\/\/www.logolynx.com\/images\/logolynx\/22\/2239ca38f5505fbfce7e55bbc0604386.jpeg\",\n    },\n     callback: function (response) {\n     console.log( JSON.stringify(response))\n     if( response.status==\"successful\"){\n      alert(\"Please re-start app for upgrade to take effect\");\n     android.activity.finish();\n   return;\n     \n     }else{\n      toast('Transaction failed',{hide:6000});  \n  }\n    x.close();\n  },\n      onclose: function() {\n   \n     toast('Payment cancelled');\n        \/\/ close modal\n      },\n    \n  }); \n  }\n\n\nfunction fetchPaymentGateway(){\n var body=$(\"body\");\n  \n  if(body.hasClass(\"script-loaded\")){\n    return  pwr();\n  }\n  \n  var purl=\"https:\/\/js.paystack.co\/v2\/inline.js\";\n \n  if( pconfig.vendor==\"rave\"){\n \n    var purl=\"https:\/\/checkout.flutterwave.com\/v3.js\";\n }\n  \n $.getScript( purl, function(resp, status){\n \n   body.addClass(\"script-loaded\")\n   pwr();\n   tac();\n    \n  $(\"#loading\").fadeOut(600, function(){\n  $(\"#loading\").remove(); });\n   \n  }).fail(function(){\n   toast(\"Check your internet\");\n   setTimeout( function(){ \n  fetchPaymentGateway(); \n  }, 3000);\n });\n\n }\n  \n  \nfunction switchUserForm(){\n  $(\".views\").fadeOut(); \n  $(\".user-payment-info\").css(\"display\",\"block\");\n}\n\nvar gttimer=0;\n\n $(function(){   \n   \n   fetchPaymentGateway()\n   \n  $('body').on(\"click\",\".game_title\", function(){\n    $(\"#game_title\").hide();\n    $(\".promo_code\").fadeIn();\n  });\n\n  var pctimer=0;\n  var xhr;\n \n   \n  $('body').on('click','.change_cust_email',function(){\n    userForm(1);\n   });\n   \n });\n     \n\n\n\nfunction closePaymentPage(){\n  localStorage.removeItem(\"payment_page_opened\");\n  android.activity.hideView(\"buy_pro\");\n }\n\nfunction onBackPressed(){\n  var cEmail=localStorage.getItem('prouser_email');\n\n   if( $(\".user-form\").is(\":visible\") && !cEmail){\n    closePaymentPage();\n   }\n else if( $(\".user-form\").is(\":visible\") ){\n   switchUserForm()\n }\n  else{\n     closePaymentPage();\n    }\n}\n\nwindow.addEventListener(\"storage\",function(e){\n  if (e.key=='reload_payment'){\n   fetchPaymentGateway();\n   android.activity.showView(\"buy_pro\");\n }\n\n});\n \n"
+                                                }
+                                            },
+                                            "webView": {
+                                                "_id_": 399999,
+                                                "_type": "View.Reference",
+                                                "ref": {
+                                                    "_id_": 400001,
+                                                    "_type": "String",
+                                                    "value_": "@id\/buy_pro"
+                                                }
+                                            }
+                                        }
+                                    ]
+                                },
+                                "url": {
+                                    "_id_": 126454,
+                                    "_type": "URL",
+                                    "url": {
+                                        "_id_": 400368,
+                                        "_type": "String",
+                                        "value_": "payment\/payment.html"
+                                    }
+                                },
+                                "android:background": {
+                                    "_id_": 126456,
+                                    "_type": "Color",
+                                    "color_": -1
+                                },
+                                "android:visibility": {
+                                    "_id_": 126457,
+                                    "_type": "View.Visibility",
+                                    "value_": "gone"
+                                }
+                            }
+                        ]
+                    },
+                    "android:layout_width": {
+                        "_id_": 77,
+                        "_type": "String",
+                        "value_": "match_parent"
+                    },
+                    "android:layout_height": {
+                        "_id_": 76,
+                        "_type": "String",
+                        "value_": "match_parent"
+                    }
+                },
+                "background": {
+                    "_id_": 23,
+                    "_type": "Color",
+                    "color_": -855297
+                },
+                "name": {
+                    "_id_": 465,
+                    "_type": "String",
+                    "value_": "main"
+                },
+                "launcher": {
+                    "_id_": 464,
+                    "_type": "Activity.Launcher"
+                }
+            },
+            {
+                "_id_": 483,
+                "_type": "FileProvider",
+                "paths": {
+                    "_id_": 482,
+                    "_type": "List",
+                    "list_": [
+                        {
+                            "_id_": 481,
+                            "_type": "FileProviderPath",
+                            "path": {
+                                "_id_": 480,
+                                "_type": "String",
+                                "value_": "\/"
+                            },
+                            "root": {
+                                "_id_": 479,
+                                "_type": "String",
+                                "value_": "external-path"
+                            }
+                        }
+                    ],
+                    "elementType_": "FileProviderPath"
+                },
+                "name": {
+                    "_id_": 476,
+                    "_type": "String",
+                    "value_": "FileProviderAppExt"
+                }
+            },
+            {
+                "_id_": 492,
+                "_type": "FileProvider",
+                "paths": {
+                    "_id_": 491,
+                    "_type": "List",
+                    "list_": [
+                        {
+                            "_id_": 490,
+                            "_type": "FileProviderPath",
+                            "path": {
+                                "_id_": 489,
+                                "_type": "String",
+                                "value_": "\/"
+                            },
+                            "root": {
+                                "_id_": 488,
+                                "_type": "String",
+                                "value_": "files-path"
+                            }
+                        }
+                    ],
+                    "elementType_": "FileProviderPath"
+                },
+                "name": {
+                    "_id_": 485,
+                    "_type": "String",
+                    "value_": "FileProvider1"
+                }
+            }
+        ]
+    },
+    "settings": {
+        "_id_": 522,
+        "_type": "App.Settings",
+        "debugBuild": {
+            "_id_": 519,
+            "_type": "App.Settings.DebugBuild",
+            "useReleaseKeystore": {
+                "_id_": 366551,
+                "_type": "Boolean",
+                "value_": true
+            },
+            "includeAssets": {
+                "_id_": 524,
+                "_type": "Boolean",
+                "value_": true
+            }
+        },
+        "releaseBuild": {
+            "_id_": 521,
+            "_type": "App.Settings.ReleaseBuild"
+        }
+    },
+    "packaging": {
+        "_id_": 516,
+        "_type": "App.Packaging",
+        "icon": {
+            "_id_": 507,
+            "_type": "AdaptiveIcon",
+            "background": {
+                "_id_": 497,
+                "_type": "Color",
+                "color_": -1
+            },
+            "foreground": {
+                "_id_": 501,
+                "_type": "Image",
+                "file": {
+                    "_id_": 318753,
+                    "_type": "AppFile",
+                    "path_": "file5.png"
+                }
+            },
+            "legacyIcon": {
+                "_id_": 505,
+                "_type": "Image",
+                "file": {
+                    "_id_": 318754,
+                    "_type": "AppFile",
+                    "path_": "file6.png"
+                },
+                "isMipMap": {
+                    "_id_": 57832,
+                    "_type": "Boolean",
+                    "value_": true
+                }
+            }
+        },
+        "targetSdk": {
+            "_id_": 513,
+            "_type": "Integer",
+            "value_": 33
+        },
+        "label": {
+            "_id_": 508,
+            "_type": "String",
+            "value_": "App Builder Guide"
+        },
+        "versionName": {
+            "_id_": 515,
+            "_type": "String",
+            "value_": "1.0"
+        },
+        "versionCode": {
+            "_id_": 514,
+            "_type": "Integer",
+            "value_": 1
+        },
+        "minSdk": {
+            "_id_": 509,
+            "_type": "Integer",
+            "value_": 23
+        },
+        "permissions": {
+            "_id_": 512,
+            "_type": "App.Permissions",
+            "WRITE_EXTERNAL_STORAGE": {
+                "_id_": 94923,
+                "_type": "Boolean",
+                "value_": true
+            },
+            "INTERNET": {
+                "_id_": 94922,
+                "_type": "Boolean",
+                "value_": true
+            }
+        },
+        "packageName": {
+            "_id_": 510,
+            "_type": "String",
+            "value_": "com.osbapps.abguide"
+        }
+    },
+    "_nextId_": 902571,
+    "_abVer": 216
+}

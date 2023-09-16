@@ -1,0 +1,677 @@
+Sometimes you would want to create, write or get(read) a file in user's phone that is useful both to the app or the user. For example, you might want to create an app that allows user to save birthdays dates, those dates needs to be saved somewhere on the device so user can read it again, delete, or edit later e.t.c
+You might also want to save some user's activities when user is using your app.
+
+First of all, we need to know where exactly to save a file or directory on the device, i.e the storage area. Every android device have internal and external storage area, so you choose based on the nature of data you want to save. If you want to save a data you wouldn't want a user to tamper with or see, 
+then you save it in user's internal storage area, otherwise you can save it in external storage area.
+
+_To get or make use of user device's *internal or external storage*, you have to:_
+* *includeApi* and set fields *files* and *reflect* to true in *App Tree*
+[img=file:///assets/notes/notes/folder1/photos/files-reflect-api.png][/img]
+
+_To make use of device's *external storage*, we have to:_
+* Set *WRITE_EXTERNAL_STORAGE* permission in *App Tree* ( Read [link=file:///assets/notes/notes/folder1/packaging.html]Packaging, Permissions[/link] )
+[img=file:///assets/notes/notes/folder1/photos/write-external-perm.png][/img]
+
+*--To get device's internal storage directory of your app (Your app's designated private directory), use the following:--*
+
+1. *getFilesDir()*
+<code>&lt;script&gt;var dir=android.files.getFilesDir();&lt;/script&gt;</code>
+This is your app's private directory.
+This returns a File object for your app's private directory. Only your app can access this directory, it cannot be accessed by other apps. When the app is uninstalled, the directory (and all files in it) is deleted. No permissions are needed to read or write files in this directory.
+
+*--To get device's external storage directory, use the following:--*
+
+1. *getExternalDir()*
+<code>&lt;script&gt;var dir=android.files.getExternalDir();&lt;/script&gt;</code>
+
+This returns a file object for device's primary shared/external storage directory. File can be accessed by other apps. When your app is uninstalled, files in this directory *are not* deleted i.e it stays on the device until the user delete them.
+WRITE_EXTERNAL_STORAGE permission is needed to read, write files in this directory.
+
+2. *getExternalFilesDir()*
+<code>&lt;script&gt;var dir = android.files.getExternalFilesDir();&lt;/script&gt;</code>
+
+This returns a File object for the app's external directory. This directory can be accessed by other apps. When the app is uninstalled, the directory (and all files in it) is deleted. Depending on Android version, WRITE_EXTERNAL_STORAGE permission might be needed to write files in this directory.
+
+3. *getPublicDir(type)*
+type - could be any of the following: "alarms", "dcim", "documents", "downloads", "movies", "music", "notifications", "pictures", "podcasts", "ringtones".
+
+<code>&lt;script&gt;var dir=android.files.getPublicDir("downloads");&lt;/script&gt;</code>
+This return a file object of device top-level shared/external storage "Download" directory. When your app is uninstalled, files in this directory *are not* deleted.
+WRITE_EXTERNAL_STORAGE permission is needed to read, write files in this directory.
+
+See result for each of the storage directories
+[img=file:///assets/notes/notes/folder1/photos/storage-dirs.png][/img]
++s++r+*Note:* the values of these storage directories are not the same on all Android device+r++s+
+
+Just for a test, you can copy below code into your *hello.html* to test it. Make sure you *includeApi* - *files* and set *WRITE_EXTERNAL_STORAGE* permission in the app tree.
+<code>&lt;html&gt;
+  &lt;script src="file:///assets/android.js">&lt;/script>
+  &lt;script> 
+    var data="";
+document.addEventListener('DOMContentLoaded', function() {
+  var res=document.getElementById("res");
+  data+="1. &lt;b>getFilesDir()&lt;/b> - " + android.files.getFilesDir().toString() + "&lt;br>&lt;hr>";
+  data+="2. &lt;b>getExternalDir()&lt;/b> - " +android.files.getExternalDir().toString() + "&lt;br>&lt;hr>";
+  data+="3. &lt;b>getExternalFilesDir()&lt;/b> - " + android.files.getExternalFilesDir().toString() + "&lt;br>&lt;hr>";
+  data+="4. &lt;b>getPublicDir(''downloads'')&lt;/b> - " + android.files.getPublicDir("downloads").toString()
+  
+  res.innerHTML=data;
+})
+  &lt;/script>
+&lt;body>
+ 
+  &lt;div style="font-size: 13px;" id="res">&lt;/div>
+
+&lt;/body>
+&lt;/html></code>
+
+You are going to learn how to create, read, write, delete a file
+
++b+*var file = new android.File(path);*+b+ _(This is a file object)_
+A File object represents a file. File objects are immutable: once created, a File object does not change.
+The only element of its state is the path. 
+It is specified as a parameter to the constructor function.
+
+Another way to construct a File object:
++b+*var file = new android.File(dir,fileName);*+b+
+
+A File object may refer to a file or directory which may or may not exist.
+
+
+*LET'S createNewFile()*
+Now we want to create a file in user's device "Download" folder
+
+First of all we need to check if user granted your app permission (WRITE_EXTERNAL_STORAGE) in order to create or write a file (Tip: You can request this permission once at runtime if your app solely depend on it)
+Reminder: setting *WRITE_EXTERNAL_STORAGE* permission in the *app tree* under *Packaging* does not mean your app has been granted permission to create, read or write a file on user's device automatically, it simply means you are notifying user device's android system that your app will make use of user's device storage.
+
+Therefore, you have to explicitly request it from user and user have the choice to reject or accept it.
+
+Note: *WRITE_EXTERNAL_STORAGE* permission is needed only if your app will create, read, write or manipulate files in an external storage area (public area where user can see the file). It's not needed if you make use of device's internal storage area or your app's designated directory.
+
+Let's create a file now
+
++s+Remember to include function *hasPermission()* and *requestPermission()* in your javascript code.+s+ Check [ [link=file:///assets/notes/notes/folder1/check-request-permission.html]Check request permission[/link] )
+
+<code>&lt;script>
+  
+function createFileTest(){
+   if( !hasPermission() ){
+  
+     //First of all check & request
+     //WRITE_EXTERNAL_STORAGE if it 
+     //hasn't been granted before
+  
+   return requestPermission();
+}
+    var dir=android.files.getPublicDir("downloads");
+ 
+  var file=new android.File( dir, "test-file.txt");
+      
+  if( file.createNewFile() ){
+        alert("File: test-file.txt successfully created");
+      }else{
+        alert("Something went wrong");
+    }
+ }
+  &lt;/script>
+&lt;body>
+ 
+ &lt;button onclick="createFileTest()">Create&lt;/button>
+ 
+&lt;/body>
+&lt;/html>
+</code>
+
+Build and launch.
+After click the button, and it's successful, open your phone's file manager, check the "Download" folder, you will see the new file your app just created.
+
+Watch Video
+[youtube=XW_AAes-T1M]Create a file~[/youtube]
+
+
+*LET'S write() TO A FILE*
+i.e let's save a text
+
+<code>&lt;html>
+  &lt;script>
+function writeHello(){
+   if( !hasPermission() ){
+     return requestPermission();
+  }
+ 
+var dir=android.files.getPublicDir("downloads");
+ 
+var file=new android.File( dir, "test-file.txt");
+      if( file.write("Hello! How are you?") ){
+        alert("Success");
+      }else{
+        alert("Something went wrong");
+    }
+ }
+  &lt;/script>
+&lt;body>
+ 
+ &lt;button onclick="writeHello()">Write&lt;/button>
+ 
+&lt;/body>
+&lt;/html></code>
+
+Build and launch, press the button, if it says "Success", open your file manager and  check your Download folder to see the file.
+
++r+*Note:* write(text) will create the file if it does not exist and write to it. This function also overwrites contents of a file.+r+
+
+*CHECK IF A FILE exists()*
+
+Check if this file exists.
+
+Returns true if this object refers to an existing file; false otherwise.
+
+<code>
+var dir=android.files.getPublicDir("downloads");
+ 
+var file=new android.File( dir, "test-file.txt");
+
+if( file.exists() ){
+   alert("Yes, this file exists");
+}else{
+ alert("File not found");
+}
+</code>
+
+*read() A FILE*
+Let's fetch the content of the file we previously created
+
+<code>
+var dir=android.files.getPublicDir("downloads");
+ 
+var file=new android.File( dir, "test-file.txt");
+  //We need to check if file exists() before we read it's content
+
+if( file.exists() ){
+  alert( file.read() ); //This will alert the content of the  file
+}else{
+  alert("File not found");
+  }
+</code>
+
+*CHECK IF A FILE isFile()*
+This function checks if a file exists and it's also a file
+
+<code>
+var dir=android.files.getPublicDir("downloads");
+ 
+var file=new android.File( dir, "test-file.txt");
+
+if( file.isFile() ){
+   alert("Yes, this file exists and it's a file");
+}else{
+ alert("Not a file");
+}
+</code>
+
+
+*APPEND TEXT TO A FILE*
+
+*append(text)*
+Append text to this file.
+
+text - the text to append. If the file does not exist, it will be created.
+
+Returns true if the text was appended successfully; false otherwise.
+
+<code>var dir=android.files.getPublicDir("downloads");
+ 
+var file=new android.File( dir, "test-file.txt");
+  
+file.append("\nI Love you so much");
+</code>
+
+*COPY A FILE TO ANOTHER PATH*
+
+*copyTo(file)*
+Copy this file into another file.
+
+file - the destination file. It may be a string or a File object. If the file exists, it will be replaced.
+
+Returns true if file is copied successfully; false otherwise.
+
+<code>var dir=android.files.getPublicDir("downloads");
+ 
+var file=new android.File( dir, "test-file.txt");
+var anotherPath= new android.File(dir, "new-test-file.txt");
+
+ file.copyTo(anotherPath);
+</code>
+
+*COPY FILE FROM uri*
+
+*copyFromUri(uri)*
+Copy data from a content provider into this file.
+
+uri - an uri from a content provider. It is usually obtained from an intent or by querying a content provider.
+
+Returns true if the data was copied successfully; false otherwise.
+
+*CHECK IF A DIRECTORY (FOLDER) EXISTS*
+
+*isDirectory()*
+Check if this object refers to a directory.
+
+Returns true if this file exists and is a directory; false otherwise.
+
+<code>
+var dir=android.files.getPublicDir("downloads");
+ 
+var file=new android.File( dir, "nice-folder");
+ if( file.isDirectory()){
+  alert("Folder exists");
+  }else{
+   alert("Not a directory or does not exist")
+  }
+</code>
+
+*CREATE A DIRECTORY (FOLDER)*
+
+*mkdir()*
+Create the directory.
+
+Returns true if the directory was created; false otherwise.
+
+<code>
+var dir=android.files.getPublicDir("downloads");
+ 
+var file=new android.File( dir, "nice-folder");
+ 
+ if( file.mkdir() ){
+  alert("Folder created");
+  }
+  else{
+  alert("Could not create folder");
+  }
+</code>
+
+*CREATE A FOLDER INCLUDING PARENT DIRECTORIES*
+
+*mkdirs()* +s+Notice the "s" mkdir(s)+s+
+Create the directory, including any necessary but nonexistent parent directories. Note that if this operation fails it may have succeeded in creating some of the necessary parent directories.
+
+Returns true if and only if the directory was created, along with all necessary parent directories; false otherwise.
+
+<code>
+var dir=android.files.getPublicDir("downloads");
+ 
+var file=new android.File( dir, "nice-folder/folder2/folder3");
+
+ if( file.mkdirs() ){
+   alert("Successfully created");
+ }
+ else{
+   alert("Failed");
+}
+</code>
+
+
+*DELETE A SINGLE FILE OR DIRECTORY*
+
+*delete()*
+Delete this file. If this file denotes a directory (directory is also a file), it must be empty in order to be deleted.
+
+Returns true if the file has been deleted; false otherwise.
+<code>
+var dir=android.files.getPublicDir("downloads");
+  
+var file=new android.File( dir, "image.png");
+
+ if( file.delete() ){
+  alert("Deleted");
+  }
+</code>
+
+*DELETE A FILE OR DIRECTORY(INCLUDING THE FILES INSIDE IT)*
+
+*deleteFileOrFolder()*
+Delete this file. If this file denotes a directory, its content will be recursively deleted.
+
+Returns true if the file has been deleted; false otherwise. Note that this method may return false when the content of a directory was partially deleted.
+
+<code>
+var dir=android.files.getPublicDir("downloads");
+  
+var file=new android.File( dir, "folder-name");
+
+ if( file.deleteFileOrFolder() ){
+  alert("File or directories deleted");
+  }
+   else{
+  alert("Failed");
+  }
+</code>
+
+
+*CHECK IF TWO OBJECTS REFER TO THE SAME FILE
+
+*equals(file)*
+Check if two objects refer to the same file.
+
+file - another object. It may be a string or a File object.
+
+Returns true if this object refers to the same file as the file object; false otherwise.
+
+<code>
+var dir=android.files.getPublicDir("downloads");
+  
+var file=new android.File( dir, "test-file.txt");
+var file2=new android.File( dir, "anotherfile.txt");
+
+if( file.equals( file2 ) ){
+  alert("Equal");
+}else{
+ alert("Not the same");
+}
+</code>
+
+*GET LENGTH OF A FILE (FILE SIZE)*
+
+*length()*
+Get the length of the file, in bytes.
+
+Returns the length of the file; 0 if the file does not exist or is a directory.
+
+<code>
+var dir=android.files.getPublicDir("downloads");
+  
+var file=new android.File( dir, "test-file.txt");
+var length = file.length();
+  alert(length)
+</code>
+ 
+*GET LIST OF FILE NAMES IN A DIRECTORY*
+ 
+*list()*
+Get a list of file names in this directory.
+
+Returns an array of file names if this object refers to a directory; an empty array otherwise.
+
+<code>
+var dir=android.files.getPublicDir("downloads");
+  
+var file=new android.File( dir, "folder-name");
+var list = file.list();
+  alert(list)
+</code>
+
+*GET LIST OF FILES IN A DIRECTORY*
+
+*listFiles()*
+Get a list of files(files full path) in this directory.
+
+Returns an array of File objects if this object refers to a directory; an empty array otherwise.
+
+<code>
+var dir=android.files.getPublicDir("downloads");
+  
+var file=new android.File( dir, "folder-name");
+var list = file.listFiles();
+  alert(list)
+</code>
+
+*GET NAME PART OF A PATH*
+
+*getName()*
+Get the name part of the path.
+
+Returns a *string* containing the name part of the path.
+
+<code>
+var dir=android.files.getPublicDir("downloads");
+  
+var file=new android.File( dir, "test-file.txt");
+alert(file.getName()); //Result: test-file.txt
+</code>
+
+*GET PARENT FOLDER OF A PATH*
+  
+*getParent()*
+Get the parent folder.
+
+Returns a *File object* for the folder containing this file; null if there is no parent.
+
+<code>
+var dir=android.files.getPublicDir("downloads");
+  
+var file=new android.File( dir, "test-file.txt");
+var parent = file.getParent();
+  
+alert(parent.toString());
+</code>
+
+*GET FILE EXTENSION FROM PATH*
+
+*getSuffix()*
+Get the suffix of the file name. The suffix is defined as the part of the file name after the last dot.
+
+Returns a string containing the suffix of the file name; null if there is no suffix.
+
+<code>
+var dir=android.files.getPublicDir("downloads");
+  
+var file=new android.File( dir, "test-file.txt");
+alert(file.getSuffix()); //Result: txt
+</code>
+
+*GET A FILE'S LAST MODIFIED TIME*
+
+*lastModified()*
+Get the time when the file was last modified.
+
+Returns a number representing the time the file was last modified, measured in milliseconds since the epoch (00:00:00 GMT, January 1, 1970), or 0 if the file does not exist or if an I/O error occurs.
+
+<code>
+var dir=android.files.getPublicDir("downloads");
+ 
+var file=new android.File( dir, "test-file.txt");
+alert(file.lastModified());
+  </code>
+The example below shows how to convert this value to a human-friendly text.
+
+<code>
+var dir=android.files.getPublicDir("downloads");
+ 
+var file=new android.File( dir, "test-file.txt");
+
+var time = file.lastModified();
+var date = new Date(time);
+var options = {
+    weekday: "short",
+    year: "numeric",
+    month: "short",
+    day: "numeric",
+    hour: "2-digit",
+    minute: "2-digit"};
+var text = date.toLocaleTimeString("en-us", options);
+
+  alert( text)
+</code>
+
+*CONVERT FILE(image, video, audio e.t.c) TO BASE64 STRING*
+
+*readBase64()*
+Get binary data from the file as a Base64-encoded string.
+
+Returns a string containing the data in Base64 encoding; null in case of an error.
+
+<code>
+var dir=android.files.getPublicDir("downloads");
+ 
+var file=new android.File( dir, "test-file.txt");
+
+var data = file.readBase64();
+alert(data);
+</code>
+
+*CONVERT BASE64 STRING TO A FILE*
+
+*writeBase64(data)*
+Write binary data into this file.
+
+data - a string that contains binary data encoded as Base64.
+
+<code>
+var dir=android.files.getPublicDir("downloads");
+ 
+var file=new android.File( dir, "image-test.jpg");
+
+ var base64_string="iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAABHNCSVQICAgIfAhkiAAAAAlwSFlzAAAApgAAAKYB3X3/OAAAABl0RVh0U29mdHdhcmUAd3d3Lmlua3NjYXBlLm9yZ5vuPBoAAANCSURBVEiJtZZPbBtFFMZ/M7ubXdtdb1xSFyeilBapySVU8h8OoFaooFSqiihIVIpQBKci6KEg9Q6H9kovIHoCIVQJJCKE1ENFjnAgcaSGC6rEnxBwA04Tx43t2FnvDAfjkNibxgHxnWb2e/u992bee7tCa00YFsffekFY+nUzFtjW0LrvjRXrCDIAaPLlW0nHL0SsZtVoaF98mLrx3pdhOqLtYPHChahZcYYO7KvPFxvRl5XPp1sN3adWiD1ZAqD6XYK1b/dvE5IWryTt2udLFedwc1+9kLp+vbbpoDh+6TklxBeAi9TL0taeWpdmZzQDry0AcO+jQ12RyohqqoYoo8RDwJrU+qXkjWtfi8Xxt58BdQuwQs9qC/afLwCw8tnQbqYAPsgxE1S6F3EAIXux2oQFKm0ihMsOF71dHYx+f3NND68ghCu1YIoePPQN1pGRABkJ6Bus96CutRZMydTl+TvuiRW1m3n0eDl0vRPcEysqdXn+jsQPsrHMquGeXEaY4Yk4wxWcY5V/9scqOMOVUFthatyTy8QyqwZ+kDURKoMWxNKr2EeqVKcTNOajqKoBgOE28U4tdQl5p5bwCw7BWquaZSzAPlwjlithJtp3pTImSqQRrb2Z8PHGigD4RZuNX6JYj6wj7O4TFLbCO/Mn/m8R+h6rYSUb3ekokRY6f/YukArN979jcW+V/S8g0eT/N3VN3kTqWbQ428m9/8k0P/1aIhF36PccEl6EhOcAUCrXKZXXWS3XKd2vc/TRBG9O5ELC17MmWubD2nKhUKZa26Ba2+D3P+4/MNCFwg59oWVeYhkzgN/JDR8deKBoD7Y+ljEjGZ0sosXVTvbc6RHirr2reNy1OXd6pJsQ+gqjk8VWFYmHrwBzW/n+uMPFiRwHB2I7ih8ciHFxIkd/3Omk5tCDV1t+2nNu5sxxpDFNx+huNhVT3/zMDz8usXC3ddaHBj1GHj/As08fwTS7Kt1HBTmyN29vdwAw+/wbwLVOJ3uAD1wi/dUH7Qei66PfyuRj4Ik9is+hglfbkbfR3cnZm7chlUWLdwmprtCohX4HUtlOcQjLYCu+fzGJH2QRKvP3UNz8bWk1qMxjGTOMThZ3kvgLI5AzFfo379UAAAAASUVORK5CYII=";
+   
+if( file.writeBase64(base64_string) ){
+  alert("Image file created");
+  }else{
+  alert("Failed");
+  }
+</code>
+
+*TIP:* If your base64 string starts with something like this: *data:image/png;base64,* then you should erase *data:image/png;base64,* and use the rest.
+ 
+*GET FILE BINARY DATA AS A HEX STRING*
+
+*readHex(offset,length)*
+Get binary data from the file as a hex string.
+
+offset - starting position in the file.
+
+length - number of bytes to read from the file.
+
+Returns a string containing the data in hexadecimal format; null in case of an error.
+
+<code>
+var dir=android.files.getPublicDir("downloads");
+ 
+var file=new android.File( dir, "test-file.txt");
+
+var data = file.readHex(0,4);
+</code>
+
+*RENAME A FILE*
+
+*renameTo(file)*
+Rename the file.
+
+file - the new path of the file. May be a string or another File object.
+
+Returns true if and only if the renaming succeeded; false otherwise.
+
+<code>
+var dir=android.files.getPublicDir("downloads");
+ 
+var file=new android.File( dir, "test-file.txt");
+var file2 = new android.File(dir, "tested-file-ok.txt");
+
+  if( file.renameTo(file2) ){
+  alert("Renamed successfully");
+  }
+   else{
+   alert("Rename failed");
+  }
+</code>
+
+*SET LAST MODIFIED TIME OF A FILE*
+
+*setLastModified(time)*
+Set the last-modified time of the file.
+
+time - the new time, measured in milliseconds since the epoch (00:00:00 GMT, January 1, 1970).
+
+Returns true if and only if the operation succeeded; false otherwise.
+
+<code>
+var dir=android.files.getPublicDir("downloads");
+ 
+var file=new android.File( dir, "test-file.txt");
+
+var now = Date.now();
+ if( file.setLastModified(now) ){
+  alert("Successful");
+  }else{
+   alert("Failed");
+  }  
+</code>
+
+*WATCH FOR CHANGES IN A FILE*
+
+*startObserver(mask,handler)*
+Start watching for changes in this file.
+
+*mask* - an integer that specifies which events to watch for. The possible values are constants from android.observerMask.
+
+*handler* - a function that will handle file events. When an observed event occurs, this function is called with the first parameter being a javascript Event object.
+
+Below are recognized mask values:
+
+*ACCESS* - Data was read from a file.
+
+*ATTRIB* - Metadata (permissions, owner, timestamp) was changed explicitly.
+
+*CLOSE_NOWRITE* - Someone had a file or directory open read-only, and closed it.
+
+*CLOSE_WRITE* - Someone had a file or directory open for writing, and closed it.
+
+*CREATE* - A new file or subdirectory was created under the monitored directory.
+
+*DELETE* - A file was deleted from the monitored directory.
+
+*DELETE_SELF* - The monitored file or directory was deleted; monitoring effectively stops.
+
+*MODIFY* - Data was written to a file.
+
+*MOVED_FROM* - A file or subdirectory was moved from the monitored directory.
+
+*MOVED_TO* - A file or subdirectory was moved to the monitored directory.
+
+*MOVE_SELF* - The monitored file or directory was moved; monitoring continues.
+
+*OPEN* - A file or directory was opened.
+
+You can use OR operator to make a mask for monitoring multiple events. There is also a special value *ALL_EVENTS* that includes all the events listed above.
+
+The event object that is passed to the handler has the following detail fields:
+
+*path* - the original path used to start the observer.
+
+*eventCode* - the reason for the event, one of the mask values listed above.
+
+*eventPath* - a path associated with the event; for example, the name of a new file.
+
+Note that it is ok to start multiple observers for the same file, as long as the handler parameter is different for each call.
+
+<code>
+var dir=android.files.getPublicDir("downloads");
+ 
+var file=new android.File( dir, "test-file.txt");
+
+function handler(e) {
+  alert("File event, code="+e.detail.eventCode); 
+ }
+  
+file.startObserver(android.observerMask.ALL_EVENTS,handler);
+</code>
+
+*stopObserver(handler)*
+Stop watching for changes in this file.
+
+handler - the function passed to *startObserver()* as the handler parameter.
+
+*CONVERT A FILE OBJECT TO STRING PATH*
+
+*toString()*
+Get the path.
+
+Returns a string containing the path of this file. This is the same value as was given to the constructor.
+
+<code>
+var dir=android.files.getPublicDir("downloads");
+ 
+var file=new android.File( dir, "test-file.txt");
+
+alert(file.toString());
+</code>
+

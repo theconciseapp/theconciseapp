@@ -1,0 +1,49 @@
+Let's add a background to our app and to our webview page( hello.html)
+
+You will notice our app has a default white background, but our WebView page has a transparent background which makes the app's default white background to reflect.
+
+First of all, let's change our App's --*+b+Main+b+ +g+Activity+g+*-- background
+
+1. Go to the *App tree* of your app
+<pre>-App
+   features
+ - Activity | Main</pre>
+
+2. Click on +s+Activity | Main+s+
+3. Click on the plus(+) icon at the top to add *background* node
+3. Click on the hand icon (at the top left) to change the colour to any preferred colour
+4. Build and launch
+
++s+_See image below for illustration_+s+
+[img=file:///assets/notes/notes/folder1/photos/add-background.png][/img]
+
++l+Result+l+
+[img=file:///assets/notes/notes/folder1/photos/result-add-background.png][/img]
+
+The above is our app's main activity background i.e immediately you launch your app, you will see the bright pink background( +s+or whatever color you set+s+ ) instead of the default white background.
+
+Now let's change the background of our WebView page (hello.html)
+<pre>
+ -App
+     features
+   - Activity | Main
+    - features
+     - contentView | RelativeLayout
+      - views
+       - WebView | mywebview
+</pre>
+1. Click on +s+ - WebView | mywebview
+2. Click on the plus sign(+)
+3. Select *View* folder from the list of *nodes* that appears
+4. Select *android:background* from the list of nodes that appears
+5. Now click on the cone & cube icon at the top left +s+( beside the hand icon )+s+
+6. Select *color* ( +r+not color folder+r+) from the list of nodes that appears
+7. Click on the hand icon to change the color to a different colour 
+8. Build and launch your app
+
+Watch video below
+[youtube=BY0cl0VNV4s]Add background to Main Aactivity & WebView~[/youtube]
+
+When you launched your app, you will notice that we have two different background colours. The first background (from our sample: pink) is our app's main activity background colour while the second (green) is the WebView page background colour
+
+

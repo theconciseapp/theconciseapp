@@ -1,0 +1,39 @@
+*CSS:* it simple means Cascading Style Sheet- CSS is the language we use to style an HTML document i.e it's a simple mechanism for adding styles( fonts, color, background, positioning e.t.c) to your web document like html.  
+CSS describes how HTML elements should be displayed.
+
+I will teach you at least two ways to add css styles to a WebView page.
+
+1. Linking to a .css file that contains all css styles
+2. Adding the styles directly in an html page
+
+*--Number 1:--*
+[img=file:///assets/notes/notes/folder1/photos/imported-files.png][/img]
+
+let's add css file *(my-styles.css)* in our WebView page(hello.html),
++s+_( You can create *my-styles.css* on App Builder by clicking on plus(+) icon in *Assets*, after creating it, open it and enter <code>h1{ color: blue; background: red; }</code>, then close it and follow the instruction below )_+s+
+
+- Open *hello.html*
+- Put <code>&lt;link href="file:///assets/my-styles.css" rel="stylesheet"&gt;</code>
++s+_(Put it immediately after &lt;html&gt;)_+s+
+[img=file:///assets/notes/notes/folder1/photos/add-css.png][/img]
+- Build and launch your app
+
++s+(Remember to remove &lt;style&gt;h1{ color: white; }&lt;/style&gt; inside *hello.html*, since all our styles will now be inside *my-styles.css*)+s+
+
+*--Number 2:--* Adding the css styles directly in an html page
+
+- Open hello.html
+- Put 
+<code>&lt;style&gt;
+  h1{ color: white; background: indigo; }
+  /*Other styles*/
+&lt;/style&gt;</code> anywhere after &lt;html&gt; and build your app.
+
+It is best to use the first method as it is more organised in one file and also, using the method reduces the size of our html document.
+
+*Note:* If you want to use external css file (i.e css not created on or imported to app builder i.e css link that starts with https:// or http:// instead of file:///assets), then remember to set permission *INTERNET* in *App Tree* under *Packaging* ( [link=file:///assets/notes/notes/folder1/packaging.html]Read about Packaging[/link] )
+
+To know more about css, go to https://www.w3schools.com/css
+
+
+

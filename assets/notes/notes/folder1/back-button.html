@@ -1,0 +1,111 @@
++r+Note: This API is available if *activity* is set to true in *includeApi*.+r+
+ 
+Instruct a WebView on how to handle the back button using *setBackButtonLogic(value)*
+
+*value* - a string containing one of the following instructions:
+
+*_"fireEvent"_* - fire a backButtonPressed event. Use this if you really want to have total control of the back button.
+For example, a user might have clicked on an image to enlarge it, ideally, when user clicks the back button, the enlarged image should be closed first before the user click the back button again to quit the entire page.
+
+*_"useHistory"_* - use WebView history to go back; do nothing if the history stack is empty.
+
+*_"useHistoryOrDefault"_* - use WebView history to go back; let the default action be used if the history stack is empty. The default action is to handle the event on the activity level.
+
+_If value is anything else, then the default action will be used._
+
+Let's demostrate the _"fireEvent"_
+
+<code>&lt;script>
+android.webView.setBackButtonLogic("fireEvent");
+
+function myBackButtonLogic(){
+  alert("Back button pressed");
+  
+/*
+ if( imageIsOpened ){
+    return closeImageFirst();
+  }
+  else if( menuIsOpened ){
+    return closeMenuFirst();
+  }
+ else{
+   
+    //closeApp()
+  
+  }
+*/
+
+}
+  
+document.addEventListener("backButtonPressed",
+ function(){
+   myBackButtonLogic();
+});
+
+
+&lt;/script></code>
+  
+
+You can also set the *setBackButtonLogic* through the *App Tree*. Click on your *WebView* node, click the + icon and search *Back button*, click on the hand icon at the top left to choose which value you want.
+[img=file:///assets/notes/notes/folder1/photos/back-button.png][/img]
+
+_Note that fireEvent and useHistory consume the event, so that it doesn't go to the activity level i.e it doesn't affect other webviews or  activities._
+
+You can also use the *"onBackPressed"* event
+
+<code>
+ document.addEventListener("onButtonPressed",
+ function(){
+   myBackButtonLogic();
+});
+
+</code>
+
+*Difference between +r+onBackPressed+r+ and +r+backButtonPressed+r+ events*
+
+The event "onBackPressed" is fired by an activity. The event "backButtonPressed" is fired by a WebView. 
+It is possible that the WebView does not receive the back button event because it was consumed by something else, and so it will not fire "backButtonPressed", but the event from the activity is always fired.
+
+
+*EXIT/QUIT APP OR CLOSE AN ACTIVITY*
+
+Closing or exiting your app is quite easy:
+
+<code>&lt;script>
+  android.activity.finish();
+  &lt;/script>
+</code>
+
+You can put it in a function and call it anytime you want to close app or activity:
+
+<code>&lt;script>
+function closeApp(){
+   android.activity.finish();  
+}
+  &lt;/script>
+</code>
+
+Another style is to let user press back twice to confirm they really want to exit the app:
+
+<code>&lt;script>
+var backPressed=false;
+  
+function closeApp(){
+  
+if( backPressed ){
+  return android.activity.finish();
+ }
+
+backPressed=true;
+ 
+ toast("Press back again to exit"); 
+setTimeout(function(){
+  backPressed=false;
+},1500);
+
+}
+&lt;/script>
+</code>
+
+
+

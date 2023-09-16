@@ -1,0 +1,124 @@
+<html>
+<head>
+<meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+       <meta name="viewport" content="width=device-width, initial-scale=1,user-scalable=no,user-scalable=0">    
+ <link rel="stylesheet" type="text/css" href="file:///assets/css/bootstrap.4.css">
+  <link rel="stylesheet" href="file:///assets/css/fonts/stylesheet.css" type="text/css">
+  <link rel="stylesheet" type="text/css" href="file:///assets/css/css.css">
+ <link rel="stylesheet" type="text/css" href="file:///assets/css/settings-switch.css">
+ <link rel="stylesheet" href="file:///assets/css/centerlize.css">
+ <link rel="stylesheet" href="file:///assets/css/main.css">
+ <link rel="stylesheet" href="file:///assets/notes/notes.css">   
+ <link rel="stylesheet" href="file:///assets/css/settings.css">
+  
+<script src="file:///assets/android.js"></script>
+<script src="file:///assets/js/jquery.3.3.1.js"></script>
+<script src="file:///assets/js/jquery-ui.js"></script>
+<script src="file:///assets/js/moment.js"></script>
+
+ <script src="file:///assets/bootstrap.js"></script> 
+  <script src="file:///assets/js/global-bootstrap.js"></script>
+  <script src="file:///assets/js/global-functions.js"></script>
+  <script src="file:///assets/js/functions.js"></script>
+  <script src="file:///assets/js/main.js"></script>
+ <script>
+loadTemplate();
+</script>
+  <script src="file:///assets/js/settings-switch.js"></script>
+  <script src="file:///assets/js/myscript.js"></script>
+  <script src="file:///assets/notes/notes.js"></script>
+
+    </head>
+<body class="scroll-stoppable">
+  
+  <div id="TOOLBAR--CONTAINER">
+    <div id="TOOLBAR--TITLE--CONTAINER">
+   <div class="row">
+     <div class="col w-60 text-center" onclick="openDrawer();">
+     <img id="DRAWER--BTN" src="file:///assets/images/drawer-button.png">
+  </div>
+    <div class="col">
+   <div id="TOOLBAR--TITLE">Settings</div>
+    </div>
+    
+   </div>
+   </div>
+  </div>
+   
+ <div class="container-fluid settings-container">   
+   <table class="table select">
+    <tr>
+      <td>
+ Theme
+   </td>
+   <td class="text-right"> 
+     <button class="btn btn-sm capitalize" id="selected-template" onclick="showTemplates();"></button>
+    </td>
+    </tr>
+  </table>
+<hr />
+   
+     <table class="table time-session-table">
+   <tr>
+    <td>Texts Font Size</td>
+     <td class="text-right">
+     <div class="SOPTIONS font-size-container"></div>      
+    </td>
+   </tr>
+   <tr>
+    <td>Texts Font Weight</td>
+     <td class="text-right">
+     <div class="SOPTIONS font-weight-container"></div>      
+    </td>
+   </tr>
+       
+      <tr>
+    <td>Texts Line Gap</td>
+     <td class="text-right">
+     <div class="SOPTIONS line-gap-container"></div>      
+    </td>
+   </tr> 
+   <tr>
+    <td>Texts Color</td>
+     <td class="text-right">
+     <div class="SOPTIONS text-color-container"></div>      
+    </td>
+   </tr>
+         <tr>
+    <td>Background Color</td>
+     <td class="text-right">
+     <div class="SOPTIONS background-container"></div>      
+    </td>
+   </tr>    
+   <tr>
+  <td>Auto scroll to last read position</td>
+     <td class="text-right">
+     <div id="last-read-position"></div>      
+   </td>
+   </tr>  
+       
+   </table> 
+ <hr />
+      
+   <table class="table"><tr>
+  <td>
+  Import new theme
+     </td>
+   <td class="text-right">
+  <button onclick="importTheme();" id="import-theme" class="btn btn-primary small"><img src="file:///assets/images/button-icons/settings-white.png" style="width: 15px; height: 15px;"> <span class="rfd-text">Import</span></button>     
+ </td>
+  </tr>
+    </table>
+ <hr />
+   
+  </div>
+  
+  <script src="file:///assets/js/settings.js"></script>
+  <script src="file:///assets/js/imports.js"></script>
+  <script src="file:///assets/js/check-update.js"></script>
+
+
+      
+</body>
+</html>

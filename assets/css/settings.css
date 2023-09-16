@@ -1,0 +1,42 @@
+body{
+  font-size: 14px;
+}
+
+.settings-container{
+ max-width: 95%;
+ border: 0;
+ border-radius: 5px;
+  margin: 70px auto;
+  padding: 8px;
+ -webkit-box-shadow: 2px 3px 3px 3px rgba(0,0,0,.11); 
+ font-size: 14px;
+}
+
+.table.switch tr td:nth-child(2){
+  width: 60px!important;
+}
+
+.table td{
+  padding-left: 5px;
+  border: 0!important;
+}
+
+.alert-info{
+  font-weight: bold;
+  border-radius: 2px;
+}
+
+.class-name{
+  display: inline;
+  max-width: 200px;
+  white-space: nowrap;
+  white-space: nowrap;
+  text-overflow:ellipsis;
+  overflow-x: hidden;
+}
+
+
+.so-options-container{
+  right: 0;
+}
+

@@ -1,0 +1,59 @@
+{
+  "persistSelection": true,
+  "setActivityTitle": true,
+  "style": {
+    "background": "",
+    "header": "",
+    "menuItem": "",
+    "selected": ""
+  },
+  "items": [
+     {
+      "title": "Introduction",
+      "url": "drawer-pages/drawer-pages-loader.html",
+      "page": "introduction.html",
+      "icon": "introduction.png",
+      "layout": "page",
+      "callFunction":"loadPage({})"
+    }
+,
+   {
+      "title": "Read",
+      "url": "drawer-pages/contents1.html",
+      "page": "contents1.html",
+      "icon": "read.png",
+      "layout": "page",
+      "callFunction":"loadPage({})"
+    }
+,
+  
+    {
+      "title": "About",
+      "url": "drawer-pages/drawer-pages-loader.html",
+      "page": "about-author.html",
+      "icon": "about.png",
+      "layout": "page",
+      "callFunction":"loadDrawerPage()"
+    },
+    
+
+{
+      "title": "Settings",
+      "url": "drawer-pages/settings.html",
+      "page": "settings.html",
+      "icon": "settings.png",
+      "layout": "page",
+      "callFunction":"loadSettings()"
+    }
+    ,
+    {
+      "title": "Contact",
+      "url": "drawer-pages/contact.html",
+      "page": "contact.html",
+      "icon": "contacts.png",
+      "layout": "page",
+      "callFunction":""
+    }
+    
+  ]
+}

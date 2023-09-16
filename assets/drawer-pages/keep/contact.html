@@ -1,0 +1,161 @@
+<html>
+ <head>
+<meta charset="utf-8">
+   <meta http-equiv="X-UA-Compatible" contemt="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+   <link rel="stylesheet" href="file:///assets/css/bootstrap.4.css">
+   <link rel="stylesheet" href="file:///assets/css/font-awesome5/webfonts/all.css">
+ 
+   <link rel="stylesheet" href="file:///assets/css/fonts/stylesheet.css" type="text/css">   
+   <link rel="stylesheet" href="file:///assets/css/main.css">
+   <link rel="stylesheet" href="file:///assets/css/centerlize.css">
+   <link rel="stylesheet" href="file:///assets/notes/notes.css">
+   <link rel="stylesheet" href="file:///assets/third-party/mediaelement-master/build/mediaelementplayer.css" />
+   <link rel="stylesheet" href="file:///assets/third-party/media.css" />
+   <link rel="stylesheet" href="file:///assets/css/sponsored-posts.css" />
+  
+   <script src="file:///assets/android.js"></script>
+   <script src="file:///assets/js/jquery.3.3.1.js"></script>
+   <script src="file:///assets/third-party/mediaelement-master/build/mediaelement-and-player.min.js"></script>
+   <script src="file:///assets/third-party/media.js"></script>
+ 
+   <script src="file:///assets/js/moment.js"></script>
+   <script src="file:///assets/js/jquery.mark.min.js"></script>
+   <script src="file:///assets/js/yall.js"></script>
+ <script>
+   var PAGE_ID__="contact-us";
+  </script>
+  <script src="file:///assets/bootstrap.js"></script>    
+   <script src="file:///assets/js/global-bootstrap.js"></script>
+<script src="file:///assets/js/global-functions.js"></script>
+<script src="file:///assets/js/functions.js"></script>
+ <script src="file:///assets/js/main.js"></script>
+<script>
+loadTemplate();
+</script>
+<script src="file:///assets/notes/notes.js"></script>
+</head>
+<body>
+ <div id="TOOLBAR--CONTAINER">
+   <div id="highlighted-options-container" class="TOOLBAR--MENU--CONTAINER"></div>
+      
+  <div id="highlighted-options-container" class="search-box-container TOOLBAR--MENU--CONTAINER">
+     <div class="container-fluid bg-white text-dark" id="highlighted-options-child-cont">
+     <div class="row">
+      <div class="col w-50 text-center pt-3" onclick="closeSearchBox();">
+       <img class="w-20" src="file:///assets/images/button-icons/back-grey.png">
+      </div>
+     <div class="col p-0">
+      <input type="search" id="SEARCH--BOX" placeholder="Search"> 
+     </div>
+     <div class="col w-50 text-left">
+       
+       </div>
+     <div class="col p-0 w-40 text-left">
+       <img id="SEARCH--LOADER" style="display: none;" class="mt-3 w-20" src="file:///assets/loading-indicator/loading2.png">
+       <div id="SEARCH--FOUND"></div>
+      </div>
+       </div>
+      </div>
+   </div>
+
+  <div id="TOOLBAR--TITLE--CONTAINER">
+   <div class="row">
+     <div class="col w-60 text-center" onclick="openDrawer();">
+     <img id="DRAWER--BTN" src="file:///assets/images/drawer-button.png">
+  </div>
+    <div class="col">
+   <div id="TOOLBAR--TITLE" class="MANUAL--UPGRADE"></div>
+    </div>
+   <div class="col w-70 text-left d-none" onclick="openSearchBox();">
+     <img class="w-20" src="file:///assets/images/button-icons/search.png">      
+   </div>
+  <div id="TOGGLE--TOPICS--LIST" class="col w-60 text-left d-none" onclick="openTopicsList();">
+  <img src="file:///assets/images/drawer-button.png">
+   </div>
+     
+    </div>
+   </div>
+    
+  </div>
+  
+  
+ <div class="container-fluid">
+   
+  <div class="row">
+    <div class="col-12 col-md-8" id="MAIN--NOTE--CONTAINER">
+   
+   <div id="NOTE--CONTAINER">
+     <div id="NOTE--TEXTS"></div>
+   <div id="NOTE--NAV--CONTAINER" class="d-none">
+     
+    <button class="NAV--BTN" id="PREV--TOPIC--BTN" onclick="nextPrev(-1);">Prev</button>
+    <button class="NAV--BTN" id="NEXT--TOPIC--BTN" onclick="nextPrev(1);">Next</button>    
+    </div>      
+   </div>
+   
+    </div>    
+  <div class="col-12 col-md-4 p-0">
+    <div class="HIDE--TOPICS--LIST" id="TOPICS--LIST--CONTAINER">
+     <input type="search" id="TOPICS--SEARCH--BOX" placeholder="Search...">
+      <div id="TOPICS--LIST"></div>   
+  </div>
+ </div>    
+ </div>    
+  </div>
+  
+ <div class="container-fluid p-0 custom-page-container" id="ENLARGED--PHOTO--CONT">
+  <div onclick="closeCustomPage(this);" class="custom-page-shadow" data-close-id="ENLARGED--PHOTO--CONT"></div>
+  <div class="custom-page-child-container INPLAY--CHILD--CONTAINER">
+  <div class="custom-page-header" style="border-bottom: 1px solid rgba(0,0,0,0.18); line-height: 50px; padding-left: 16px;">
+   <div class="container">
+     <div class="row">
+       <div class="col">
+         <small>Click image to enlarge</small>
+       </div>
+       <div class="col text-right pt-2">
+         <img onclick="shareFile(this);" class="w-30" src="file:///assets/images/share.png">
+       </div>
+     </div>
+    </div>
+  </div>
+  <div class="custom-page-content" id="ENLARGED--PHOTO--CHILD--CONT">
+   
+  </div>
+    </div>
+  </div>
+  
+  <div id="video-element-container"></div>
+   <div id="media-youtube-fs"></div>
+  
+  <input type="hidden" id="CURRENT--PAGE" value="1">  
+  <div id="IS--MOBILE"></div>
+  
+  
+  
+  <script>
+ $(function(){
+  listTopics();
+  loadPage({});
+   
+setTimeout( function(){
+  //fetchExternalContents( contact_us_json_url);  
+},4000)   
+});
+    
+  </script>
+   
+<script>   
+  document.addEventListener("DOMContentLoaded", function() {
+  yall({
+    observeChanges: true,
+   // delay: 1000,
+  });
+});  
+  </script>  
+  
+
+  <script src="file:///assets/js/check-update.js"></script>
+
+</body>
+</html>

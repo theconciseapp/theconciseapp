@@ -1,0 +1,16 @@
+*Add an inline javascript to a webview page or trigger a Javascript function in a webview page (hello.html)*
+
+- Add inline javascript to a webview page onPageStarted or onPageFinished
+
+Follow the following steps
+1. In *App tree*, Add *webViewClient* node to your webview node
+2. Add *onPageStarted* node to the *webViewClient* node
+3. Add *webView.execute* node to *onPageStarted* (or onPageFinished ) node ( To do this, click on the *webViewClient* node and click the + icon, search for  *webview* [ folder ], then select *Webview.Execute* )
+4. Click on *code|inlineScript* and click the edit icon to enter/add javascripts or call/trigger a javascript function
+5. Finally, Click *webView|View.Reference* to choose which webview you want to add the javascripts.
+
+Check image below
+[img=file:///assets/notes/notes/folder1/photos/add-trigger-javascript.png][/img]
+
+* You should be careful if you are calling a javascript function that was declared in html ( &lt;script&gt;function blabla(){    };&lt;/script&gt;) or loaded js file from assets or external js link, as onPageFinished node *does not* indicate that your page body (javascript, html css e.t.c) has fully loaded 
+

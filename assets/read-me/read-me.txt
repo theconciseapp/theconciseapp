@@ -1,0 +1,94 @@
+This app's template is built by Oluwaseyi Bankole
+This template is to be used with Android App Builder ( by serakont) [ Download on PlayStore: https://play.google.com/store/apps/details?id=com.serakont.appbuilder2 ]
+
+You can use this template if you want to
+create a story app, ebook, school rules and regulations,
+lesson notes e.t.c.
+
+You can contact me via telegram: https://t.me/oluwaseyi_bankole
+for more advanced template or go to my github page: https://github.com/theconciseapp/app-builder-templates
+
+---ROAD MAP--
+
+*. Open Assets/notes/notes/folder1, here you will see some html files,
+this is where you will add your contents (Stories, notes e.t.c). 
+You can edit these files or delete and create new ones.
+However, they must be named numerically i.e 1.html, 2.html and so on. For example,
+if you are creating a story app, "1.html" is page 1 or chapter 1,
+"2.html" is page 2 or chapter 2 and so on.
+
+
+
+*. Edit, "notes.json" in Assets/notes
+
+The file contains json data thst stores each pagr
+
+  {
+    "path":"folder1",
+    "title":"Chapter 1",
+    "sub_topics":[],  
+    "keywords":""
+  }
+  
+  Change "title":"To whatever"
+
+Don't add double quote in your title. That is invalid:
+i.e don't do this "title":"My "good"title" . You may use single quote twice if you need quotes
+
+
+
+
+*. Open Assets/drawer-pages
+Html files in this folder are the pages in menu.
+You can edit the html files there. 
+It's not necessary you edit the following html files:
+"contents.html, settings.html and drawer-pages-loader.html"
+
+Edit 0.json, this file contains json data, used in menu.
+
+{
+      "title":"Preface",
+      "url":  "drawer-pages/drawer-pages-loader.html",
+      "page": "preface.html",
+      "icon": "",
+      "layout": "page",
+      "callFunction": "loadDrawerPage()"
+ },
+ 
+ 
+ 
+ 
+*. Open Assets/bootstrap.js and edit
+ 
+ 
+ 
+Pro Version Template (buy the pro version template at cheap rate)
+
+- Sub topics activated
+- Upgraded settings options - App users can:
+   .Change theme
+   .Font weight[ Bold, Normal ]
+   .Text color [ Black, blue, red, green, white, yellow ]
+   .Background [ Black, blue, red, green, white, yellow ], 
+   .Texts line gap
+- Add unlimited pages/chapters/notes
+- Whatsapp-like text formatting 
+    i.e instead of typing <b>Text</b> in your notes or stories,
+    you can do *text* others are "_Italise_, ~Strike~, --Underline-- ```Monospaced text```
+
+- Best customer support
+Contact me via telegram: https://t.me/oluwaseyi_bankole 
+or via Android app builder group on facebook
+ 
+ 
+ 
+ 
+ 
+!!WARNING
+
+Free template users are prohibited strongly from 
+tampering with the core code of this Note app template.
+
+Any attempt to tamper with the codes, will be reported to adequate authority if detected, and your
+app will be stopped from app stores.
+ 

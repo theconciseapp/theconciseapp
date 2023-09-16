@@ -1,0 +1,150 @@
+#attendance-info{
+  width: 100%;
+  white-space: nowrap;
+  overflow-x: auto;
+  font-size: 11px;
+  font-weight: bold;
+  color: #555;
+  padding: 10px 8px 8px 0;
+}
+
+#attendance-info img{
+  width: 19px;
+  height: 19px;
+  margin-left: 15px;
+}
+
+#turn-on-btn,
+#turn-off-btn{
+  background: none;
+  border: 0;
+  border-radius: 100%;
+  width: 40px;
+  height: 40px;
+  outline: none!important;
+}
+
+#turn-on-btn img,
+#turn-off-btn img{
+ width: 40px;
+}
+
+#pick-date{  
+  /* margin-top: 10px;*/
+  font-size: 11px;
+  border-radius: 3px;
+  position: relative;
+  background: #ffffff;
+  height: 30px;
+  text-transform: capitalize;
+  margin-bottom: 0;
+  color: #444;
+  font-weight: bold;
+  display: inline-block; /*flex;
+  flex: 1;*/
+  border: 0;
+  outline: none;
+  padding-left: 10px;
+  padding-right: 10px;
+  white-space: nowrap;
+  text-overflow:ellipsis;
+  overflow-x: hidden;
+  box-shadow: 4px 4px 20px -2px rgba(0, 0, 0, 0.35);
+  transition: all 0.4s;
+  
+}
+    
+.sign-btn,
+.signout-btn,
+.view-ireport-btn{
+  width: 40px;
+  height: 40px;
+  padding: 0;
+  border: 1px solid #f0f0f0;
+  border-radius:5px;
+  outline: none!important;
+  margin: 0 auto;
+  position: relative;
+/*  -webkit-box-shadow: 1px 1px 2px 0px rgba(0,0,0,0.16); */   
+  margin-right: 16px;
+}
+
+.BEFORE--SIGN--BTN,
+.BEFORE--SIGNOUT--BTN{
+  background: #D2E1EA;
+}
+
+.AFTER--SIGN--BTN,
+.AFTER--SIGNOUT--BTN{
+  background: #25D55F;
+}
+
+.sign-btn img,
+.signout-btn img,
+.view-ireport-btn img{
+  display: block;
+  margin:0 auto;
+  height: 25px;
+  width: 25px;
+}
+
+.view-ireport-btn{
+  background: #1B97E6; /*0079c6;*/
+}
+
+.signed-time{
+  display: block;
+  font-size: 11px;
+  height: 13px;
+}
+
+.signin-time{
+  margin-left: 14px;
+}
+
+img.signed-late-indicator{
+  position: absolute;
+  z-index: 2;
+  bottom: 10px;
+  right: -5px;
+  height: 14px;
+  width: 14px;
+}
+
+
+.a-date-picker-container{
+  position: absolute;
+  z-index: 50;
+  bottom: 0;
+  width: 100%;
+  height: 50px;
+  background: #fff;
+  border: 1px solid #999;
+  padding: 2px 16px;
+  white-space: nowrap;
+}
+
+.a-date-picker-container .so-options-container{
+  bottom: 5px;
+  z-index: 
+}
+
+.report-date-pick{
+  height: 42px;
+}
+
+
+.ireport-header{
+  /*Nav Buttons are inside this header in individual
+  reports to toggle daily, monthly, e.t.c
+  */
+  width: 100%;
+  overflow-x: auto;
+  white-space: nowrap;
+  
+}
+
+.ireport-header button{
+  margin: 5px 8px;
+}
+  

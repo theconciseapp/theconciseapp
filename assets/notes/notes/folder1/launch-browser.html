@@ -1,0 +1,33 @@
++r+Note: This API is available if *activity* is set to true in *includeApi*.+r+
+
+An elegant way to load an external URL outside your app is to make use of an *intent*.
+For example, you might want your app users to open a facebook Url or any other website in an external browser, so when they click on the link, Opera, or Chrome or any other browser on user's phone will show up and so they can choose which of the browser to use to open the Url. 
+
+<code>&lt;script>
+var intent = {
+    action:"android.intent.action.VIEW",
+    data:"https://google.com"
+     };
+android.activity.startActivity(intent);
+
+&lt;/script>
+</code>
+  
+You can put it in a function to make it easier to use:
+  
+ <code>&lt;script>
+function openInBrowser( url ){
+   var intent = {
+    action:"android.intent.action.VIEW",
+    data: url
+     };
+android.activity.startActivity(intent);
+}
+&lt;/script>
+</code>
+  
+&lt;button onclick="openInBrowser('https://facebook.com') ">Open Facebook Url&lt;/button>
+
+Result:
+<button onclick="openInBrowser('https://www.facebook.com');" class="btn btn-lg">Open Facebook Url</button>
+  

@@ -1,0 +1,33 @@
+When we created and launched our first app on App Builder, it displays *+r+Hello+r+* in red color. I'm quite sure you are wondering where the text *Hello* came from.
+
+Now let's change the text to *+r+Hello World+r+*
+
+Open the App tree of your app +s+_(You already know what and where the *App tree* and *App nodes* are. If you don't, go to previous lesson)_+s+
+
+<pre>
+  -App
+     features
+   - Activity | Main
+    - features
+     - contentView | RelativeLayout
+      - views
+       - TextView
+        - android:text | String | *--Hello--*
+</pre>
+
+Click on the image below to further understand
+[img=file:///assets/notes/notes/folder1/photos/hello-world.png][/img]
+
+- Click on *Hello* field as indicated in the image above and then click on the pencil icon at the top to edit the text
+- Change the text to *Hello World* and press done or ok sign on your keypad
+- Now go back and "Build"
+
+When you launch it, you will see +r+*Hello World*+r+
+
+let's move on!
+
+When you changed the text from "Hello" to "Hello World", you will notice that the editing area is not elegant enough because we used a type of *view* called *TextView* node. Imagine you want to write a readable long sentences with new lines.
+
+*THERE IS A BETTER WAY*
+
+By using a special type of *View* called +g+*WebView*+g+ *node*

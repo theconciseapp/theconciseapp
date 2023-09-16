@@ -1,0 +1,36 @@
++r+Note: This API is available if *activity* is set to true in *includeApi*.+r+
+
+Use this function to share or send any type of text to another app on the device or bluetooth
+
+
+<code>&lt;script>
+
+function shareText(text, mimeType) {
+  
+  mimeType=mimeType||"text/html";
+  
+ var intent={
+  action:"android.intent.action.SEND",
+  type: mimeType,
+  extras:{
+  "android.intent.extra.TEXT" : text
+  }
+  
+ };
+  
+android.activity.startActivity(intent,true);
+
+ }
+&lt;/script>
+</code>
+
+Test:
+
+<code>
+&lt;body>
+  &lt;button onclick="shareText('I am beautiful')">Share sample text&lt;/button>
+&lt;/body>
+</code>
+
+<button onclick="shareHtml('I am beautiful')" class="btn btn-lg">Share sample text</button>
+

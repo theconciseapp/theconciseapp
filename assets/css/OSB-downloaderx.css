@@ -1,0 +1,2073 @@
+html,body{
+  height: 100%;
+  width: 100%;
+}
+
+body{  
+ background: linear-gradient(to bottom right, white, #bcbdc4);
+ overflow: hidden;
+ font-family: Arial, helvetica, sans-serif;
+font-size: 0;
+}
+
+#MASTER-CONTAINER{
+  font-size: 14px;
+}
+
+#go-initializing-container{
+  position:fixed;
+  top:0;
+  bottom:0;
+  left:0;
+  right:0;
+  z-index: 200;
+  background: linear-gradient(to bottom right, white, #bcbdc4);
+}
+
+#go-initializing-loader{
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  -webkit-transform: translate(-50%,-50%);
+  text-align: center;
+}
+
+/*PROGRESS BAR*/
+
+#post-progress-bar-container{
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 100;
+}
+
+
+#post-progress{
+    position: relative;
+    height: 5px;
+}
+
+#post-progress-slider{
+    position: absolute;
+  top: 0;
+    background-color: #0079c6;
+    width: 0px;
+    height: 5px;
+    border-radius: 5px;
+  animation: progres 2s linear 0.5s 1 normal forwards;
+}
+
+@keyframes progres{
+  
+  from { width:0;
+  }
+  to { width: 87%;
+  }
+}
+
+a[disabled="disabled"] {
+  pointer-events: none;
+}
+
+.absolute-center{
+  position: absolute;
+  left: 50%;
+  top:50%;
+  -webkit-transform: translate(-50%,-50%);
+}
+
+img{
+ text-indent: 100%;
+}
+
+.fw-bold{
+  font-weight: bold;
+  font-size: 30px;
+}
+
+.icon-small{
+  height: 12px;
+  width: 12px;
+}
+
+.icon-normal{
+  height: 18px;
+  width: 18px;
+}
+
+.icon-medium{
+  height: 25px;
+  width: 25px;
+}
+
+.icon-lg{
+  height: 30px;
+  width: 30px;
+}
+
+.icon-lg-2{
+  height: 45px;
+  width: 45px;
+}
+
+.p-0{
+  padding:0!important;
+}
+
+.ellipsis{
+  white-space: nowrap;
+  overflow-x: hidden;
+  text-overflow:ellipsis;
+}
+
+.opacity-1{
+  /*Used in go-menu-items.html*/
+  opacity: 0.8;
+}
+  
+.bg-grey{
+  background: #999;
+}
+
+.middle{
+  display:-webkit-box;
+-webkit-box-pack:center;
+-webkit-box-align:center;
+}
+
+.ext-social-button{
+	color: rgba(0,0,0,0.6);
+	color: #d9534f;
+	font-size: 14px;
+	font-weight: bold;
+	padding: 10px 8px 10px 0px;
+}
+
+.go-nice-link-container{
+  display: block;
+  padding: 4px;
+  border: 1px solid rgba(0,0,0,0.19);
+  border-radius: 8px;
+  width: calc(100% - 11px);
+  margin: 5px auto 0 auto;
+  font-size: 16px;
+  color: #2b2b2b;
+/*  margin-bottom: -2px;*/
+  }
+  
+.go-nice-link{
+ color: #2b2b2b;
+  outline: none!important;
+  text-decoration: none!important;
+  font-weight: bold;
+}
+
+.save-media-btn{
+  background: #f5f5f5;
+  color: rgba(0,0,0,0.7);
+  border: 0; 
+  border-radius: 20px;
+  padding: 5px 10px;
+  font-size: 15px;
+}
+.save-media-btn img{
+  width: 17px;
+  height: 17px;
+}
+
+.save-video-btn{
+  position: absolute; 
+  z-index: 50; 
+  top: 10px; 
+  right: 10px;
+}
+
+.go-hide{
+   display: none;
+}
+
+.go-no-post{
+  width: calc(100% - 10px);
+  margin: 5px auto;
+  background: #f5f5f5;
+  color: #2b2b2b;
+  font-size: 18px;
+  font-weight: bold;
+  text-align: center;
+  border: 0;
+  border-radius: 4px;
+}
+
+.go-no-post img{
+  display: block;
+  margin: 0 auto;
+  height: 100px;
+  width: 100px;
+}
+
+
+#post-loading-indicator,
+#go-followers-loading-indicator,
+#go-following-loading-indicator,
+#go-blocked-followers-loading-indicator{
+ display: block;
+ visibility: hidden; 
+ margin:0 auto;"  
+}
+
+#go-full-photo-container,
+#go-full-cover-photo-container{
+  position: fixed;
+  top:0;
+  bottom:0;
+  width: 100%;
+  z-index: 99999;
+  background: #000;
+  display: none;
+}
+
+#go-full-photo-child-container{
+  z-index: 20;
+  height: 100vh;
+  position: relative;
+  background: none;
+}
+
+
+.go-full-photo{
+  display: block;
+  margin: 0 auto;
+  margin-top: 10px;
+  min-width: 200px;
+  max-width: 100%;
+  z-index: 20;
+ 
+}
+
+#go-main-header{
+  position: fixed;
+  top: 0;
+  width: 100%;
+  height: 100px;
+  padding: 10px 16px;
+  overflow: hidden;
+  background: #fff;
+  z-index:10;
+  font-size: 14px;
+}
+
+#go-label{
+  max-width: 100%;
+  overflow-x: hidden;
+  color: #0079c6;
+  font-weight: bold;
+  font-size: 16px;
+  font-family: gidole;
+  white-space: nowrap;
+  text-overflow:ellipsis;
+  overflow-x: hidden;
+}
+
+#go-open-menu,
+#go-open-search-box{
+  background: #f3f3f2;
+  border: 0;
+  height: 38px;
+  width: 38px;
+  border-radius: 100%;
+  margin-right: 8px;
+  outline: none;
+}
+
+#go-open-menu{
+  margin-right: 8px;
+  margin-left: 8px;
+  display: none;
+}
+
+#header-navlists{
+  width: 100%;
+  white-space: nowrap;
+  overflow-x: auto;
+  padding-top: 10px;
+}
+
+#header-navlists div{
+position: relative;
+display: inline-block;
+ padding-right: 15px;
+ margin-right: 16px;
+ height: 30px;
+text-align: left;
+}
+
+
+#header-navlists span{
+  position: absolute;
+  top: -6px;
+  left: 15px;
+  display: none;
+  min-width: 22px;
+  height: 22px;
+  border: 1px solid #fff;
+  border-radius: 20px;
+  font-size: 12px;
+  padding: 1px 6px;
+  text-align: center;
+  font-weight: bold;
+  background: red;
+  color: #fff;
+}
+
+.go-pages-lists-item{
+  text-transform: capitalize;
+  display: block;
+  white-space: nowrap;
+  text-overflow:ellipsis;
+  overflow-x: hidden;
+  font-size: 14px;
+  font-weight: bold;
+  padding: 5px 0px;
+ /* border-bottom: 1px solid #999;*/
+}
+
+
+.go-user-icon-container{
+  height: 45px;
+  width: 45px;
+  text-align: center;
+  margin: 0 auto;
+  border: 0;
+  border-radius: 100%;
+  overflow: hidden;
+}
+
+.go-user-icon-container img.friend-picture,
+.my-photo-icon{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: 50% 50%;
+}
+
+.go-saved-post-icon{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: 50% 50%;
+}
+
+.the-main-container{
+  position: relative;
+  display: block;
+  padding:0;
+  margin:0;
+  margin-top: 101px!important;
+  height: calc(100% - 101px);
+  overflow: hidden;
+  font-size: 15px;
+}
+
+#open-compose-page-btn{
+  height: 40px;
+  background: #f5f5f5;
+  border: 0;
+  font-size: 15px;
+  border-radius: 20px;
+  width: 100%;
+  overflow-x: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  padding-top: 8px;
+  padding-left: 10px;
+}
+
+.side-bar-container,
+.main-content-container,
+.right-side-bar-container{
+ display: inline-block;
+ position: relative;
+ padding:0;
+ border:0;
+ height: calc(100vh - 101px);
+ border-radius:5px;
+ overflow: hidden;
+ font-size: 15px;
+   }
+
+.side-bar-container,
+.right-side-bar-container{
+  width: 250px;
+  vertical-align: top;
+  background: rgba(0,0,0,0.16);
+}
+
+
+.main-content-container{
+ width: calc(100% - 500px);
+ white-space: normal;
+ margin-left: 0;
+ }
+
+
+#go-posts-column{
+  height: calc(100vh - 101px);
+  word-wrap: break-word;
+  word-break: break-word;
+  overflow-y: auto!important;
+  overflow-x: hidden;
+  background: rgba(0,0,0,0.16);
+}
+
+#go-express-your-mind{
+  margin-bottom: 0;
+}
+
+
+#go-search-container{
+  position: fixed;
+  top:0;
+  bottom:0;
+  width: 100%;
+  z-index: 20;
+  background: rgba(0,0,0,0.17);
+  display: none;
+  font-size: 14px;
+}
+  
+#go-search-child-container{
+  width: 100%;
+  max-width: 600px;
+  margin:0 auto;
+  overflow-x: hidden;
+  background: #fff;
+  height: 100vh;
+  position: relative;
+  word-wrap: break-word;
+  word-break: break-word;
+  z-index: 20;
+}
+
+#go-search-box{
+  background: #f5f5f5;
+  height: 35px;
+  width: calc(100% - 70px);
+  display: inline-block;
+  margin: 0 auto;
+  margin-right: 10px;
+  color: #2b2b2b;
+  border-radius: 18px;
+  outline: none;
+  padding: 4px 10px;
+  font-size: 14px;
+  border: 1px solid rgba(0,0,0,0.16);
+}
+
+#go-searched-posts{
+  background: rgba(0,0,0,0.16);
+}
+
+#go-the-posts{
+  background: none;
+  width: 100%;
+  max-width: 700px;
+  margin: 4px auto 0 auto;
+  overflow-x: hidden;
+  padding-bottom: 200px;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+  font-size: 15px;
+}
+
+.go-post-header{
+  margin-bottom: 6px;
+  
+}
+
+.go-post-container,
+.go-opost-container /*Original post if it was a repost*/
+{
+  margin: 0 auto 5px auto;
+  width: calc(100% - 10px);
+  border: 0;
+  font-size: 15px;
+  font-weight: 400;
+  color: #4f4f4f;
+  border-radius: 4px;
+  overflow-x: hidden;
+  background: #fff;
+  font-family: Arial, helvetica, sans-serif;
+}
+
+.go-opost-container{
+  border: 1px solid rgba(0,0,0,0.16);
+  border-radius: 5px;
+  width: calc(100% - 16px);
+ /* -webkit-box-shadow: 1px 2px 1px 2px rgba(0,0,0,0.16);
+   */
+  margin: 5px auto;
+  overflow-wrap: break-word;
+  word-wrap: break-word;
+  
+}
+
+.go-post-by-icon-col,
+.go-opost-by-icon-col
+{
+  width: 70px!important;
+  max-width: 70px!important;
+  padding-left: 20px;
+}
+
+.go-post-by-icon-container,
+.go-opost-by-icon-container
+{
+  display: block;
+  margin-top: 8px;
+  overflow: hidden;
+  width: 50px;
+  height: 50px;
+  border-radius: 100%;
+  background: url(file:///android_asset/go-icons/avatar.png);
+  background-repeat: no-repeat;
+  background-size: 50px 50px;
+}
+
+.go-opost-by-icon-container{
+  width: 40px;
+  height: 40px;
+  background-size: 40px 40px;
+}
+
+.go-post-author-icon,
+.go-opost-by-icon
+{
+  
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: 50% 50%; 
+  
+  }
+
+.go-opost-by-icon{
+  /*
+  width: 40px;
+  max-height: 60px;
+  */
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: 50% 50%;
+}
+
+.go-post-fullname,
+.go-opost-fullname,
+.go-user-fullname
+{
+  text-transform: capitalize;
+  display: block;
+  white-space: normal;
+  width: 100%;
+  font-size: 14px;
+  font-weight: bold;
+  margin-top: 12px;
+}
+
+.go-user-fullname{
+  margin-top: 0;
+}
+
+.go-opost-fullname{
+text-overflow:ellipsis;
+  overflow-x: hidden;
+  white-space: nowrap;
+}
+
+
+.go-post-date,
+.go-opost-date
+{
+  font-size: 13px;
+  font-weight: bold;
+  color: #777;
+}
+
+.go-post-title{
+ width: 90%;
+ white-space: normal;
+ overflow-wrap: break-word;
+ padding-left: 10px;
+	font-size: 18px;
+	font-weight: bold;
+	font-family: serif;
+	margin-bottom: 8px;
+}
+
+.go-post-title:first-letter{
+ font-size: 30px;
+ text-transform: capitalize;
+ }
+ 
+
+
+.go-post-options-btn{
+  height: 40px;
+  font-weight: bold;
+  letter-spacing: 3px;
+}
+
+.go-post,
+.go-opost
+{
+  margin-top: 0px;
+  width: 100%;
+  
+}
+
+.post-chat-user{
+  color: bold;
+  color: teal;
+  font-size: 18px;
+}
+
+.post-chat-user:before{
+  content: "@";
+}
+
+re{ color: #d9534f; }
+bl{ color: blue; }
+gr{ color: green; }
+
+big{
+  display: inline-block;
+  font-weight: bold;
+  font-size: 35px;
+}
+
+small{
+  font-size: 11px;
+}
+
+code{
+  display: block;
+  width: 90%;
+  max-width: 450px;
+  max-height: 500px;
+  overflow-y: auto;
+  margin: 5px auto;
+  font-family: gidole, "courier new";
+  color: crimson;
+  background-color: #f1f1f1;
+  padding: 10px;
+  font-size: 15px;
+  border: 0;
+  border-radius: 8px;
+  word-wrap: break-word;
+  word-break: break-word;
+}
+
+.go-post-preview,
+.go-opost-preview{
+  padding: 0 10px;
+  font-size: 15px;
+  color: #2b2b2b;
+ /* font-weight: 400; */
+  white-space: pre-line;
+  word-wrap: break-word;
+  word-break: break-word;  
+}
+
+.go-load-full-post:hover{
+  /*background: #f6f6f6;*/
+}
+
+.go-load-full-post-loading{
+  opacity: 0.5;
+}
+
+
+.go-post-more-link{
+  color: #777;
+  font-size: 15px;
+  font-weight: normal;
+}
+
+.go-post-files-container{
+  max-width: 500px;
+  position: relative;
+  margin: 0 auto;
+  overflow: hidden;
+}
+
+.go-post-files-container-m{
+  width: 100%;
+}
+
+.go-post-photo-container{
+  position: relative;
+  background: #fff;
+  max-height: 600px;
+  overflow: hidden!important;
+}
+
+.go-more-photos{
+  position: absolute;
+  bottom:0;
+  right: 5px;
+  width: calc(50% - 6px);
+  height: 159px;
+  z-index: 5;
+  background: rgba(0,0,0,0.3);
+  text-align: center;
+  line-height: 198px;
+  overflow: hidden;
+  font-size: 15px;
+  color: #fff;
+  font-weight: bold;
+}
+
+
+.go-post-photo{
+  display: block;
+  margin: 0 auto;
+ /* width:  100%; */ /*100px;*/
+  min-height: 160px;
+  max-height: 700px;
+  max-width: 100%;
+}
+
+.go-multiple-images img.go-post-photo{
+  height: 100%;
+  width:  100%;
+  max-width: 100%;
+  max-height: 100%;
+ object-fit: cover;
+ object-position: 50% 50%;
+}
+
+
+.go-multiple-images-2 .go-post-photo-container
+{
+  display: inline-block;
+  height: 250px;
+  width: calc(50% - 5px);
+  margin-left: 2px;
+  margin-right: 2px;
+  overflow: hidden;
+}
+
+.go-multiple-images-2 img.go-post-photo{
+    min-height: 250px;
+}
+
+.go-multiple-images-3 .go-post-photo-container
+{
+  display: inline-block;
+  width: calc(50% - 5px);
+  margin-left: 2px;
+  margin-right: 2px;
+  height: 160px;
+  overflow: hidden;
+}
+
+.go-multiple-images-3 .go-post-photo-container:nth-child(3)
+{
+ width: calc(100% - 5px);
+ min-height: 200px;
+ padding-top: 2px;
+}
+
+.go-multiple-images-4 .go-post-photo-container,
+.go-multiple-images-6 .go-post-photo-container,
+.go-multiple-images-5 .go-post-photo-container
+{
+  display: inline-block;
+  width: calc(50% - 5px);
+  margin-left: 2px;
+  margin-right: 2px;
+  height: 160px;
+  padding-top: 2px;
+  overflow: hidden;
+}
+
+.go-multiple-images-5 .go-post-photo-container:nth-child(5)
+{
+ width: calc(100% - 5px);
+/* height: auto; */
+ min-height: 200px;
+}
+
+/*
+.go-multiple-images-5 .go-post-photo-container:nth-child(5) img.go-post-photo
+{
+ min-height: 150px;
+}
+*/
+
+.go-video-play-icon{
+  position: absolute;
+  top:50%;
+  left:50%;
+  z-index: 5;
+  height: 50px;
+  width: 50px;
+  max-height: 50px;
+  -webkit-transform: translate(-50%,-50%); 
+}
+
+.go-open-video{
+  position: absolute;
+  top:0;
+  width: 100%;
+  bottom:0;
+  z-index: 10;
+  background: none;
+}
+
+.go-post-footer{
+  margin-top: 8px;
+  margin-bottom: 5px;
+}
+
+.go-post-footer button{
+ border: 0;
+ border-radius: 20px;
+ background: #f2f2f2;
+  width: 90%;
+  max-width: 130px;
+  padding: 6px 0;
+  font-size: 16px;
+  outline: none;
+}
+
+.go-post-footer button:hover{
+  background: rgba(0,0,255,0.16);
+}
+
+.go-post-footer .go-post-liked{
+  background: rgba(0,255,0, 0.15); 
+}
+
+.reactions-box-container{
+  position: relative;
+  z-index: 10;
+  max-width: 270px;
+}
+
+.reactions-box{
+  position: absolute;
+  margin-top: -50px;
+  z-index: 10;
+  width: 100%;
+  height: 50px;
+  border: 2px solid skyblue;
+  border-radius: 25px;
+  left: 20px;
+  background: #fff;
+  overflow-y: hidden;
+}
+
+
+.reactions-box .col{
+  padding:0;
+  padding-top: 10px;
+  text-align: center;
+  border: 1px solid rgba(0,255,0,0.09);
+ height: 50px;
+}
+
+.reactions-box img{
+  height: 20px;
+  width: 20px;
+}
+
+
+
+#go-video-element-container{
+  position: fixed;
+ top:0;
+ width: 100%;
+ bottom: 0;
+ background: #000;
+ z-index: 9999999;
+  display: none;
+}
+
+.go-video-container{
+ 
+}
+
+#compose-post-container{
+  position: fixed;
+  z-index: 100;
+  width: 100vw;
+  top:0;
+  bottom: 0;
+  background: #fff;
+  padding-top: 60px;
+  display: none;
+  overflow-y: auto;
+  padding-bottom: 60px;
+  font-size: 15px;
+}
+
+#compose-post-header{
+  position: fixed;
+  top:0;
+  width: 100%;
+  height: 50px;
+  overflow: hidden;
+  background: #fff;
+  border-bottom: 1px solid #f0f0f0;
+  z-index: 10;
+}
+
+#grh-container{
+ background: #f4f4f4;
+ border: 0;
+ border-radius: 3px 3px 0 0;
+ padding: 4px 10px;
+ font-weight: bold;
+ white-space:nowrap;
+ text-overflow:ellipsis;
+ overflow-x: hidden;
+  
+}
+
+
+#compose-post-box{
+  display: block;
+  margin: 0 auto;
+ height: 150px;
+ max-width: 600px;
+ background: #f7f7f7;
+ color: #2b2b2b;
+ border:0!important;
+}
+
+#compose-post-box:hover{
+  border: 0!important;
+}
+
+#selected-photo-format{
+  border: 1px dotted #474747;
+  outline: none!important;
+  background: #f5f5f5;
+  border-radius: 6px;
+  font-size: 14px;
+  color: #444;
+  display: none;
+}
+
+#go-upload-preview-container{
+  margin-top: 16px;
+}
+
+.go-upload-photo-preview-container,
+.go-upload-video-preview-container
+{
+  position: relative;
+  width: 100px;
+  height: 100px;
+  border: 1px solid #f5f5f5;
+  border-radius: 5px;
+  overflow: hidden;
+  margin-right: 4px;
+  display: inline-block;
+  margin-bottom: 5px;
+  
+}
+
+.go-upload-photo-preview{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: 50% 50%;
+}
+
+
+.go-video-preview-cover{
+  position: absolute;
+  background: #fff;
+  top:0;
+  bottom:0;
+  width: 100%;
+  z-index: 10;
+  padding-top: 30px;
+}
+
+.go-video-preview-cover img{
+  display: block;
+  margin: 0 auto;
+}
+  
+
+.go-upload-video-preview{
+  background: #fff;
+  width: 100px!important;
+  height: 100px!important;
+}
+
+.go-video-preview-child-cont{
+  width: 100px;
+  height: 100px;
+  position: relative;
+}
+
+
+img.go-video-upload-preview-poster{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: 50% 50%;
+}
+
+.go-remove-upload-preview{
+  position: absolute;
+  top: 0;
+  right: 0;
+  display: inline-block;
+  height: 20px;
+  width: 20px;
+  border: 0;
+  border-radius: 3px;
+  background: #d9534f;
+  color: #fff;
+  font-size: 10px;
+  font-weight: bold;
+  text-align: center;
+  vertical-align: middle;
+}
+
+.go-up-progress-container{
+  position: absolute;
+  bottom: 20px;
+  left: 5%;
+  height: 17px;
+  display: none;
+  width: 90%;
+  background: none;
+  border: 1px solid #f5f5f5;
+  border-radius: 10px;
+  overflow: hidden; 
+}
+
+.go-up-progress{
+ display: inline-block;
+ height: 20px;
+ background: green;
+ width: 1px;
+}
+
+
+#go-send-post-btn{
+  margin: 8px 2px;
+}
+
+
+/*SINGLE POST*/
+
+#go-single-post-container{
+  position: fixed;
+  top:0;
+  bottom:0;
+  width: 100%;
+  z-index: 40; /*42*/
+  background: rgba(0,0,0,0.17);
+  display: none;
+  font-size: 14px;
+}
+  
+#go-single-post-child-container{
+  width: 100%;
+  max-width: 500px;
+  margin:0 auto;
+  background: #fff;
+  height: 100vh;
+  overflow-x: hidden;
+  position: relative;
+  word-wrap: break-word;
+  word-break: break-word;
+  z-index: 20;
+}
+
+
+/*PROFILE*/
+
+#go-profile-container,
+#go-profile-update-container{
+  position: fixed;
+  top: 0;
+  width: 100vw;
+  bottom: 0;
+  z-index: 40;
+  background: rgba(0,0,0,0.2);
+  font-size: 14px;
+  display: none;
+  transform: translateZ(0);
+  -webkit-transform: translateZ(0);
+}
+
+/*.go-profile-page,*/
+.go-profile-child-container, 
+#go-profile-update-child-container{
+  position: relative;
+  height: 100vh;
+  width: 100%;
+  max-width: 600px;
+  margin: 0 auto;
+  overflow-y: auto;
+  overflow-x: hidden;
+  background: #fff;
+  z-index: 20;
+  transform: translateZ(0);
+  -webkit-transform: translateZ(0);
+}
+
+#go-profile-update-container{
+  z-index: 50;
+}
+
+#go-page-post-order{
+  position: absolute;
+  top: 5px;
+  right: 16px;
+  z-index: 50;
+  width: 100px;
+  background: #f5f5f5;
+  color: #2b2b2b;
+  outline: none!important;
+  border: 1px solid #999;
+  border-radius: 4px;
+  font-size: 13px;
+ 
+}
+
+.go-profile-cover-photo-container{
+  position: relative;
+  max-width: 100%;
+  height: 250px;
+  max-height: 250px;
+  overflow: hidden;
+  background: #87CEEB; /* same as skyblue;*/
+}
+
+.go-profile-cover-photo{
+  display: block;
+ /*
+  min-width: 150px;
+  max-width: 700px;
+  min-height: 250px;
+  max-height: 260px;
+  */
+  
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: 50% 50%;  
+  border:0;
+  margin: 0 auto;
+}
+
+.go-profile-photo-container{
+  position: absolute;
+  top: -45px;
+  z-index: 15;
+  height: 90px;
+  width: 90px;
+  overflow: hidden;
+  border-radius: 100%;
+  background: #87CEEB; 
+  box-sizing: border-box;
+  border: 5px solid #fff;
+  font-size: 14px;
+}
+
+.go-profile-photo{
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: 50% 50%;
+}
+
+.go-profile-camera-icon{
+  z-index: 5;
+  position: absolute;
+  left: 50%;
+  top:50%;
+  height: 50px;
+  width: 50px;
+  -webkit-transform: translate(-50%,-50%);
+  display: none;
+}
+
+.go-profile-info-container{
+  padding-left: 16px;
+  margin-bottom: 0;
+  width: 85%;
+  max-width: 600px;
+  font-size: 14px;
+}
+
+.go-profile-fullname{
+  font-weight: 800;
+  font-size: 17px;
+  color: #2b2b2b;
+  font-weight: 800;
+  text-transform: capitalize;
+}
+
+/*
+.go-profile-fullname:first-letter{
+  text-transform: capitalize;
+}
+*/
+
+.go-profile-user-pin{
+  color: #3F5765;
+  margin-bottom: 5px;
+  font-size: 15px;
+  text-transform: capitalize;
+}
+
+.go-profile-user-pin:before{
+  content: "@";
+  font-size: 20px;
+  color:#3F5765;
+}
+
+.go-profile-bio{
+  color: #232323;
+  font-size: 15px;
+  font-weight: 300;
+  margin-bottom: 5px;
+}
+
+.go-profile-joined,
+.go-profile-birth,
+.go-profile-country,
+.go-profile-phone{
+  color: #3F5765;
+  margin-bottom: 5px;
+}
+
+.go-profile-joined:before{
+  content: '➕ Joined on ';
+}
+
+.go-profile-birth:before{
+  content: '📅 Born on ';
+}
+
+.go-profile-country:before{
+  content: '🌎 ';
+}
+
+.go-profile-phone:before{
+  content:'☎ ';
+}
+
+.go-profile-update-form-btn{
+  border: 1px solid #0079c6;
+  border-radius: 16px;
+  font-size: 14px;
+  background: #fff;
+  color: #0079c6;
+  outline: none!important;
+  width: 100px;
+  padding: 4px 5px;
+  display: none;
+}
+
+#go-profile-update-container label{
+  display: block;
+  color: #3F5765;
+  margin-bottom:0;
+}
+
+#go-profile-update-container input,
+#go-profile-update-container textarea{
+  border:0;
+  border-bottom: 1px solid #3f5765;
+  display: block;
+  margin: 0 auto 16px auto;
+  width: 100%;
+  max-width: 600px;
+  background: #fff;
+  outline: none!important;
+  height: 40px;
+  font-size: 14px;
+}
+
+#go-profile-update-container input:hover,
+#go-profile-update-container textarea:hover{
+  border-bottom: 1px solid #0079c6;
+}
+
+#go-profile-update-container textarea{
+  height: 100px;
+}
+
+#go-profile-update-btn{
+  border:0;
+  border-radius: 3px;
+  outline: none!important;
+  color: #0079c6;
+  font-size: 13px;
+  font-weight: bold;
+}
+
+/*UNIVERSAL HEADER & SCROLLABLE CONTENT*/
+
+.u-container{
+ position: relative;
+ width: 90%;
+ height: calc(100vh - 90px);
+ overflow: hidden;
+ margin: 0 auto;
+ padding:0;
+  font-size: 14px;
+}
+
+.u-shadow{
+  position: fixed;
+  top:0;
+  z-index: 10;
+  left:0;
+  right: 0;
+  bottom:0;
+ }
+  
+
+.u-header{
+  position: absolute;
+  top:0;
+  height: 50px;
+  width: 100%;
+}
+
+.u-content{
+  position: absolute;
+  top: 55px;
+  bottom: 0;
+  width: 100%;
+  padding-bottom: 50px;
+  overflow-y: auto;
+  overflow-x: hidden;
+  word-wrap: break-word;
+  word-break: break-word;
+}
+
+.u-top{
+  top: 0;
+}
+
+
+/*POST BACKGROUNDS*/
+
+#go-post-bg-container{
+  border: 1px solid rgba(0,0,0,0.14);
+  border-radius: 2px;
+  width: 100%;
+  max-width: 100%;
+  margin: 15px 0;
+  padding:0;
+  white-space: nowrap;
+ /* vertical-align: middle;*/
+  height: 40px;
+  overflow-x: auto;
+}
+
+.go-post-bg{
+ display: inline-block;
+ width: 40px;
+ height: 40px;
+ margin: 0;
+ border: 1px solid rgba(0,0,0,0.16);
+ border-radius: 2px;
+ box-sizing: border-box;
+ background-size: 40px 40px!important;
+}
+
+
+.go-pbg-10{
+  background: url(file:///android_asset/go-icons/bg/pbg-10.png)!important;
+  background-repeat: no-repeat;
+  color: #fff!important;
+}
+
+.go-post-bg-10{
+  background: url(file:///android_asset/go-icons/bg/pbg-10.png)!important;
+  background-size: 80px 40px!important;
+}
+
+.go-pbg-9{
+  background: url(file:///android_asset/go-icons/bg/pbg-9.png)!important; 
+  color: gold!important;
+}
+
+.go-post-bg-9{
+  background: url(file:///android_asset/go-icons/bg/pbg-9.png)!important; 
+  color: gold!important;
+  background-size: 80px 40px!important;
+}
+
+.go-pbg-8{
+  background: url(file:///android_asset/go-icons/bg/pbg-8.png)!important;
+  color: #fff!important;
+}
+
+.go-post-bg-8{
+  background: url(file:///android_asset/go-icons/bg/pbg-8.png)!important;
+  color: #fff!important;
+  background-size: 80px 40px!important;
+}
+
+.go-pbg-7{
+  background: url(file:///android_asset/go-icons/bg/pbg-7.png)!important;
+  color: #fff!important;
+}
+
+.go-post-bg-7{
+  background: url(file:///android_asset/go-icons/bg/pbg-7.png)!important;
+  color: #fff!important;
+  background-size: 80px 40px!important;
+}
+
+.go-pbg-6,
+.go-post-bg-6{
+  background: orange!important;
+  color: #fff!important;
+  text-align: center!important;
+  font-size: 23px;
+  font-weight: bold;
+}
+
+.go-pbg-5,
+.go-post-bg-5{
+  background: gold!important;
+  color: #fff!important;
+  text-align: center!important;
+  font-size: 23px;
+  font-weight: bold;
+}
+
+.go-pbg-4,
+.go-post-bg-4{
+  background: skyblue!important;
+  color: #0079c6!important;
+  text-align: center!important;
+  font-size: 23px;
+  font-weight: bold;
+}
+
+.go-pbg-3,
+.go-post-bg-3{
+  background: lime!important;
+  color: #2b2b2b!important;
+  text-align: center!important;
+  font-size: 23px;
+  font-weight: bold;
+}
+
+.go-pbg-2,
+.go-post-bg-2{
+  background: purple!important;
+  color: #fff!important;
+  text-align: center!important;
+  font-size: 23px;
+  font-weight: bold;
+}
+
+.go-pbg-1,
+.go-post-bg-1{
+  background: #f5f5f5;
+  text-align: left!important;
+}
+
+
+
+.go-pbg-10,.go-pbg-9,
+.go-pbg-8,.go-pbg-7{
+  background-size: 100% 100%!important;
+  text-align: center!important;
+  font-size: 23px;
+  font-weight: bold;
+}
+
+
+.go-pbg{
+  text-align: center!important;
+  font-size: 23px;
+  font-weight: bold;
+  min-height: 250px;
+  max-height: 250px;
+  overflow: hidden;
+  margin-top: 5px;
+  display:-webkit-box;
+-webkit-box-pack:center;
+-webkit-box-align:center;
+}
+
+.go-pbg-font{
+  /*Increase text size If post text length less than 20*/
+  font-size: 30px;
+  font-weight: 800;
+}
+
+
+/*PEOPLE YOU MAY KNOW*/
+
+.go-people-you-may-know{
+  margin-top: 0;
+  margin-bottom: 5px;
+  width: 100%;
+  white-space: nowrap;
+  max-height: 230px;
+  overflow: hidden;
+  font-size: 14px;
+}
+
+.go-pymk-container{
+  width: 100%;
+  overflow-x: auto;
+}
+
+.go-pymk-title{
+  color: #333333;
+  font-size: 14px;
+  font-weight: 500;
+  padding-left: 10px;
+  margin-bottom: 8px;
+  font-family: sans-serif,Arial;
+}
+
+.go-pymk{
+  position: relative;
+  display: inline-block;
+  margin-left: 4px;
+  padding: 4px;
+  border: 1px solid #f5f5f5;
+  border-radius: 4px;
+}
+
+.go-pymk-photo-container{
+  width:90px;
+  height: 140px;
+  margin: 0 auto;
+  border: 0;
+  border-radius: 3px 3px 0 0;
+  overflow:hidden;
+  background: linear-gradient(rgba(141,153,174,0.8), rgba(141,123,174,0.6));
+}
+
+.go-pymk-image{
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: 50% 50%;
+}
+
+.go-pymk-name-container{
+ position: absolute;
+  top: 5px;
+  left: 4px;
+  border:0;
+  border-radius: 0 6px 6px 0;
+  color: #fff;
+  font-size: 11px;
+  font-weight: 500;
+  padding: 1px 5px;
+  width: 75px;
+  white-space: normal;
+  text-transform: capitalize;
+  max-height: 80px;
+  overflow-y: hidden;
+}
+
+.go-pymk-vicon-container{
+	position: absolute;
+	top: 5px;
+	right: 6px;
+	}
+
+
+.go-sugg-follow-btn{
+  font-size: 13px;
+  width: 90px;
+  border-radius: 0 0 3px 3px!important;
+  margin: 0 auto;
+}
+
+/*FOLLOW FORM*/
+
+#go-follow-container{
+  position: fixed;
+  top:0;
+  bottom:0;
+  width: 100%;
+  z-index: 35;
+  background: rgba(0,0,0,0.17);
+  display: none;
+  font-size: 14px;
+}
+
+#go-follow-form-container{
+  width: 100%;
+  max-width: 500px;
+  margin:0 auto;
+  background: #fff;
+  height: 100vh;
+  position: relative;
+  word-wrap: break-word;
+  word-break: break-word;
+  z-index: 20;
+}
+
+#go-follow-box{
+  outline: none;
+  height: 70px;
+  display: block;
+  font-size: 20px;
+  letter-spacing: 4px;
+  border:0;
+  width: 100%;
+}
+
+.go-follow-btn,
+.go-unfollow-btn{
+  padding: 4px 16px;
+  border: 0;
+  border-radius: 16px;
+  font-size: 14px;
+  background: #0079c6;
+  color: #fff;
+  outline: none!important;
+}
+
+.go-profile-follow-btn{
+  width: 100px;
+  padding: 4px 5px;
+}
+
+.go-follow-btn:hover,
+.go-unfollow-btn:hover{
+ /*
+  position: relative;
+  top: -2px;
+  */
+}
+
+.go-post-follow-btn{
+  display: inline-block;
+  padding: 4px 16px;
+  border: 1px solid rgba(0,0,0,0.18);
+  border-radius: 6px;
+  font-size: 14px;
+  background: #fff;
+  color: #2b2b2b;
+  outline: none!important;
+}
+
+/*SUGGESTIONS*/
+
+.go-suggestions-container {
+  width: 100%;
+  max-width: 600px;
+  margin: 0 auto;
+   background: #baebe1;
+  word-wrap: break-word;
+  word-break: break-word;
+  font-size: 14px;
+}
+
+.go-suggestions-container ul {
+   list-style-type: none;
+   margin: 0;
+   padding: 0;
+   width: 100%;
+}
+
+.go-suggestions-container li {
+   padding: 10px; 
+   background: #FFF;
+   border-bottom: #F0F0F0 1px solid;
+}
+
+.go-suggestions-container li:hover {
+   background:#F0F0F0;
+   cursor: pointer;
+   cursor: hand;
+}
+
+.go-follow-suggested-name:first-letter,
+.go-follow-suggested-pin span:first-letter{
+   text-transform: capitalize;
+}
+
+.go-follow-suggested-pin{
+  color:#485960;
+}
+
+.go-follow-suggested-pin:before{
+  content: "@";
+  font-size: 17px;
+}
+
+.go-follow-sugg-icon-container{
+  height: 45px;
+  width: 45px;
+  border:1px solid #f5f5f5;
+  border-radius: 100%;
+  overflow: hidden;
+}
+
+
+.go-follow-sugg-icon{
+  display: inline-block;
+  margin: 0 auto;
+  width: 45px;
+  height:45px;
+  max-height:70px;
+}
+
+
+/*NOTIFICATIONS*/
+
+#go-notifications-container{
+  position: fixed;
+  top:0;
+  bottom:0;
+  width: 100%;
+  z-index: 35;
+  background: rgba(0,0,0,0.17);
+  display: none;
+  font-size: 15px;
+}
+
+#go-notifications-child-container{
+  width: 100%;
+  max-width: 500px;
+  margin:0 auto;
+  background: #fff;
+  height: 100vh;
+  position: relative;
+  z-index: 20;
+}
+
+#go-notifications{
+  word-wrap: break-word;
+  word-break: break-word;
+}
+
+#go-notifications .col{
+  padding:10px 10px 10px 0;
+}
+
+.go-notifications-user-icon{
+  display: block;
+  width: 40px;
+  height: 40px;
+  border: 1px solid #ddd;
+  border-radius: 100%;
+  margin:0 auto;
+}
+
+.go-notification-names{
+  display: inline-block;
+  font-size: 17px;
+  font-weight: bold;
+  text-transform: capitalize;
+}
+
+.go-unread-notification{
+  background: rgba(0,60,255,.06);
+}
+
+.go-notifications-time{
+  color: #999;
+  font-size: 13px;
+}
+
+
+/*VIEW FOLLOWERS/FOLLOWING/BLOCKED*/
+
+.go-cont,
+#go-followers-container,
+#go-following-container,
+#go-blocked-followers-container{
+  position: fixed;
+  top:0;
+  bottom:0;
+  width: 100%;
+  z-index: 35;
+  background: rgba(0,0,0,0.17);
+  display: none;
+}
+
+.go-child-cont,
+#go-followers-child-container,
+#go-following-child-container,
+#go-blocked-followers-child-container{
+  width: 100%;
+  max-width: 500px;
+  margin:0 auto;
+  background: #fff;
+  height: 100vh;
+  z-index: 20;
+  position: relative;
+}
+
+#go-followers,
+#go-following,
+#go-blocked-followers{
+  word-wrap: break-word;
+  word-break: break-word;
+}
+
+#go-followers .col,
+#go-following .col,
+#go-blocked-followers .col{
+  padding:10px 10px 10px 0;
+}
+
+.go-followers-user-icon{
+  display: block;
+  width: 40px;
+  height: 40px;
+  border: 1px solid #ddd;
+  border-radius: 100%;
+  margin:0 auto;
+}
+
+.go-followers-name{
+  font-size: 13px;
+  font-weight: bold;
+  text-transform: capitalize;
+  white-space: nowrap;
+  text-overflow:ellipsis;
+  overflow-x: hidden;
+}
+
+.go-followers-bio{
+ color: #333333;
+ font-size: 14px;
+ font-weight: 400;
+}
+
+.go-followers-block-btn{
+  padding: 4px 16px;
+  border: 0;
+  border-radius: 16px;
+  font-size: 14px;
+  background: #333;
+  color: #fff;
+  outline: 0;
+}
+
+#open-right-menu-btn{
+  display: none!important;
+}
+
+#go-left-menu-container,
+#go-right-menu-container{
+  margin: 0 auto;
+  padding: 0;
+  padding-bottom: 100px;
+  background: #fff;
+  height: 100%;
+  overflow-y: auto;
+  width: calc(100% - 6px);
+}
+
+#left-menu-header,
+#right-menu-header{
+  display: none;
+ }
+
+
+.go-mlogout-container{
+  display: none;
+}
+
+
+#IS-MOBILE{
+  display: none;
+}
+
+@media (max-width: 599px){
+ .go-profile-cover-photo{
+   max-width: 100%;
+  }
+
+}
+
+@media  (max-width: 767px){
+/*@media  (max-width: 575px){*/
+/*
+  col-sm >=576px
+  col-md >=768px
+  */
+#IS-MOBILE{
+  display: block;
+}
+ 
+#go-open-menu,
+#open-right-menu-btn{
+  display: inline-block!important;
+}
+  
+.hide-left-sidebar,
+.hide-right-sidebar{
+ display: none;
+}
+
+
+.main-content-container{
+  position: relative;
+  width: 100%;
+ }
+  
+.main-content-marginLeft{
+  margin-left: -250px;
+}
+
+.main-content-shadow{
+  display: none;
+  position: absolute;
+  top: 0;
+  z-index: 20;
+  width: 100vw;
+  bottom: 0;
+  top:0;
+  background: rgba(0,0,0, 0.2)!important;
+ }
+
+#left-menu-header,
+#right-menu-header{
+  position: sticky;
+  position: -webkit-sticky;
+  z-index: 10;
+  top:0;
+  width: 100%;
+  height: 50px;
+  overflow: hidden;
+  display: block;
+  background: #fff;
+  border-bottom: 1px solid rgba(0,0,0,0.12);
+ }
+  
+#right-menu-content,
+#left-menu-content{
+  height: calc(100% - 50px);
+  margin-bottom: 100px;
+ /* overflow-y: auto;*/
+  }
+  
+.u-shadow{
+  position: fixed;
+  top:0;
+  z-index: 10;
+  width: 100vw;
+  bottom: 0;
+  top:0;
+  background: rgba(0,0,0,0.2)!important;
+  }  
+ 
+
+.go-profile-cover-photo-container{
+  max-height: 250px;
+  overflow: hidden;
+}
+  
+  
+.go-profile-cover-photo{
+  
+  }
+  
+.go-mlogout-container{
+  display: block;  
+  }
+  
+.go-rlogout-container{
+  display: none;  
+  }
+  
+  
+}
+
+
+@media (min-width: 768px) {
+ /*@media (min-width: 576px) {*/
+
+ /*Desktop*/
+  /*
+  col-sm >=576px
+  col-md >=768px
+  */
+  
+.hide-left-sidebar,
+.hide-right-sidebar{
+ display: inline-block!important;
+}
+
+}
+
+
+button#show-console-log{
+  display:none;
+  position: fixed;
+  bottom: 10%;
+  left: 5%;
+  z-index: 100;
+  background: #fff;
+  width: 50px;
+  height: 50px;
+  border:0;
+  border-radius: 100%;
+  outline: none!important;
+  -webkit-box-shadow: 1px 1px 2px 1px rgba(0,0,0,0.14);
+ opacity: 0;
+}
+
+
+#show-console-log img{
+  height: 40px;
+  width: 40px;
+}
+
+.console-log{
+  position: fixed;
+  top:0;
+  left: 10%;
+  right: 10%;
+  bottom: 30%;
+  overflow: hidden;
+  background: #fff;
+  display: none;
+  z-index: 500;
+  border: 2px solid #999;
+  border-radius: 5px;
+}
+
+.console-log-data{
+  position: absolute;
+  top:0;
+  width: 100%;
+  bottom:0;
+  z-index: 1;
+  overflow-y: auto;
+}
+
+#clear-clog{
+  position: absolute;
+  right: 0;
+  bottom:0;
+  background: #d9534f;
+  color: #fff;
+  z-index: 5;
+}
+

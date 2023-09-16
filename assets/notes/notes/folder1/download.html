@@ -1,0 +1,90 @@
++r+Note: This API is available if *--download--* is set to true in includeApi. It is also available if legacy is true.+r+
+
+As an app developer, sometimes you want your user to download files (pictures, videos, tutorials e.t.c) through your app, the *download* api will enable you to use built-in download manager to download those files to user's phone.
+
+*android.download.start(parameters)*
+
+*parameters* - an object with the following properties:
+
+_url_ - url to download
+
+_path_ - relative file path, for example 'pics/myPic.jpg'
+
+_public_ - (optional) if true, a public directory will be used to store the file, if false, file will be downloaded to your app's specific external directory i.e to the value returned by *android.files.getExternalFilesDir()*
+
+_dirType_ - (optional) the directory type to use for storing the file. Accepted values are "Music", "Podcasts","Ringtones","Alarms","Notifications","Pictures","Movies","Download","DCIM","Documents".
+
+_wifiOnly_ - (optional) if true, download only when on a wi-fi network
+
+_title_ - (optional) title to display in the download notification
+
+_description_ - (optional) description to display in the download notification
+
+_notifications_ - (optional) how to display notifications. Accepted values are in android.download.visibility. This property has no effect on Android API level 10 and lower.
+
+_visibleInUI_ - (optional) if false, the download requst will not be visible in the Download Manager user interface.
+
+Returns a number which serves as an ID for the download request. You can use this ID to track or check the status of the download.
+
+<code>
+var parameters={
+  url: "https://aaappps.com/testImage.jpg",
+  path: "myFile.jpg"
+  public: true,
+  dirType: "Download"
+}
+  
+var id = android.download.start(parameters);
+
+alert( id)
+</code>
+
+From the code above, we told download manager to download a picture to the public directory of user phone in Downloads folder.
+
+The *id* is a number return by download manager, so we can use the number to track download status or progress of the file like the bytes it has received, the total size of the file e.t.c
+
+checkDownloadStatus(id)
+Get the download status.
+
+*id* - the download ID; this is the number returned by *android.download.start()*.
+
+*checkDownloadStatus(id)* returns an object that contains the following properties:
+
+_status_ - a number that indicates the status of the download request. Possible values are defined in android.download.status:
+
+_reason_ - some additional status information. Possible values are defined in android.download.reason.
+
+_localUri_ - a file URL for the downloaded file. E.g file:///storage/0/blabla
+
+_bytesDownloaded_ - number of bytes already downloaded.
+
+_lastModified_ - the timestamp of the file as reported by the server.
+
+_mediaType_ - the file type as reported by the server. This depends on your server so sometimes it says null
+
+var info = android.download.checkDownloadStatus(myDownloadID);
+if(info.status==android.download.status.success) alert("Download complete");
+
+
+*Cancel/Remove download
+
+To cancel a download, use *android.download.remove(id)*
+
+_id_ - the download ID; this is the number returned by android.download.start().
+
+<code>
+android.download.remove(myId);
+</code>
+
+status
+This object contains possible values for the status property of the object returned by checkDownloadStatus(). The keys are: success, running, pending, paused, failed.
+
+reason
+This object contains possible values for the reason property of the object returned by checkDownloadStatus(). The keys are: waiting_to_retry, waiting_for_network, waiting_for_wifi, unknown.
+
+visibility
+This object contains possible values for the notifications property of the object passed to start(). The keys are: hidden,visible, visible_notify_completed.
+
+Note that to use hidden, you need to request permission DOWNLOAD_WITHOUT_NOTIFICATION.
+
+<button onclick="OSB_dm_test()">Download</button>

@@ -1,0 +1,41 @@
++r+Note: This API is available if *clipboard* is set to true in includeApi.+r+
+
+You will notice in most of our tutorials, some examples or codes can be copied to clipboard by just clicking on the example so you can paste else where.
+*Programatically store text into the clipboard*
+
+*setText(text)*
+
+*text* - the text you want to store.
+
+<code>
+function copyToClipboard(text){
+  android.clipboard.setText(text);
+  
+}
+</code>
+
+*Get the text from the clipboard.*
+You can get the text that is already in the clipboard
+
+*getText()*
+
+Returns the text from the clipboard as a string; null if there is no text in the clipboard.
+
+<code>
+  var text = android.clipboard.getText();
+  alert(text); //Texts in the clipboard or null if empty
+</code>
+
+*Check if there is text in the clipboard*
+
+*hasText()*
+
+Returns true if there is text in the clipboard; false otherwise.
+
+<code>
+if( android.clipboard.hasText() ) {
+  var text = android.clipboard.getText();
+  alert(text);
+ }
+</code>
+

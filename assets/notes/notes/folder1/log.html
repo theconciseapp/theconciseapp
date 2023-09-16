@@ -1,0 +1,15 @@
++r+Note: This API is available if log is set to true in includeApi.+r+
+
+Get Android log messages: *android.log.read(thisProcessOnly);*
+
+*thisProcessOnly* - if true, only messages from this process will be returned.
+
+Returns a string containing log messages, separated by newline character.
+
+<code>
+ var text = android.log.read(true);
+     
+ alert(text);
+</code>
+
+The log may contain error messages that help debug your app.

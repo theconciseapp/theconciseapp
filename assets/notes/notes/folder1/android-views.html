@@ -1,0 +1,27 @@
+A *View* is a simple building block of a user interface. It is a rectangular box that can be TextView, EditText, or even a button. It occupies the area on the screen in a rectangular area and is responsible for drawing and event handling. View is a superclass of all the graphical user interface components.
+
+*--Types of Views--*
+
+*+r+WebView+r+* - is a view that display web pages inside your application. It does not include any features of a fully developed web browser (like Chrome, Firefox e.t.c.), such as navigation controls or an address bar. All that WebView does, by default, is show a web page. Web pages can contain Html, Css, Javascript e.t.c.
+<!--_+s+(Although, WebView is not actually a type of *View*, the WebView is an extension of Android's View)+s+_-->
+*TextView* - TextView is a UI Component that displays the text to the user on their Display Screen.
+*EditText* - is a user interface control that allows the users to enter some text.
+*Button* - This is a UI that is used to perform some action as soon as the user clicks on it.
+*ImageButton* - It is the same as a Button but it’s used to display an image on the button to perform an Action
+*ImageView* - helps to display images in an android application. Any image can be selected, we just have to paste our image in a drawable folder from where we can access it.
+*CheckBox* - is the UI control that has two states that are either checked or unchecked. If we have a group of CheckBox, we can select as many as we want, unlike RadioGroup.
+*Radio button* - is the one that has only two possible states, that are either checked or unchecked. Initially, it is in the unchecked state, once it’s checked it can’t be unchecked.
+*RadioGroup* - it’s a group of Radio buttons that are alike. In this, only one of all the buttons can be chosen.
+*ListView* -  is a view which groups several items and display them in vertical scrollable list.
+Spinner -  Spinners provide a quick way to let user select one value from a set. Similar to a  drop down menu.
+AutoCompleteTextView - AutoCompleteTextView is an extension of EditText. In this UI element, the user is provided with a few suggestions of some values/texts. The value can be chosen by the user while filling AutoCompleteTextView.
++s+( You can learn more at https://data-flair.training/blogs/android-ui-controls | https://www.formget.com/android-views )+s+
+
++s+See them on App Builder in *App Tree*+s+
+[img=file:///assets/notes/notes/folder1/photos/ab-views.png][/img]
+
+Below is a visual representation of some of the views above
+[img=file:///assets/notes/notes/folder1/photos/android-views.png][/img]
+_( Image credit: https://www.formget.com )_
+
+All these *View* types' visibility can be toggled using *android.activity*.showView(viewId); and *android.activity*.hideView(viewId);

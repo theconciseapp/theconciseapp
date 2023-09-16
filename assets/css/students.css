@@ -1,0 +1,37 @@
+.signed-indicator{
+  position: absolute;
+  z-index: 5;
+  bottom: 5px;
+  right: 4px;
+  background: green;
+  width: 6px;
+  height: 6px;
+  border:0;
+  border-radius: 100%;
+ }
+
+#page-student-activity .so-options-container{
+  bottom: 5px;
+  z-index: 
+}
+
+.activity-field-counter{
+  position: absolute;
+  top:  -7px;
+  left: 8px;
+  font-size: 8px;
+  background: #fff;
+  z-index: 2;
+  padding: 1px 6px;
+  border: 0;
+  border-radius: 5px;
+}
+.notes {
+    background-attachment: local;
+    background-image:
+        linear-gradient(to right, white 10px, transparent 10px),
+        linear-gradient(to left, white 10px, transparent 10px),
+        repeating-linear-gradient(white, white 35px, #ccc 35px, #ccc 36px, white 36px);
+    line-height: 36px;
+    padding: 8px 10px;
+}

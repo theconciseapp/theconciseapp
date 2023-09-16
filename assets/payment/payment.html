@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+  <head>
+   <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+       <meta name="viewport" content="width=device-width, initial-scale=1,user-scalable=no,user-scalable=0">    
+  <link rel="stylesheet" type="text/css" href="file:///assets/css/bootstrap.4.css">
+   <link rel="stylesheet" href="file:///assets/css/css.css">
+   <link rel="stylesheet" href="file:///assets/css/centerlize.css">
+  <link rel="stylesheet" href="payment.css">
+   
+    <script sr="file:///assets/android.js"></script>
+ 
+  <script sr="file:///assets/js/jquery.3.3.1.js"></script>
+  <script sr="file:///assets/js/jquery-ui.js"></script>
+  <script sr="file:///assets/js/moment.js"></script>
+ 
+ <script sr="file:///assets/bootstrap.js"></script>
+    
+  <script sr="file:///assets/js/global-bootstrap.js"></script>
+  <script sr="file:///assets/js/global-functions.js"></script>
+  <script sr="file:///assets/js/functions.js"></script>
+   
+</head>
+
+<body>
+  <button class="btn btn-sm btn-danger close_buy_coins" onclick="closePaymentPage();" style="position: fixed; top: 0; left: 0; z-index: 2000; border-radius: 0 2px 2px 0;">Close</button>
+
+  <div id="loading">
+    <div class="loading_div"><img src="loading.gif"></div>
+  </div>
+  
+  <div class="container">
+    
+   <div class="views tac terms_conditions" style="display: none; background:#fff; font-size: 85%;">
+   <div class="text-center">NOTICE!</div>
+   <div style="width:100%; padding: 0px 15px 5px 15px;">
+   <div><br><b>&bull;</b>I AGREE THAT PAYMENT WILL FOREVER BE VALID AND ONLY VALID UNTIL THE CONCISE APP IS UNINSTALLED FROM THIS DEVICE.</div>
+   <br><div style="width:100%; text-align: center;">
+   <button class="accept_btn btn btn-sm btn-success" onclick="acceptCondition();">Accept</button>
+   </div> 
+     </div>
+    </div>
+     
+
+ <div class="views form-container user-form" style="position: relative;">
+ 
+ <div class="form-content">
+<div id="close_gamer_form" onclick="switchUserForm();" style="display: none; position: absolute; top: -15px; left:-15px;">
+ <img src="switch.png" style="height: 30px; border: 1px solid #999; border-radius: 10px;">
+</div>
+   
+ <div class="header">
+   Fill the form
+   </div>
+  
+   <div class="mt-3 input-grou">
+     <label>Full name</label> 	
+	<input class="mb-2 d-block" type="text" placeholde="Full name" id="fname">
+	</div>
+    
+<div class="input-grou"> 
+      <label>Phone number</label> 	
+	<input class="mb-2 d-block" type="number" placeholde="Phone number" id="phone">
+	</div>
+	<div class="input-grou"> 
+      <label>Email address</label> 	
+	<input class="mb-2 d-block" type="email" placeholde="Email address" id="email">
+	</div>
+
+       <div style="padding-top: 20px; text-align: center;"> 	
+	<button class="save btn btn-primary" onclick="saveUserForm();">Save</button>     
+    </div>
+</div>
+</div>
+
+     
+  <div class="container user-payment-info">
+    <div class="change_cust_email" style="position: absolute; z-index: 5; top: -15px; left:-4px;">
+  <img src="switch.png" style="height: 30px; border: 1px solid #999; border-radius: 10px;">
+  </div>
+ 
+    
+    <div class="cust_email upayinfo"></div>
+  
+</div>
+ 
+     
+     </div>
+  
+    <script sr="file:///assets/payment/payment.js"></script>
+ 
+   </body>
+</html>

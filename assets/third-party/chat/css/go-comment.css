@@ -1,0 +1,347 @@
+/*GO POST COMMENTS*/
+
+#go-comment-container,
+#go-rcomment-container{
+  position: fixed;
+  top:0;
+  bottom:0;
+  width: 100%;
+  z-index: 45;
+/*  background: rgba(0,0,0,0.17);*/
+  display: none;
+}
+
+#go-rcomment-container{
+  z-index: 47;
+}
+
+#go-comment-tagged-cont{
+  font-weight: bold;
+  max-width: 90%;
+  white-space: nowrap;
+  text-transform: capitalize;
+  text-overflow:ellipsis;
+  overflow-x: hidden;
+}
+
+#go-comment-child-container,
+#go-rcomment-child-container{
+  width: 100%;
+  max-width: 600px;
+  background: #fff;
+  height: 100vh;
+  max-height: 1000px;
+  bottom: 0;
+  left: 50%;
+  z-index: 20;
+  -webkit-transform: translateX(-50%);
+  position: absolute;
+}
+
+#post-comments-container,
+#post-rcomments-container{
+  position: absolute;
+  top: 0;
+  bottom:0;
+  width: 100%;
+  padding: 46px 10px 95px 10px;
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+
+#post-comment-title-cont,
+#post-rcomment-title-cont{
+  position: absolute;
+  z-index: 10;
+  top: 0;
+  background: #f5f5f5;
+  width: 100%;
+}
+
+#go-comment-title,
+#go-rcomment-title{
+  width: 90%;
+  padding: 10px;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow-x: hidden;
+  text-align: left;
+  font-size: 17px;
+}
+
+#go-comment-box-container,
+#go-rcomment-box-container{
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  z-index: 10;
+  background: #fff;
+  padding-top: 10px;
+  padding-bottom: 5px;
+  border-top: 5px solid rgba(0,0,0,0.16);
+}
+
+#go-send-comment-btn,
+#go-send-rcomment-btn,
+#go-comment-upload-file-btn,
+#go-rcomment-upload-file-btn{
+  display: block;
+  margin:0 auto;
+  vertical-align: bottom;
+  color: #0079c6!important;
+  background: none;
+  border: 0;
+  outline: none;
+}
+
+#go-send-comment-btn,
+#go-send-rcomment-btn{
+  margin:0;
+}
+
+#go-comment-box,
+#go-rcomment-box{
+  background: #f5f5f5;
+  min-height: 45px;
+  max-height: 100px;
+  line-height: 1.6em;
+  width: 100%;
+  display: block;
+  margin: 0 auto;
+  color: #2b2b2b;
+  border-radius: 20px;
+  outline: none;
+  padding: 6px 10px;
+  border: 1px solid rgba(0,0,0,0.16);
+}
+
+
+.post-comment-btn:hover{
+  background: #fff;
+}
+
+#post-comments,
+#my-comments-container{
+ width: 100%;
+}
+
+.my-comment-container{
+  text-align: right;
+}
+
+.comment-bubble{
+  position: relative;
+  display: inline-block;
+  padding: 10px 5px 5px 5px;
+ /*  min-width: 70%; */
+  max-width: calc(85% - 65px);
+  overflow-x: hidden;
+  margin-top: 10px;
+  margin-right: 12px;
+  margin-bottom: 0px;
+  text-align: left;
+  border: 0;
+  color: #2b2b2b;
+  word-wrap: break-word;
+  word-break: break-word;
+  background: #f5f5f5;
+  border: 0;
+  border-radius: 15px;
+}
+
+.my-comment-container .comment-bubble{
+ margin-right: 0;
+}
+
+
+.comment-bubble img{
+  border:0;
+  border-radius: 10px;
+}
+
+.comment-bubble .go-post-photo{
+ min-height: 80px;
+}
+
+.go-post-photo-container{ }
+
+
+.comment-author{
+  display: inline-block;
+  font-weight: bold;
+  font-size: 15px;
+  max-width: 130px;
+  white-space: nowrap;
+  text-transform: capitalize;
+  text-overflow:ellipsis;
+  overflow-x: hidden;
+  color: #EA1889
+}
+
+.go-comment-author-icon-container{
+  display: block;
+  margin:0 auto;
+  overflow: hidden;
+  width: 40px;
+  height: 40px;
+  border-radius: 100%;
+  background: url(file:///android_asset/chat-icons/no_profile_picture.png);
+  background-repeat: no-repeat;
+  background-size: 40px 40px;
+}
+
+.go-comment-author-icon{
+  display: block;
+  margin:0 auto;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: 50% 50%;
+}
+
+.go-comment-tagged-pin{
+  color: #0079c6;
+  font-weight: bold;
+  text-transform: capitalize;
+}
+
+.comment-message{
+  text-align: left;
+  display: block;
+  -webkit-user-select: text;
+  user-select: text;
+  line-height: 1.6em;
+  font-weight: 500;
+  font-family: helvetica, sans-serif;
+  padding: 5px;
+}
+
+.comment-footer{
+  padding-right: 5px;
+  padding-left: 50px;
+}
+
+.delete-comment{
+  padding-right: 15px;
+}
+
+.comment-date{
+  display: inline-block;
+  color:#3F5765;
+  font-size: 13px;
+  font-weight: bold;
+}
+
+#comment-loader-container,
+#rcomment-loader-container{
+  position: absolute;
+  z-index: 13;
+  top:0;
+  bottom: 0;
+  width: 100%;
+  background: rgba(0,0,255,0.06);
+  opacity: 0.6;
+  display: none;
+  text-align: center;
+  padding-top: 100px;
+}
+ 
+#comment-loader-container .spin,
+#rcomment-loader-container .spin{
+  border-top: 5px solid #0079c6;
+}
+
+.comment-loader{
+  text-align: center;
+}
+
+#post-comment-sending-cont,
+#post-rcomment-sending-cont{
+  position: relative;
+  width: 45px;
+  height: 40px;
+}
+
+#comment-sending-icon,
+#rcomment-sending-icon{
+  position: absolute;
+  right: 0;
+  top: 0;
+  height: 40px;
+  width: 45px;
+  background: #f5f5f5;
+  border: 0;
+  border-radius: 3px;
+  padding: 10px;
+}
+
+#comment-sending-icon img,
+#rcomment-sending-icon img{
+  height: 25px;
+  width: 25px;
+  display: block;
+  margin: 0 auto;
+}
+
+.like-comment,
+.unlike-comment{
+  margin-left: 16px;
+}
+
+.likes{
+  font-size: 13px;
+  color: #3d3d3d;
+}
+
+#prev-comments,
+#prev-rcomments,
+#next-comments,
+#next-rcomments{
+  display: none;
+  color: #3f3f3f;
+  background: #f5f5f5;
+  border: 0;
+  border-radius: 20px;
+  padding: 2px 16px;
+  margin: 0 auto;
+  max-width: 200px;
+  text-decoration: none;
+  font-size: 14px;
+  font-weight: bold;
+  text-align: center;
+}
+  
+#prev-comments,
+#prev-rcomments{
+  position: sticky;
+  margin-bottom: 10px;
+}
+
+#next-comments{
+  margin-top: 10px;
+}
+
+#go-comment-upload-preview-container,
+#go-rcomment-upload-preview-container{
+  position: absolute;
+  bottom: 70px;
+  left:0;
+  z-index: 10;
+}
+  
+.go-comment-remove-upload-preview{
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  display: inline-block;
+  height: 20px;
+  width: 20px;
+  border: 0;
+  border-radius: 3px;
+  background: #d9534f;
+  color: #fff;
+  font-size: 10px;
+  font-weight: bold;
+  text-align: center;
+  vertical-align: middle;
+}

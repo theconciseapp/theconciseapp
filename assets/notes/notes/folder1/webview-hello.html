@@ -1,0 +1,57 @@
+*WebView* is a view that display web pages inside your application. You can also specify HTML string and can show it inside your application using WebView. WebView turns your application to a web application +s+_( Definition from https://www.tutorialspoint.com )_+s+
+When using the webview, you can make use of HTML, CSS, JAVASCRIPT just like you are building a website. You can learn Html, Css or Javascript at +s+( https://www.w3schools.com )+s+
+
+- First of all let's create a text file in Assets - An html file
+
+1. Open the *App Files* of your app.
+2. Open *Assets*
+3. Click on the plus(+) icon at the top left
+4. Enter *hello* or any name you wish, select *html* from the list of buttons below it.
+5. Click on ok sign at the top right. Now we have *hello.html*
+6. Open it and edit the text *Hello* to anything that comes to your mind. Use &lt;br&gt; for new line.
+
+For example, enter:
+
+<code>&lt;html&gt;
+&lt;style&gt;
+
+&lt;/style&gt;
+&lt;script src="android.js"&gt;&lt;/script&gt;
+&lt;script&gt;
+
+&lt;/script&gt;
+&lt;body&gt;
+&lt;h1&gt;Hello
+&lt;br&gt;my name is so so so
+&lt;br&gt;I'm beautiful&lt;/h1&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+</code>
++s+Note that the above is HTML codes. Go to https://www.w3schools.com to learn more about HTML+s+
+
+- Now go back and open the *App Tree* of your app
+
+1. Click on *- views*, now click on the plus icon (+) at the top right
+[img=file:///assets/notes/notes/folder1/photos/views.png][/img]
+2. What appears are list of *nodes* available for the views. Scroll to the bottomest or just search *webview* and select it.
+3. Click the pencil icon at the top right, and type *mywebview* or any name and press okay on your keyboard or keypad +s+_(choose easy name as it serves as the ID of that webview)_+s+
+4. Click on the plus icon (+) at the top and select *url* from the list of nodes that appears or you can search for it.
+5. Click on the hand icon at the top left. The html file we created in Assets will appear (i.e hello.html). Select it.
+
+[img=file:///assets/notes/notes/folder1/photos/create-webview.png][/img]
+
+6. Build your app to see the result.
+
+_See expected result below. +r+(Please click image to see full picture)+r+_
+
+[img=file:///assets/notes/notes/folder1/photos/hello-world-webview.png][/img]
+
+[youtube=CacSJ5sARCA]Hello i'm so so so beautiful using WebView node~[/youtube]
+
+You may remove the red coloured "Hello" by deleting the *TextView* node in *App Tree*
+
+*--Assignment--*
+
+- Create an app that displays your National or State anthem.
+
+

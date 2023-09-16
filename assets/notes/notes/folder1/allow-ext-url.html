@@ -1,0 +1,26 @@
++r+Note: This API is available if *webView* is set to true in *includeApi*.+r+
+
+Allow or disallow loading external URLs in this WebView.
+
+*setAllowExternalURLs(true)*
+
+If set to true, external URLs (e.g https:/ /www.google.com) will be allowed to load in this WebView; otherwise an attempt to load an external URL in this WebView will launch a browser activity where user will choose any of the browsers that pops up like Chrome, Firefox, Opera  to open the url.
+
+Note that to load external URLs, you have to declare *INTERNET* permission in the *App Tree*-> *Packaging* -> *Permission* (You don't need to explicitly request Internet permission from user, once you declare it in the *App Tree*, it's automatically granted)
+[img=file:///assets/notes/notes/folder1/photos/internet-perm.png][/img]
+
+<code>
+&lt;script>
+android.webView.setAllowExternalURLs(true);
+  
+location.href="https://www.google.com";
+&lt;/script>
+</code>
+
+Result:
+[img=file:///assets/notes/notes/folder1/photos/webview-url-result.png][/img]
+
+NOTE: If the original URL (that is set in *App Tree*) of this WebView was an external one (i.e it's not like an *asset* hello.html), then the default value of *setAllowExternalUrl* is true, so you don't need the code above (Check image below)
+[img=file:///assets/notes/notes/folder1/photos/webview-url.png][/img]
+
+

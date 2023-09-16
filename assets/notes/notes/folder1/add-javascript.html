@@ -1,0 +1,43 @@
+*Javascript:* often abbreviated as JS, is a programming language that is one of the core technologies of the World Wide Web.
+There are many uses of Javascript:
+
+- Client-side validation
+- To send data to server or request data from server
+- Displaying date and time
+- To validate the user input before submission of the form
+- Open and close new windows
+- To display dialog boxes and pop-up windows
+- To change the appearance of HTML documents, hide/show html elements
+- To create the forms that respond to user input without accessing the server
+- To detect user scroll position
+- ...and lots more
+
+I will teach you at least two ways to add javascript to a WebView page.
+
+1. Linking to a .js file that contains all our javascripts
+2. Adding the Javascript directly in an html page
+
+*--Number 1:-- Linking to a .js file* 
+[img=file:///assets/notes/notes/folder1/photos/imported-files.png][/img]
+
+let's add javascript file *(my-javascript.js)* in our WebView page(hello.html)
+_(You can create *my-javascript.js* on App Builder by clicking the plus(+) icon in *Assets*, after creating it, open it and enter <code>alert("My name is Oluwaseyi");</code> then close it and follow the instruction below)_
+
+- Open *hello.html*
+- Put <code>&lt;script src="file:///assets/my-javascript.js"&gt;&lt;/script&gt;</code>
++s+_(Just put it before &lt;body&gt; or after &lt;script src="android.js"&gt;&lt;/script&gt;)_+s+
+[img=file:///assets/notes/notes/folder1/photos/add-javascript.png][/img]
+- Build and launch your app
+
+*--Number 2:--* Adding javascript directly to an html page
+- Open *hello.html*
+- Put <code>&lt;script&gt;alert("Thank you love");&lt;/script&gt;</code> after &lt;html&gt;.
+- Build and install.
+
+*Note:* If you want to use external js(javascript) file (i.e js file that is not created on App Builder or imported to App Builder i.e Js link that starts with https:// or http:// instead of file:///assets), then remember to set permission *INTERNET* in *App Tree* under *Packaging*
+( [link=file:///assets/notes/notes/folder1/packaging.html]Read about Packaging[/link] )
+
+To learn javascripts go to https://www.w3schools.com/javascript or https://www.javatpoint.com
+
+
+

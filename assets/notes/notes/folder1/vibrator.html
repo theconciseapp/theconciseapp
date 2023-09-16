@@ -1,0 +1,20 @@
+1. +r+Note: This API is available if *vibrate* is set to true in *includeApi*.+r+
+2. +b+The permission *VIBRATE* is required for the methods below to work. Set permission in *App Tree* -> *Packaging* -> *Permission*+b+
+
+Sometimes, we want to call the attention of user that he/she has entered or clicked on a wrong item on the app by making the phone vibrate.
+
+*android.vibrator.vibrate(msec)*
+Vibrate constantly for the specified period of time.
+
+*msec* - the number of milliseconds to vibrate.
+
+<code>
+  android.vibrator.vibrate(500);
+</code>
+
+
+You can turn the vibrator off by calling:
+
+<code>
+  android.vibrator.cancel();
+</code>

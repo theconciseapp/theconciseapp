@@ -1,0 +1,58 @@
+WebView API( Application Programing Interface ) Reference
+*Note:* This API is for execution in the WebView environment i.e you can *only* use them in a WebView page like our *hello.html*. It is not available in the *app tree* +r+scripts+r+.
+
+*android.activity*
+*android.AssetFile*
+*android.File*
+*android.JavaObject*
+*android.clipboard*
+*android.control*
+*android.download*
+*android.files*
+*android.location*
+*android.log*
+*android.sensors*
+*android.system*
+*android.toast*
+*android.vibrator*
+*android.webView*
+
+I know you are sweating now. I did too when i just got to this phase but i'm here to make things easier for you. It's not hard! Just concentrate!
+
+Though we have created a simple app *My App* that shows *Hello, i'm so so beautiful bla bla..*, but that is not just enough! 
+
+- Sometimes we want to have more than one page and we need something to toggle(switch) between them.
+- Sometimes we want to create & start another *activity* aside our +s+*Activity | main*+s+ (Main activity)
+- Sometimes we need to be able to create, delete, rename, read or write to a file, copy a file to another folder, create folders/directories, check if directory or a file exists e.t.c from our app
+- Sometimes we need to communicate with the *app tree* to launch user photos,  documents
+- ...and lots more
+
+These are possible using App Builder WebView API
+
++r+*--Important Notes For the API to work--*+r+
+
+1. You need to enable API through the *App Tree* by adding *includeApi* field to your *WebView node* and also set the corresponding field of *includeApi* to true for the API to work. 
+For example, if you plan to use *android.activity.start()*, you need to set *activity* of includeApi to true.
+[img=file:///assets/notes/notes/folder1/photos/webview-includeapi.png][/img]
+
+2. Your HTML page must include the following:
+<code>&lt;script src="file:///assets/android.js"&gt;&lt;/script&gt;</code>. Put it after &lt;html&gt; (before any other javascripts or js &lt;script&gt; tags ) in all html pages you plan to use the API, or else, none the API calls will work.
+
+These WebView APIs should be made use of in a .js file or wrapped inside &lt;script&gt; &lt;/script&gt; because they are javascript objects
+
+Most of the API calls are made via *android* object. 
+For example, this is an API call to show a message that disappears by itself:
+&lt;script&gt; *android.toast*.show("Login failed. Try again");&lt;/script&gt; _( See picture below )_
+
+[img=file:///assets/notes/notes/folder1/photos/webview-toast.png][/img]
+_(Don't forget we added *toast* in *includeApi* field in *App Tree*)_
+
+Watch Video
+[youtube=v5v51bBqzfc]WebView includeApi and Sample usage of toast~[/youtube]
+
+By default, all parts of this API are disabled. You need to set the corresponding field of *includeApi* to *true* for the API to work. For example, if you plan to use *android.activity.start()*, you need to set *activity* of includeApi to true.
+
+_+s+For backward compatibility reasons, there is legacy field. If legacy is set to true, the whole WebView API is available by default, but only to the pages loaded from assets and resources.+s+_
+
+As you continue learning, you will know more about the WebView API and usage
+

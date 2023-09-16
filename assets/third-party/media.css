@@ -1,0 +1,164 @@
+.stadium-older-messages{
+  position: relative;
+}
+
+.text-format-symbol{
+  color: #999;
+}
+
+.media-container{
+  position: relative;
+  background: none;
+  width: 100%;
+  max-width: 500px;
+  max-height: 60vh;
+  overflow-y: auto;
+  background: none;
+  margin: 0 auto;
+  padding-bottom:0!important;
+ }
+
+.share-message{
+  display: inline-block;
+  margin-bottom: 7px;
+  vertical-align: bottom;
+}
+
+.share-message img{
+  height: 30px;
+  width: 30px;
+}
+
+re{
+  color: #d9534f; }
+bl{
+  color: blue; }
+gr{
+  color: green; }
+small{
+  font-size: 11px;
+}
+
+big{
+  display: inline-block;
+  font-weight: bold;
+  font-size: 30px;
+}
+
+.mejs__custom-fullscreen .video-title{
+  z-index: 9999999;
+  top: none;
+  bottom: 5%;
+}
+
+
+.media-audio-container{
+  position: relative;
+  margin: 0 auto;
+  min-width: 150px;
+  max-width: 260px;
+  overflow: hidden;
+  border: 1px solid #0079c6;
+  border-radius: 10px;
+}
+
+.audio-title{
+  width: 85%;
+  margin: 0 auto;
+  font-size: 11px;
+  color: rgba(0,10,245,0.7);
+  font-weight: 500;
+  text-align: center;
+  white-space: nowrap;
+  text-overflow:ellipsis;
+  overflow-x: hidden;
+}
+
+.media-document-container{
+  position: relative;
+  display: block;
+  margin: 0 auto;
+  padding: 15px 10px;
+  width: 220px;
+  max-width: 230px;
+  overflow: hidden;
+  border: 1px solid #0079c6;
+  border-radius: 10px;
+}
+
+.document-title{
+  font-weight: 500;
+  color: rgba(0,10,245,0.7);
+  width: 80%;
+  padding-left: 10px;
+  font-size: 14px;
+  line-height: 20px;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow-x: hidden;
+}
+
+
+.open-video{
+  position: absolute;
+  top:0;
+  left:0;
+  bottom:0;
+  width: 100%;
+  z-index: 10;
+  background: none;
+  
+}
+
+.video-play-icon-container{
+  position: absolute;
+  left:50%;
+  top:50%;
+  -webkit-transform: translate(-50%,-50%);
+  z-index: 10;
+  height: 60px;
+  width: 60px;
+}
+
+.video-play-icon,
+#ytube-loader{
+  height: 60px;
+  width: 60px;
+}
+
+code{
+  display: inline-block;
+  /*width: 90%;*/
+  max-width: 450px;
+  max-height: 500px;
+  overflow-y: auto;
+  margin: 5px auto;
+  font-family: gidole, "courier new";
+  color: crimson;
+  background-color: #f1f1f1;
+  padding: 10px;
+  font-size: 15px;
+  border: 0;
+  border-radius: 8px;
+  word-wrap: break-word;
+  word-break: break-word;
+  vertical-align: middle;
+}
+
+#video-element-container{
+  display: none;
+}
+
+
+@media  (max-width: 767px){
+.mejs__overlay{
+  max-width: 280px; /*250*/
+}
+
+.mejs__overlay-play {
+    cursor: pointer;
+  max-width: 280px; /*250*/
+  }
+}
+
+

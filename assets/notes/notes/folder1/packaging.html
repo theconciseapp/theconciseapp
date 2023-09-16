@@ -1,0 +1,45 @@
+We need to change our app's icon. The default icon is not what we would like to use. We want our app to have a unique icon just like some popular apps like Whatsapp, Gmail, Instagram e.t.c. have their unique icon
+But before then, let's define some elements under *Packaging* in App Builder as seen in the picture below
+[img=file:///assets/notes/notes/folder1/photos/packaging.png][/img]
+
+*Icon* - You app's icon
+*Label* - Your app's name e.g My App
+*minSdk* - The minimum API level on which the application is able to run i.e it is the earliest release of the Android SDK that your application can run on. 
+Another definition says: it is a marker that defines the minimum Android version on which your application will be able to install and run.
+For example if you designed your app to work on Android 7 and above, set the minSdk to  *24* and by so doing, your app will not install or run on Android 6 or lower. Check full list of Android versions and their SDK or API levels here https://apilevels.com
+*packageName* - The package name of an Android app uniquely identifies your app on the device, in Google Play Store, and in supported third-party Android stores.
+The package name should be unique and don't use another app's packageName for your app as there could be no two apps with the same package name on the same Android device or in the Android Play Store. Your packageName should be lowercase letters ('a' through 'z'), numbers, period(.) and underscores ('_').
+Good packageName example: _*com.myapp.hello*, *com.myvideo.design.app*, *net.myonlinestore.sell*_
+*permissions* - Android permissions are a core operating system feature for protecting your app's users privacy. They are special privileges that apps developers must ask users for approval to use or access sensitive information on their phone e.g App developer must ask for permission to use user phone's camera, microphone, location or read files.  
+*targetSdk* - The API level on which the application is designed to run or it is the version of Android that your app was created or targetted to run on. It must be  higher than or equal to the value of minSdk.
++s+_( As at the writing of this information: Starting August 31, 2023: New apps and app updates must target API level 33 to be submitted to Google Play (Wear OS must target API 30). Check https://developer.android.com/google/play/requirements/target-sdk )_+s+. So set the value of targetSdk to 33 on App Builder
+*versionCode* - This number is used to determine whether one version is more recent than another, with higher numbers indicating more recent version. This is not the version number shown to users; The value must be set as a positive integer (whole number), such as "1". You can define it however you want, as long as each successive version has a higher number.
+It's suggested that you linearly increment it for successive versions i.e If the first release of your app has versionCode of 1, your next release should be 2 and so on
+*versionName* - The version name is shown to users. This attribute can be set as a raw string or as a reference to a string resource. The string has no other purpose than to be displayed to users.
+_For example_
+- Say you release an app, its initial versionCode could be 1 and versionName could also be 1. Once you make some little changes to the app and want to publish an update, you would set versionName to "1.1" (since the changes aren't major) while logically your versionCode would be 2 (regardless of size of changes).
+- Say in another condition you release a completely revamped version of your app, you could set versionCode and versionName to "2". _(Example taken from From stackoverflow user krishnakeshan)_
+<hr>
+
+*--How to change app's icon--*
+
+1. Open the *App Tree* of your app
+2. Scroll to packaging, select *icon*
+3. Click the hand icon - your phone images or gallery should appear, select any of the images
+4. Build and launch
+5. Press the home key, open list of your apps, check that your app's icon has changed
+
+Note, that is a random image. A good app icon should not be too large or too small, recommended size (height & width ) of the icon is _192x192_ pixel
+
+*PERMISSIONS* _(Check definition above)_
+- Open the *App Tree*, *+ Packaging*
+- Click on *permissions*
+- Click on the plus(+) icon at the top right
+- A list of permissions you can request will appear. Items in the list are self explanatory. You can also add list of custom permission. 
+
+_For example_
+- If your app is going to use internet connection, may be to load a website or to load an external javascript or css framework, you need to select *INTERNET* from the list of permissions that appears.
+- If your app is going to create or write to a file or you need to read a file on user's device, then you need to select *READ_EXTERNAL_STORAGE* or *WRITE_EXTERNAL_STORAGE* permissions, as these will give you access to user gallery or files when you request it.
+
+
+

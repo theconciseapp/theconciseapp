@@ -1,0 +1,159 @@
+body{
+  background: #ffffff;
+  height:100%;
+  width:100%;
+  overflow: hidden;
+  overflow-y: auto;
+  font-family: "Times", Arial, Helvetica, sans-serif;
+ 
+}
+
+
+#loading{
+ position:fixed;
+  top: 0;
+  bottom: 0; 
+  width: 100%; 
+  z-index: 500;
+  background: #fff;
+  overflow: hidden;
+  
+}
+
+#loading img{
+	position: fixed;
+	top: 50%;
+	left: 50%;
+	height: 70px;
+	width: 70px;
+ -webkit-transform: translate(-50%,-50%);
+  z-index: 10;
+}
+
+
+.views{
+  display: none;
+  margin-top: 100px; 
+}
+
+.pay{
+  margin-top:30px;
+  width:100%;
+  }
+  
+ .pay>form{  
+   text-align:center;
+   margin-top: 50px;
+  }
+  
+.help-btn img{
+  width: 16px;
+  height:16px;
+  }
+  
+.promo_code{
+  position:relative;
+  width: 150px;
+  margin:0 auto;
+  display: block;
+}
+
+#promo_code{
+  display: block;
+  background:none;
+  width: 150px;
+  border: 2px solid orange;
+  border-radius: 5px;
+  color: #444;
+  text-align: center;
+  padding: 3px 23px 3px 15px;
+  font-family: gidole,sans-serif;
+  outline:none!important; 
+}
+
+.promo_check_indicator{
+  position: absolute;
+  top: 4px;
+  right: 5px;
+  display:none;
+} 
+
+.user-payment-info{
+  margin-top: 100px;
+  position: relative;
+}
+
+.upayinfo{
+ position: relative; 
+  background: #fff!important; 
+  max-width: 500px; 
+  margin: 20px auto;
+  max-height: 70vh;
+  overflow-y:auto;
+  padding: 16px;
+  border:1px solid #f2f9f9;
+  border-radius: 5px;
+  -webkit-box-shadow: 3px 3px 20px grey;
+}
+
+.form-container{
+  width:90%;
+ max-width:500px;
+ margin: 100px auto;
+ margin-bottom: 270px;
+ background:#fff;
+ border-radius: 2px;
+ padding:20px;
+/* font-family: Georgia, "Times New Roman", Times, serif;
+*/
+  -webkit-box-shadow: 3px 3px 20px grey;
+}
+
+.form-content{
+ width:100%;
+}
+
+.header{
+background: #f9f9f9;
+color:#272727;
+font-size: 14px;
+padding: 10px;
+border:0;
+border-radius: 2px;
+}
+
+.form-container form{
+border:1px solid #f2f9f9;
+padding:20px;
+border-radius:0 0 5px 5px;
+}
+
+.input-grou{
+  position: relative;
+  border: 1px solid rgba(0,0,0,0.5);
+  border-radius: 5px;
+  margin-bottom: 16px;
+  padding-top: 5px;
+}
+.input-grou label{
+  margin-left: 16px;
+  padding: 2px 6px;
+  background: #fff;
+  color: #272727;
+  font-size: 10px;
+  position: absolute;
+  z-index: 5;
+  top: -8px;
+  border: 1px solid rgba(0,0,0,0.5);
+  border-radius: 10px;  
+}
+
+.input-grou input{
+ width: 100%;
+ height: 50px;
+  border: 0;
+  outline: none;
+  padding-left: 10px;
+  font-size: 14px;
+}
+

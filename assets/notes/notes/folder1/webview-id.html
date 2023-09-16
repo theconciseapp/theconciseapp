@@ -1,0 +1,16 @@
++r+Note: This API is available if *webView* is set to true in *includeApi*.+r+
+
+*GET THE ID OF A WEBVIEW*
+Returns a string containing one of the following: 
+(1) the name associated with the id, if any; 
+(2) the numeric value of the id *if there is no name;* 
+(3) "0" string if this WebView does not have an id.
+
+<code>&lt;script>
+  
+  var id = android.webView.getId();
+
+  alert(id);
+  
+  &lt;/script>
+</code>

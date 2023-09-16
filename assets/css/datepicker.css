@@ -1,0 +1,213 @@
+#datepicker{
+  z-index: 10;
+  max-width: 350px;
+  background: #fff;
+  border:0;
+  border-radius: 10px;
+  display: none;
+}
+
+.ui-datepicker td a:after {
+  content: "";
+  display: block;
+  text-align: center;
+  color: blue;
+  font-size: small;
+  font-weight: bold;
+}
+
+
+.ui-datepicker {
+    width:  300px;
+    height: 300px;
+    margin: 5px auto 0;
+    font: 12pt Arial, sans-serif;
+    /*-webkit-box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, .5);
+    -moz-box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, .5);*/
+}
+
+.ui-datepicker table {
+   width: 100%;
+ }
+
+.ui-datepicker-header {
+    color: #0079c6;
+   padding-top: 10px;
+   padding-bottom: 10px;
+    font-family:'Times New Roman';
+    border-width: 1px 0 0 0;
+    border-style: solid;
+    border-color: #fff;
+   border-radius: 7px;
+}
+
+.ui-datepicker-title {
+    text-align: center;
+    font-size: 17px;
+}
+
+.ui-datepicker-prev {
+    float: left;
+    cursor: pointer;
+    background-position: center -30px;
+   margin-left:6px;
+  }
+
+.ui-datepicker-next {
+    float: right;
+    cursor: pointer;
+    background-position: center 0px;
+   margin-right: 6px;
+  }
+
+.ui-datepicker-prev,
+.ui-datepicker-next{
+  border:1px solid #f5f5f5;
+  border-radius: 15px;
+  background: #fff;
+  color:#444!important;
+ font-size: 11px;
+  padding: 2px 10px;
+ -webkit-box-shadow: 1px 1px 5px 1px #999;
+ 
+}
+
+ 
+
+.ui-datepicker thead {
+    background-color: #f7f7f7;
+   
+    /*border-bottom: 1px solid #bbb;*/
+}
+
+.ui-datepicker th {
+    background-color:#fff;
+    text-transform: uppercase;
+    font-size: 14px;
+    color: #272727;
+    text-align: center;
+    text-shadow: 1px 0px 0px #fff;
+    filter: dropshadow(color=#fff, offx=1, offy=0);
+}
+
+.ui-datepicker tbody td {
+  text-align: center;
+   padding: 0;
+   padding-top: 3px;
+    /*border-right: 1px solid #808080;*/
+}
+
+    .ui-datepicker tbody td:last-child {
+        border-right: 0px;
+    }
+
+.ui-datepicker tbody tr {
+   /* border-bottom: 1px solid #999;*/
+}
+
+.ui-datepicker tbody tr:last-child {
+    border-bottom: 0px;
+    }
+
+.ui-datepicker a {
+    text-decoration: none;
+}
+
+.ui-datepicker td span, .ui-datepicker td a {
+    display: inline-block;
+    /*font-weight: bold;*/
+    text-align: center;
+    width: 40px;
+    height: 40px;
+    line-height: 40px;
+    color: #ffffff;
+    /*text-shadow: 1px 1px 0px #fff;*/
+    /*filter: dropshadow(color=#fff, offx=1, offy=1); */
+}
+
+.ui-datepicker-calendar .ui-state-default {
+      /*background: linear-gradient(#999999, #737373);*/
+   
+   background: #f5f5f5;
+  /*F0F3F4*/
+   color:#333;
+   height:40px; /*40*/
+   width: 40px;
+   border:0;
+   border-radius: 4px; 
+
+}
+
+.ui-datepicker-calendar .ui-state-hover {
+    /*background: #33adff;*/
+    color: #0079c6;
+}
+
+.ui-datepicker-calendar .ui-state-active {
+    background: #0079c6!important;
+    -webkit-box-shadow: inset 0px 0px 10px 0px rgba(0, 0, 0, .1);
+    -moz-box-shadow: inset 0px 0px 10px 0px rgba(0, 0, 0, .1);
+    box-shadow: inset 0px 0px 10px 0px rgba(0, 0, 0, .1);
+    color: #ffffff !important;
+    text-shadow: 0px 1px 0px #4d7a85;
+    border: 1px solid blue;
+    position: relative;
+    margin: -1px;
+}
+
+.ui-datepicker-unselectable .ui-state-default {
+   display: none; 
+    background: #D6E4BE;
+    color: #000;
+    opacity: 0.1;
+}
+
+.datehighlighted a{
+ background: green!important;
+ color:#fff!important; 
+}
+
+
+#confirm-date-picked,
+#cancel-date-picker{
+ border:1px solid #f5f5f5;
+  border-radius: 5px;
+ font-size: 13px;
+  padding: 2px 10px;
+ -webkit-box-shadow: 1px 1px 5px 1px #999;
+  }
+
+
+#confirm_date_picked{
+ background: #fff;
+ color:#444!important;
+}
+
+
+@media  (max-width: 320px){
+  /*col-sm >=576px
+  col-md >=768px
+  */
+.ui-datepicker th {
+    font-size: 11px;
+  }
+  
+.ui-datepicker {
+    width:  250px;
+    height: 250px;
+  }
+
+.ui-datepicker td span, .ui-datepicker td a {
+ width: 30px;
+  height: 30px;
+  line-height: 30px;
+  }
+  
+.ui-datepicker-calendar .ui-state-default {
+  height:30px; /*40*/
+   width: 30px;
+}
+
+  
+  
+}

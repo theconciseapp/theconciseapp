@@ -1,0 +1,69 @@
+Sometimes we want to show or hide a *View*, whether a buttonView, textView , webView e.t.c
+Each of the View types should have an id any time you use them.
+
+The image below shows a *WebView* node with an id *mywebview*
+[img=file:///assets/notes/notes/folder1/photos/one-webview.png][/img]
+
+Now, to demostrate show/hide a view, we need to create another *WebView* node whose *url* field is set to another html page ( *hello-two.html* ) in *Assets*
+If you've forgotten how to create an html page(Assets) or *WebView* node (App Tree), [link=file:///assets/notes/notes/folder1/webview-hello.html]Click here[/link]. 
+
+*STEP ONE*
+- Open our first page *hello.html*, clear whatever is there, and paste the following javascript & html code:
++s+_(click on the code to copy it)_+s+
+<code>&lt;html&gt;
+  &lt;script src="file:///assets/android.js"&gt;&lt;/script&gt;
+  &lt;script&gt;
+function goPageTwo(){
+  //Show page two webview
+  android.activity.showView("mywebview_2");
+  
+  //Hide current page webview i.e mywebview
+  android.activity.hideView("mywebview");
+}
+  &lt;/script&gt;
+&lt;body&gt;
+
+&lt;h1&gt;This is our first page&lt;/h1&gt;
+
+&lt;button onclick="goPageTwo()"&gt;Go to page Two&lt;/button&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+</code>
+
+- Now create a new file in *Assets*, you can call it *hello-two.html*, clear whatever is there and paste the following code:
+<code>&lt;html&gt;
+  &lt;script src="file:///assets/android.js"&gt;&lt;/script&gt;
+  &lt;script&gt;
+function goPageOne(){
+  //Show first page webview
+  android.activity.showView("mywebview");
+  
+  //Hide current page webview i.e mywebview_2
+  android.activity.hideView("mywebview_2");
+}
+  &lt;/script&gt;
+&lt;body&gt;
+
+&lt;h1 style="color: yellow;"&gt;This is our SECOND page&lt;/h1&gt;
+
+&lt;button onclick="goPageOne()"&gt;Go back to page one&lt;/button&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+</code>
+
+*STEP TWO*
+- Create a *WebView* node in the *App Tree* and set the id to *mywebview_2* by clicking on the pencil icon
+- Add a *Url* field to the WebView node by clicking the plus icon (search for url).
+- Set the url field to *hello-two.html* by clicking on the hand icon at top left
+
+Now, we need to hide the new  *WebView* node we just created by setting it's visibility to "gone", so that both webview pages won't show at the same time when our app is launched.
+- Add *android:visibility* (gone) field to the *WebView* node [ to add this, click on the +s+*WebView | mywebview_2*+s+ node, click on plus icon, search for *View* folder (this folder contains attributes like background, width, visibility e.t.c that we can apply to our WebView node), search for *visibility* and select it. ] 
+- Click on +s+*WebView | mywebview_2*+s+ node, click plus + icon, Add *includeApi* field, then click on the plus(+) icon to add *Activity* field to it.
+- Build and launch it.
+
+Watch Video
+[youtube=djrTLVJkCIg]Show/Hide a View~[/youtube]
+
+You can also do this for other type of views: buttonView, TextView e.t.c using:
+*android.activity.showView(viewId)* to show or *android.activity.hideView(viewId)* to hide a view
+

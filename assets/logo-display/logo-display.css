@@ -1,0 +1,99 @@
+ html,body{
+  width: 100%;
+  height: 100%;
+  font-family: "Times", Arial, helvetica, sans-serif;
+  overflow: hidden!important;
+
+   }
+   
+::-webkit-scrollbar {
+    display: none;
+ }
+
+#header{
+  font-size: 25px;
+ font-family: gidole;
+  display: none;
+   }
+   
+#splash{
+ display: block;
+  overflow: hidden;
+  text-align: center;
+  width:  300px;
+  height: 300px;
+  position: fixed;
+  left: 50%;
+  top: 50%;
+  -webkit-transform: translate(-50%, -50%);
+ 
+ }
+   
+#splash-image-cont{
+  width: 80px;
+  height: 80px;
+  overflow: hidden;
+  margin: 0 auto;
+  border:0;
+  border-radius: 100%;
+}
+ 
+#splash #splash-image,
+#splash-image-2{
+  width: 81px;
+ height: 81px;
+  border:0;
+  border-radius: 100%;
+}
+
+
+   
+#logo{
+  max-width: 60px;
+  display: none;
+   }
+   
+#splash-image-2-cont,
+ #author-name2{
+  display: none;
+}
+#author-name2,
+#author-name{
+  font-size: 14px;
+ font-style: italic;
+}
+   
+#app-label{
+ display: none;
+  font-size: 16px;
+ font-family: monospace;
+  color: #0079c6;
+  font-weight: bold;
+ }
+   
+
+#ext-assets-first-load{
+ vertical-align: middle;
+ text-align: center;
+ display: none;
+ font-size: 14px;
+}
+
+
+#ext-assets-first-load img{
+  height: 50px;
+  width: 50px;
+}
+
+#powered{
+   position: fixed;
+   bottom: 10%;
+   width: 99%;
+   text-align: center;
+   color: #0079c6;
+   font-size: 10px;
+   font-weight: bold;
+  display: none;
+  visibility: hidde;
+ }
+

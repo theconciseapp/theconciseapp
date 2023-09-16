@@ -1,0 +1,60 @@
+Most times when we declare to use a permission in the *App Tree* under *Packaging*->*Permission*, your app still need to explicitly ask user to approve it or reject it for security reasons. For example, setting *WRITE_EXTERNAL_STORAGE* permission in the *app tree* under *Packaging* does not mean your app has been granted permission to create, read or write a file on user's device automatically, it simply means you are notifying android system that your app will make use of or request user's device storage and user files.
+
+Therefore, you have to explicitly request it from user and user have the choice to reject or accept it.
+
+* To check or request a permission you should add *includeApi* and set field *reflect* to true in *App Tree* in the webview node.
+Also, *targetSdkVersion* in *App Tree* *Packaging* should be set to 23 or higher for this function to work.
+
+[img=file:///assets/notes/notes/folder1/photos/files-reflect-api.png][/img]
+
+This is an helper function to help you check and request for a permission if it hasn't been granted
+<code>function hasPermission( requestType) {
+  if( !requestType){
+    requestType="WRITE_EXTERNAL_STORAGE";
+  }
+  
+var check="android.permission." + requestType;
+return android.system.checkRuntimePermission(check);
+}
+
+function requestPermission(requestType){
+ if( !requestType){
+    requestType="WRITE_EXTERNAL_STORAGE";
+  }
+  
+ var request="android.permission." + requestType;
+ android.system.requestPermissions(request);
+}
+</code>
+
+*USAGE*
+
+For example, if you want to request permission to use user CAMERA:
+
+<code>&lt;script>
+  if( !hasPermission("CAMERA") ){
+   requestPermission("CAMERA");
+}
+&lt;/script>
+</code>
+
+What the above code is saying is that, if user haven't granted your app permission to use his/her phone camera, then request it from the user.
+See result below:
+[img=file:///assets/notes/notes/folder1/photos/request-permission.png][/img]
+
+Another example, if you want to create, write, read or delete a file on user device's external storage, you need to request *WRITE_EXTERNAL_STORAGE* permission:
+
+<code>
+if( !hasPermission("WRITE_EXTERNAL_STORAGE") ){
+   requestPermission("WRITE_EXTERNAL_STORAGE");
+}
+</code>
+
+Another example, if your app is voice recorder or your app want to use user phone microphone, you need to request *RECORD_AUDIO* permission:
+
+if( !hasPermission("RECORD_AUDIO") ){
+   requestPermission("RECORD_AUDIO");
+} 
+
+Full permission types and their functions are listed here https://developer.android.com/reference/android/Manifest.permission.html
+

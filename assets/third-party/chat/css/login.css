@@ -1,0 +1,146 @@
+body{
+  
+  background: #fff;
+  background-image: url("file:///android_asset/chat-icons/login-bg.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  -webkit-touch-callout:none;
+    -webkit-user-select:none;
+    -moz-user-select:none;
+    -ms-user-select:none;
+    user-select:none; 
+}
+
+.form-page{
+   display: none;
+}
+
+.form-container{
+  position: fixed;
+  top: 0;
+  bottom:0;
+  width: 100%;
+  max-height: 100%;
+  background: none;
+  overflow-y: auto;
+}
+
+.form-title{
+  position: absolute;
+  top: 4%;
+  left: 5%;
+  font-size: 30px;
+  color: #fff;
+  font-family: sans-serif;
+}
+
+.login-form-container,
+.register-form-container,
+.fpwrd-form-container,
+.vemail-form-container{
+  position: absolute;
+  top:50%;
+  left: 50%;
+  -webkit-transform: translate(-50%,-50%);
+  width: 100%;
+}
+
+.login-form,
+.register-form,
+.fpwrd-form,
+.vemail-form{
+  background: #fff;
+  border:0;
+  border-radius: 40px 40px;
+  padding: 50px 16px 10px 16px;
+  width: 90%;
+  max-height: 80vh;
+  max-width: 500px;
+  margin: 0 auto;
+  -webkit-box-shadow: 1px 1px 2px 1px rgba(0,0,0,0.09);
+ overflow-y: auto;
+}
+
+label{
+  display: block;
+  font-size: 13px;
+  font-weight: 700;
+}
+
+.form-input{
+  height:  50px;
+  border-radius: 10px;
+}
+
+.forgot-password-container{
+  color: #0079c6;
+}
+
+
+.login-btn-container,
+.register-btn-container,
+.vemail-btn-container{
+  bottom: 0;
+  margin-top: 40px;
+}
+
+.register-btn-container{
+  margin-top: 20px;
+}
+
+.login-btn,
+.register-btn,
+#reset-password-btn,
+#vemail-btn{
+  width: 100%;
+  display: block;
+ height: 50px;
+  border-radius: 10px;
+}
+
+.loader{
+  width: 20px;
+  height: 20px;
+}
+
+#login-loader,
+#reg-loader{
+  display: none;
+}
+
+
+#privacy-terms-container{
+  position: fixed;
+  height: 95vh;
+  max-height: 1000px;
+  width: 90%;
+  max-width: 500px;
+  border: 1px solid #0079c6;
+  border-radius: 4px;
+  left:50%;
+  top: 50%;
+  -webkit-transform: translate(-50%,-50%);
+  overflow-y: auto;
+  overflow-x: hidden;
+  background: #fff;
+  z-index: 200;
+  padding: 16px;
+  display: none;
+}
+
+#privacy-terms-container #privacy-loader{
+ position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 50px;
+  height: 50px;
+  -webkit-transform: translate(-50%,-50%);
+}
+
+@media (min-width: 768px){
+  /*576px (sm)* 768px(md)*/
+.logo-container{
+  height: 100vh;
+ }
+
+}

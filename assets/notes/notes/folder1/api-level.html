@@ -1,0 +1,14 @@
++r+Note: This API is available if *activity* is set to true in *includeApi*.+r+
+
+Sometimes, you may want to run a function that is not supported by old devices, or you want to run a function only for specific android versions, then it's necessary to check their *Api Level* before calling the function.
+
+*getApiLevel()*
+This returns the Android API level. For example, in Android 6.0 it returns 23.
+
+<code>
+var api = android.system.getApiLevel();
+
+ if( api>22 ){
+  //Run this code for Android 6 and above
+  }
+</code>
